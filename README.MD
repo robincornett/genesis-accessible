@@ -1,9 +1,9 @@
 === Genesis Accessible ===
 Contributors: rianrietveld
-Donate link: http://wp-accessible.org/
-Tags: Genesis, Accessible, Accessibility, A11y, WCAG, Standards
-Requires at least: 3.5
-Tested up to: 3.7.0
+Plugin website: http://genesis-accessible.org
+Tags: Genesis, Accessible, Accessibility, a11y, WCAG, Web Standards
+Requires at least: 3.8
+Tested up to: 3.8.1
 Stable tag: 1.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -18,23 +18,23 @@ Leiden and Genesis Accessible together provide you with a WCAG 2.0 AA accessible
 
 == So what do you need ==
 
-- WordPress: Well, duh, a bit obvious, but first of all: have a recent version <a href="http://www.wordpress.org/">WordPress</a> installed, preferably version 3.8 or higher. Also take a look at the <a href="http://wordpress.org/about/requirements/">requirements for WordPress</a>.
-- Genesis Framework: The Leiden child theme and the plugin Genesis Accessible are written for the Genesis framework version 2.0 or higher. This excellent framework is not free, but doesn’t cost much and is totally worth the money. You can buy and download it at studiopress.com, you only need the <a href="http://my.studiopress.com/themes/genesis/">basic framework</a>.
-- The plugin Genesis Accessible (for the time being at the GitHub).
-- The Genesis <a href="https://github.com/RRWD/leiden.git">child theme Leiden</a>.
+- WordPress: Well, duh, a bit obvious, but first of all: have a recent version WordPress (http://www.wordpress.org) installed, preferably version 3.8 or higher. Also take a look at the requirements for WordPress (http://wordpress.org/about/requirements/)
+- Genesis Framework: The Leiden child theme and the plugin Genesis Accessible are written for the Genesis framework version 2.0 or higher. This excellent framework is not free, but doesn’t cost much and is totally worth the money. You can buy and download it at studiopress.com, you only need the basic framework (http://my.studiopress.com/themes/genesis/).
+- The plugin Genesis Accessible (for the time being here at the GitHub).
+- The Genesis child theme Leiden (https://github.com/RRWD/leiden.git).
 
 == Installation ==
 
-- <a href="http://codex.wordpress.org/Installing_WordPress">Install WordPress</a> (or download it in the version of your language)
-- <a href="http://my.studiopress.com/themes/genesis/">Install the Genesis Framework</a>
-- If your site is in another language than English: download the plugin <a href="http://wordpress.org/plugins/genesis-translations/">Genesis Translations</a>
+- Install WordPress (http://codex.wordpress.org/Installing_WordPress) or download it in the version of your language.
+- nstall the Genesis Framework (http://my.studiopress.com/themes/genesis/)
+- If your site is in another language than English: download the plugin Genesis Translations http://wordpress.org/plugins/genesis-translations/
 - Install and activate the Genesis child theme Leiden
 - Install and activate the plugin Genesis Accessible
 - Go in the Dashboard to Genesis → Accessibility Settings and select the options you want to add.
 
 == Support and documentation ==
 
-Look for support and documentation on <a href="http://genesis-accessible.org">genesis-accessible.org</a>
+Look for support and documentation on http://genesis-accessible.org
 
 == Changelog ==
 
