@@ -1,9 +1,9 @@
 === Genesis Accessible ===
 Contributors: rianrietveld
-Donate link: http://wp-accessible.org/
-Tags: Genesis, Accessible, Accessibility, A11y, WCAG, Standards
-Requires at least: 3.5
-Tested up to: 3.7.0
+Plugin website: http://genesis-accessible.org
+Tags: Genesis, Accessible, Accessibility, a11y, WCAG, Web Standards
+Requires at least: 3.8
+Tested up to: 3.8.1
 Stable tag: 1.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
