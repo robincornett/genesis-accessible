@@ -1,0 +1,65 @@
+/*
+	genwpacc-skiplinks-style.css
+	Description: Hide skiplink except from screen readers and keyboard users
+	Part of the plugin genesis-accessible
+	Author: Rian Rietveld
+	Plugin URI: http://genesis-accessible.org/
+	Version: 1.0.0
+
+	License: GPL-2.0+
+	License URI: http://www.opensource.org/licenses/gpl-license.php
+*/
+
+
+.screen-reader-text,
+.screen-reader-text span,
+.search-form label {
+	position: absolute;
+	left: -1000em;
+	top: -1000em;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+}
+
+
+.screen-reader-shortcut {
+	position: absolute;
+	top: -1000em;
+}
+
+.screen-reader-shortcut:focus {
+	left: 1em;
+	top: 1em;
+	height: auto;
+	width: auto;
+	display: block;
+	font-size: 1em;
+	font-weight: bold;
+	padding: 15px 23px 14px;
+	background: #fff;
+	color: #333;
+	z-index: 100000;
+	line-height: normal;
+	text-decoration: none;
+	-webkit-box-shadow: 0 0 2px 2px rgba(0,0,0,.6);
+	box-shadow: 0 0 2px 2px rgba(0,0,0,.6);
+}
+
+.wpacc-genesis-skip-link li {
+	height: 0;
+	width: 0;
+	list-style: none;
+
+}
+/* Display search button */
+.search-form input[type="search"] {
+	width: auto;
+	margin-right: 10px;
+}
+
+/* Display outline on focus */
+:focus {
+	color: #333;
+	border: 1px solid #333;
+}
