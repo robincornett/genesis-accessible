@@ -12,36 +12,16 @@
 // keping the link on the post title
 
 // check for Joe's plugin
-if ( !function_exists( 'wpa_custom_excerpt_more' ) && get_option('wpa_more') != 'on' ) {
-	add_filter( 'get_the_excerpt', 'genwpacc_excerpt_more',100 );
-	add_filter( 'get_the_content_more_link', 'genwpacc_read_more_link',100 );
-	add_filter( 'excerpt_more', 'genwpacc_excerpt_more',100 );
-	add_filter( 'the_content_more_link', 'genwpacc_read_more_link', 100 );
-}
+
+add_filter('get_the_content_more_link', 'genwpacc_read_more_link');
+add_filter('the_content_more_link', 'genwpacc_read_more_link');
 
 function genwpacc_read_more_link() {
-
-	if ( has_excerpt() && !is_attachment() ) {
-		global $id;
-		$output .=  genwpacc_continue_reading( $id );
-	}
-
-	return $output;
+	// http://wpfab.com/edit-the-read-more-link-on-blog-or-content-archive-pages/
+	// return '&nbsp;<a class="more-link" href="' . get_permalink() . '" rel="nofollow">Continue Reading &hellip;</a>';
+	return '...<br /> <a href="'. get_permalink() .'" class="more-link">' . __( 'Read more', 'genesis' ) . '<span class="more-link-title"> ' . __( 'about', GENWPACC_DOMAIN ) . " " . get_the_title() . "</span></a>";
 }
 
-function genwpacc_continue_reading( $id ) {
-    return ' <a href="'. get_permalink( $id ) .'" class="more-link">' . __( 'Read more', 'genesis' ) . '<span class="more-link-title"> ' . __( 'about', GENWPACC_DOMAIN ) . " " . get_the_title($id) . "</span></a>";
-}
-
-function genwpacc_excerpt_more( $more ) {
-	global $id;
-	return '&hellip; '. genwpacc_continue_reading( $id );
-}
-
-function genwpacc_content_more( $more ) {
-	global $id;
-	return genwpacc_continue_reading( $id );
-}
 
 
 /*
