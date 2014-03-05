@@ -42,7 +42,11 @@ function wpaccgen_skip_links() {
 	if( is_active_widget( '', '', 'search' ) ) $search = true;
 
     // footer widgets?
-    if ( current_theme_supports( 'genesis-footer-widgets' ) == '1' ) $footer = true;
+    if ( current_theme_supports( 'genesis-footer-widgets' ) == '1' ) {
+    	$footer_widgets = get_theme_support( 'genesis-footer-widgets' );
+    	if ( isset( $footer_widgets[0] ) && is_numeric( $footer_widgets[0] ) )
+    		$footer = true;
+    }
 
 
 
