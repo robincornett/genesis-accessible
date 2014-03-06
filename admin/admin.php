@@ -2,7 +2,9 @@
 /**
 *	admin.php
 *	Description: Functions for Admin editor settings
-*	@since 1.0.0
+*	Author: Rian Rietveld
+*	Plugin URI: http://genesis-accessible.org/
+*	License: GPLv2 or later
 */
 
 //* Modifying TinyMCE editor to remove items that could mess up WCAG rules, such as semantics and inline styles.

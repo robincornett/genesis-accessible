@@ -1,7 +1,6 @@
 <?php
 /** skip-links.php
 *	Description: Adds skiplinks after the header to content, menu's and asides.
-*	Version: 1.0.0
 *	Author: Rian Rietveld
 *	Plugin URI: http://genesis-accessible.org/
 *	License: GPLv2 or later

@@ -1,10 +1,9 @@
 <?php
 /** forms.php
-	Description: Adds labels to the search forms
-	Version: 1.0
-	Author: Rian Rietveld
-	Author URI: http://rrwd.nl
-	License: GPLv2 or later
+*	Description: Adds labels to the search forms
+*	Author: Rian Rietveld
+*	Plugin URI: http://genesis-accessible.org/
+*	License: GPLv2 or later
 */
 
 

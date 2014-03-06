@@ -1,6 +1,5 @@
 <?php
 /** widgets.php
-*	Version: 1.0.0
 *	Author: Rian Rietveld
 *	Plugin URI: http://genesis-accessible.org/
 *	License: GPLv2 or later

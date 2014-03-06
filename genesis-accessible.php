@@ -9,7 +9,7 @@
 * Plugin URI: http://genesis-accessible.org/
 * Description: This plugin fixes some accessibility issues with the Genesis Framework.
 * Author: Rian Rietveld
-* Version: 1.0
+* Version: 1.0.0
 * Author URI: http://www.rrwd.nl/
 * License: GPLv2
 * Text Domain: genesis-accessible
