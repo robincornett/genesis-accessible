@@ -13,9 +13,7 @@
 add_action ( 'genesis_before_header', 'wpaccgen_skip_links');
 function wpaccgen_skip_links() {
 
-    if ( genesis_get_option( 'genwpacc_skiplinks', 'genwpacc-settings' ) == 0 ) return;
-
-	$site_layout = genesis_site_layout();
+    $site_layout = genesis_site_layout();
 
 	// set defaults
 	$nav = false;
@@ -135,9 +133,6 @@ function wpaccgen_skip_links() {
 
 add_action( 'wp_enqueue_scripts', 'genwpacc_skiplinks_scripts' );
 function genwpacc_skiplinks_scripts() {
-
-
-	if ( ( 	genesis_get_option( 'genwpacc_skiplinks', 'genwpacc-settings' )  == 0 ) ) return;
 
 	wp_enqueue_script( 'genwpacc-skiplinks-js',  GENWPACC_PLUGIN_URL . '/js/genwpacc-skiplinks.js' );
 

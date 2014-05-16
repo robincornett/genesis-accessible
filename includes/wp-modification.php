@@ -19,30 +19,7 @@ function genwpacc_read_more_link() {
 }
 
 
-/*
-Description: Removes all title tags from images and links in posts.
-Based on code from Ivan Glauser, http://www.glauserconsulting.com */
 
-// check for Joe Dolson's plugin
-if ( !function_exists( 'wpa_image_titles' ) &&  get_option( 'wpa_image_titles' ) != 'on' )
-	add_filter( 'the_content', 'genwpacc_remove_title_attr', 100 );
-
-add_filter( 'genesis_footer_output', 'genwpacc_remove_title_attr', 100 );
-
-function genwpacc_remove_title_attr( $text ) {
-
-    // Get all title="..." tags from the html.
-    $result = array();
-    preg_match_all('|title="[^"]*"|U', $text, $result);
-
-    // Replace all occurances with an empty string.
-    foreach($result[0] as $title_attr)
-    {
-        $text = str_replace($title_attr, '', $text);
-    }
-
-    return $text;
-}
 
 
 ?>

@@ -6,7 +6,6 @@
 *	License: GPLv2 or later
 */
 
-
 //* Modify the header URL
 //* remove title attribute from the link
 add_filter( 'genesis_seo_title', 'wpaccgen_genesis_seo_title', 10, 3 );
@@ -23,8 +22,8 @@ function wpaccgen_genesis_seo_title( $title, $inside, $wrap )  {
 
 
 /* Remove title attribute form the breadcrumbs */
-add_filter ( 'genesis_breadcrumb_link', 'wpaccgen_ggenesis_breadcrumb_link', 10, 4 );
-function wpaccgen_ggenesis_breadcrumb_link( $link, $url, $title, $content ) {
+add_filter ( 'genesis_breadcrumb_link', 'wpaccgen_genesis_breadcrumb_link', 10, 4 );
+function wpaccgen_genesis_breadcrumb_link( $link, $url, $title, $content ) {
     $link = sprintf( '<a href="%s">%s</a>', esc_attr( $url ), esc_html( $content ) );
 	return $link;
 }
@@ -34,9 +33,8 @@ Based on code from Ivan Glauser, http://www.glauserconsting.com
 The WordPress filters may become become redundant in future releases of WordPress, I hope the Genesis filters too */
 
 add_filter( 'the_content', 'wpaccgen_remove_title_attr', 1000 );
-add_filter( 'image_send_to_editor', 'wpaccgen_remove_title_attr', 1000 );
-add_filter( 'post_thumbnail_html', 'wpaccgen_remove_title_attr', 1000 );
-add_filter( 'wp_get_attachment_image', 'wpaccgen_remove_title_attr', 1000 );
+//add_filter( 'image_send_to_editor', 'wpaccgen_remove_title_attr', 1000 ); // in core
+//add_filter( 'post_thumbnail_html', 'wpaccgen_remove_title_attr', 1000 );  // in code
 add_filter( 'genesis_get_image', 'wpaccgen_remove_title_attr', 1000 );
 add_filter( 'genesis_footer_output', 'wpaccgen_remove_title_attr', 1000 );
 add_filter( 'wp_list_categories', 'wpaccgen_remove_title_attr', 1000 );

@@ -14,7 +14,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Do you need an accessible WordPress website right out of the box?
 Take a look at Leiden, an accessible child theme for the Genesis Framework and this plugin Genesis Accessible.
 
-Leiden and Genesis Accessible together provide you with a WCAG 2.0 AA accessible WordPress website.
+Leiden and Genesis Accessible together provide you with a WCAG 2.0 AA accessible-ready WordPress website.
 
 == So what do you need ==
 

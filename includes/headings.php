@@ -1,6 +1,6 @@
 <?php
 /** headings.php
-*	Description: Fixes accessibility issues with the headings
+*	Description: Fixes accessibility issues with the headings semantics
 *	Author: Rian Rietveld
 *	Plugin URI: http://genesis-accessible.org/
 *	License: GPLv2 or later
@@ -34,5 +34,7 @@ function wpaccgen_genesis_register_sidebar_defaults( $args ) {
 
     return $args;
 }
+
+// disable HTML5 headings strcuture
 
 ?>
