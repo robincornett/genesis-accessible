@@ -10,7 +10,6 @@
 	License URI: http://www.opensource.org/licenses/gpl-license.php
 */
 
-
 .screen-reader-text,
 .screen-reader-text span,
 .search-form label {
@@ -21,7 +20,6 @@
 	width: 1px;
 	overflow: hidden;
 }
-
 
 .screen-reader-shortcut {
 	position: absolute;
@@ -46,19 +44,8 @@
 	box-shadow: 0 0 2px 2px rgba(0,0,0,.6);
 }
 
-.genwpacc_-genesis-skip-link li {
+.genwpacc-genesis-skip-link li {
 	height: 0;
 	width: 0;
 	list-style: none;
-
-}
-/* Display search button */
-.search-form input[type="search"] {
-	width: auto;
-	margin-right: 10px;
-}
-
-/* Display outline on focus */
-a:focus {
-	border: 1px solid #333;
 }

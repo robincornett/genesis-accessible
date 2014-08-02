@@ -24,7 +24,6 @@ function genwpacc_skip_links() {
 
 
    	//  navigation?
-   	echo "menu-primary".has_nav_menu('menu-primary');
    	if ( genesis_get_option( 'menu-primary' ) == '1' || has_nav_menu( 'primary' ) )
    		$nav = true;
 	if ( genesis_get_option( 'menu-secondary' ) == '1' || has_nav_menu( 'secondary' ) )
@@ -118,7 +117,7 @@ function genwpacc_skip_links() {
 
     echo '<h2 class="screen-reader-text">'. __( 'Skip links', GENWPACC_DOMAIN ) .'</h2>' . "\n";
 
-	echo '<ul class="genwpacc_genesis-skip-link" aria-label="'. __( 'Skip links', GENWPACC_DOMAIN ) .'">' . "\n";
+	echo '<ul class="genwpacc-genesis-skip-link" aria-label="'. __( 'Skip links', GENWPACC_DOMAIN ) .'">' . "\n";
 
     if ($nav) echo '  <li><a href="#genwpacc-genesis-nav" class="screen-reader-shortcut">'. __( 'Jump to main navigation', GENWPACC_DOMAIN ) .'</a></li>' . "\n";
 
