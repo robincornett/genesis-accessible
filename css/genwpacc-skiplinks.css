@@ -46,7 +46,7 @@
 	box-shadow: 0 0 2px 2px rgba(0,0,0,.6);
 }
 
-.wpacc-genesis-skip-link li {
+.genwpacc_-genesis-skip-link li {
 	height: 0;
 	width: 0;
 	list-style: none;
@@ -59,7 +59,6 @@
 }
 
 /* Display outline on focus */
-:focus {
-	color: #333;
+a:focus {
 	border: 1px solid #333;
 }
