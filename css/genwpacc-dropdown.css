@@ -15,7 +15,7 @@
 }
 
 .menu .menu-item > a:focus + ul.sub-menu,
-.menu .menu-item.wpacc-hover > ul.sub-menu {
+.menu .menu-item.genwpacc-hover > ul.sub-menu {
 	left: auto;
 	opacity: 1;
 }

@@ -1,25 +1,59 @@
 /*  genesis-accessible Dropdown Menu JavaScript
 
-	Version: 1.0
+	Version: 1.1.0
 
 	License: GPL-2.0+
 	License URI: http://www.opensource.org/licenses/gpl-license.php
 
 */
 
-( function($) {
+var genacc = ( function( $ ) {
+	'use strict';
 
-	$('.menu li').hover(
-		function(){$(this).addClass("wpacc-hover");},
-		function(){$(this).delay('250').removeClass("wpacc-hover");}
-	);
+	/**
+	 * Add class to menu item on hover.
+	 *
+	 * @since 1.1.0
+	 */
+	var menuItemEnter = function() {
+		$( this ).addClass( 'genwpacc-hover' );
+	},
 
-	$('.menu li a').on('focus blur',
-		function(){$(this).parents(".menu-item").toggleClass("wpacc-hover");}
-	);
+	/**
+	 * After a short delay, remove a class when mouse leaves menu item.
+	 *
+	 * @since 1.1.0
+	 */
+	menuItemLeave = function() {
+		$( this ).delay( '250' ).removeClass( 'genwpacc-hover' );
+	},
 
-	}
+	/**
+	 * Toggle menu item class when a link fires a focus or blur event.
+	 *
+	 * @since 1.0.0
+	 */
+	menuItemToggleClass = function() {
+		$( this ).parents( '.menu-item' ).toggleClass( 'genwpacc-hover' );
+	},
 
-	(jQuery)
+	/**
+	 * Bind behaviour to events.
+	 *
+	 * @since 1.1.0
+	 */
+	ready = function() {
+		$( '.menu li' )
+			.on( 'mouseenter.genwpacc', menuItemEnter )
+			.on( 'mouseleave.genwpacc', menuItemLeave )
+			.find( 'a' )
+			.on( 'focus.wpacc blur.genwpacc', menuItemToggleClass );
+	};
 
-);
+	// Only expose the ready function to the world
+	return {
+		ready: ready
+	};
+})( jQuery );
+
+jQuery( genacc.ready );
