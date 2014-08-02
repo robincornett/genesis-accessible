@@ -41,9 +41,14 @@ Look for support and documentation on http://genesis-accessible.org
 == Changelog ==
 
 = 1.1.0 =
+* Support for Genesis 2.1
 * Removed jump to search from skiplinks
-* Renamed classes prefix skip-links into genwpacc for consistency.
-*
+* Renamed classes prefix skip-links to genwpacc for consistency
+* Moved skip-links inside the header to improve the HTML5 outline
+* Added aria-label="Skip links" to the ul containing the skip links
+* Moved the H2 Main navigation inside the nav class="nav-primary ...
+* Rewrite dropdown JS to use module pattern, props to Gary Jones
+* Removed .search-form and :focus from genwpacc-skiplinks.css → theme related, available in child theme Leiden
 * Bugfixes
 
 = 1.0.0 =
