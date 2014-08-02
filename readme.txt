@@ -1,10 +1,10 @@
 === Genesis Accessible ===
-Contributors: rianrietveld
+Contributors: rianrietveld, garyj
 Plugin website: http://genesis-accessible.org
 Tags: Genesis, Accessible, Accessibility, a11y, WCAG, Web Standards
 Requires at least: 3.8
-Tested up to: 3.8.1
-Stable tag: 1.0.0
+Tested up to: 3.9.1
+Stable tag: 1.1.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -39,6 +39,12 @@ Leiden and Genesis Accessible together provide you with a WCAG 2.0 AA accessible
 Look for support and documentation on http://genesis-accessible.org
 
 == Changelog ==
+
+= 1.1.0 =
+* Removed jump to search from skiplinks
+* Renamed classes prefix skip-links into genwpacc for consistency.
+*
+* Bugfixes
 
 = 1.0.0 =
 * First release
