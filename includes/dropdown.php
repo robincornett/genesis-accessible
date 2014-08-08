@@ -15,5 +15,4 @@ function genwpacc_dropdown_scripts() {
 	wp_enqueue_style('genwpacc-dropdown-css');
 }
 
-
 ?>
