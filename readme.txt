@@ -3,7 +3,7 @@ Contributors: rianrietveld, garyj
 Plugin website: http://genesis-accessible.org
 Tags: Genesis, Accessible, Accessibility, a11y, WCAG, Web Standards
 Requires at least: 3.8
-Tested up to: 3.9.1
+Tested up to: 3.9.2
 Stable tag: 1.1.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -18,10 +18,12 @@ Leiden and Genesis Accessible together provide you with a WCAG 2.0 AA accessible
 
 = So what do you need =
 
-- WordPress: Well, First of all: have a recent version [WordPress](http://www.wordpress.org) installed, preferably version 3.8 or higher. Also take a look at the [requirements for WordPress](http://wordpress.org/about/requirements/)
+- WordPress: Well, First of all: have a recent version [WordPress](http://www.wordpress.org) installed, preferably version 3.9 or higher. Also take a look at the [requirements for WordPress](http://wordpress.org/about/requirements/)
 - Genesis Framework: The Leiden child theme and the plugin Genesis Accessible are written for the Genesis framework version 2.0 or higher. This excellent framework is not free, but doesn’t cost much and is totally worth the money. You can buy and download it at studiopress.com, you only need the [basic framework](http://my.studiopress.com/themes/genesis/).
 - This plugin Genesis Accessible
 - The Genesis child theme [Leiden](https://github.com/RRWD/leiden/archive/master.zip)
+
+Look for sdocumentation on http://genesis-accessible.org
 
 == Installation ==
 
@@ -39,14 +41,22 @@ Leiden and Genesis Accessible together provide you with a WCAG 2.0 AA accessible
 - To add an H1 on archives for tags: Go to the Dashboard to Posts → Tags. Edit the tag and fill out the Archive Headline.
 - Go to the Dashboard to Genesis → SEO Settings →  Homepage Settings →  Which text would you like to be wrapped in h1 tags? Select Site Title.
 
-== Support and documentation ==
+Look for documentation on http://genesis-accessible.org
 
-Look for support and documentation on http://genesis-accessible.org
+== FAQ ==
+
+= Support and documentation =
+
 [FAQ](http://genesis-accessible.org/documentation/faq/)
+
+Look for documentation on http://genesis-accessible.org
 
 == Changelog ==
 
 = 1.1.0 =
+
+Release date: August 8, 2014
+
 * Support for Genesis 2.1
 * Removed jump to search from skiplinks
 * Renamed classes prefix skip-links to genwpacc for consistency
