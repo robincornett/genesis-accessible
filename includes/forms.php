@@ -9,7 +9,6 @@
 //* Replace the search form, function adds a real label and an id for the search input field
 //* Based on the genesis_search_form with Genesis 2.0.2, keeps the filters
 
-remove_filter( 'get_search_form', 'genesis_search_form', 20 );
 add_filter( 'get_search_form', 'wpaccgen_get_search_form_uniqueid', 20 );
 
 /**

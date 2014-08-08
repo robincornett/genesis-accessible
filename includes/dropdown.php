@@ -4,7 +4,6 @@
 	Author: Rian Rietveld
 	Plugin URI: http://genesis-accessible.org/
 	License: GPLv2 or later
-	Version 1.0.1
 */
 
 add_action( 'wp_enqueue_scripts', 'genwpacc_dropdown_scripts' );
