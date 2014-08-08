@@ -115,9 +115,9 @@ function genwpacc_skip_links() {
 
    	?> <!-- skiplinks --><?php
 
-    echo '<h2 class="screen-reader-text">'. __( 'Skip links', GENWPACC_DOMAIN ) .'</h2>' . "\n";
+    echo '<h2 id="genwpacc-skip-links" class="screen-reader-text">'. __( 'Skip links', GENWPACC_DOMAIN ) .'</h2>' . "\n";
 
-	echo '<ul class="genwpacc-genesis-skip-link" aria-label="'. __( 'Skip links', GENWPACC_DOMAIN ) .'">' . "\n";
+	echo '<ul class="genwpacc-genesis-skip-link" aria-labeled-by="genwpacc-skip-links">' . "\n";
 
     if ( $nav ) echo '  <li><a href="#genwpacc-genesis-nav" class="screen-reader-shortcut">'. __( 'Jump to main navigation', GENWPACC_DOMAIN ) .'</a></li>' . "\n";
 
