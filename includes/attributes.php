@@ -9,7 +9,7 @@
 
 /* Remove all title tags from images and links in posts.
 Based on code from Ivan Glauser, http://www.glauserconsting.com
-This list of filters is getting shorter with every new release WordPress and Genesis */
+This list of filter is getting shorter with every new release WordPress and Genesis */
 
 add_filter( 'the_content', 'wpaccgen_remove_title_attr', 1000 );
 add_filter( 'genesis_get_image', 'wpaccgen_remove_title_attr', 1000 );
