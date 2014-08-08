@@ -23,7 +23,7 @@ Leiden and Genesis Accessible together provide you with a WCAG 2.0 AA accessible
 - This plugin Genesis Accessible
 - The Genesis child theme [Leiden](https://github.com/RRWD/leiden/archive/master.zip)
 
-Look for sdocumentation on http://genesis-accessible.org
+Look for documentation on http://genesis-accessible.org
 
 == Installation ==
 
@@ -70,4 +70,7 @@ Release date: August 8, 2014
 * Bugfixes
 
 = 1.0.0 =
+
+Release date: May 17, 2014
+
 * First release
