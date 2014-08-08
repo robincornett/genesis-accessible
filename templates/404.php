@@ -65,3 +65,4 @@ function genwpacc_404() {
 }
 
 genesis();
+?>

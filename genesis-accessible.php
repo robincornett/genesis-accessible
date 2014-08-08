@@ -22,7 +22,8 @@
  *
  * @since 1.0.0
  */
-define( 'GENWPACC_VERSION','0.1.0' );
+
+define( 'GENWPACC_VERSION','1.1.0' );
 
 if ( ! defined( 'GENWPACC_BASE_FILE' ) )
     define( 'GENWPACC_BASE_FILE', __FILE__ );
@@ -51,54 +52,37 @@ load_plugin_textdomain( 'genesis-accessible', false, 'genesis-accessible/languag
 
 
 register_activation_hook( __FILE__, 'genwpacc_activation_check' );
+
 /**
  * Checks for activated Genesis Framework and its minimum version before allowing plugin to activate
  *
  * @author Nathan Rice, Remkus de Vries. adjusted by Rian Rietveld for this plugin
  * @uses accessible_activation_check()
- * @since 1.0.0
+ * @since 1.0
  */
 function genwpacc_activation_check() {
 
-	$latest = '2.0';
+	// Find Genesis Theme Data
+    $theme = wp_get_theme( 'genesis' );
 
-	$theme_info = get_theme_data( get_template_directory() . '/style.css' );
+    // Get the version
+    $version = $theme->get( 'Version' );
 
+    // Set what we consider the minimum Genesis version
+    $minimum_genesis_version = '2.0';
+
+	// Restrict activation to only when the Genesis Framework is activated
 	if ( basename( get_template_directory() ) != 'genesis' ) {
 		deactivate_plugins( plugin_basename( __FILE__ ) );  // Deactivate ourself
 		wp_die( sprintf( __( 'Whoa.. the Genesis Accessible plugin only works, really, when you have installed the %1$sGenesis Framework%2$s', GENWPACC_DOMAIN ), '<a href="http://www.shareasale.com/r.cfm?b=346198&u=629895&m=28169&urllink=&afftrack=">Genesis Framework</a>', '</a>' ) );
 	}
 
-	$version = genwpacc_version_check( $theme_info['Version'], 3 );
-
-	if ( version_compare( $version, $latest, '<' ) ) {
-		deactivate_plugins( plugin_basename( __FILE__ ) );  // Deactivate ourself
+	// Set a minimum version of the Genesis Framework to be activated on
+    if ( version_compare( $version, $minimum_genesis_version, '<' ) ) {
+        deactivate_plugins( plugin_basename( __FILE__ ) );  // Deactivate ourself
 		wp_die( sprintf( __( 'Uhm, the thing of it is, you kinda need the %1$sGenesis Framework %2$s%3$s or greater for these plugin to make any sense.', GENWPACC_DOMAIN ), '<a href="http://www.shareasale.com/r.cfm?b=346198&u=629895&m=28169&urllink=&afftrack=">Genesis Framework</a>', $latest, '</a>' ) );
 	}
-}
 
-
-/**
- * Used to cutoff a string to a set length if it exceeds the specified length
- *
- * @author Nick Croft
- * @link http://designsbynickthegeek.com/
- *
- * @since 1.0.0
- * @param string $str Any string that might need to be shortened
- * @param string $length Any whole integer
- * @return string
- */
-function genwpacc_version_check( $str, $length=10 ) {
-
-	if ( strlen( $str ) > $length ) {
-		return substr( $str, 0, $length );
-
-	} else {
-		$res = $str;
-	}
-
-	return $res;
 }
 
 /**
@@ -106,7 +90,6 @@ function genwpacc_version_check( $str, $length=10 ) {
  *
  * @since 1.0.0
  */
-
 
 //* Include plugin admin files and files per option
 add_action( 'genesis_init', 'genwpacc_genesis_init', 12 );

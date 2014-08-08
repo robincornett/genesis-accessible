@@ -192,3 +192,4 @@ function genwpacc_theme_settings() {
 	global $_genwpacc_theme_settings;
 	$_genwpacc_theme_settings = new Genesis_Accessible_Theme_Settings;
 }
+?>

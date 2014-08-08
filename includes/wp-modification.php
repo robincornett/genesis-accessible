@@ -18,8 +18,4 @@ function genwpacc_read_more_link() {
 	return '...<br /> <a href="'. get_permalink() .'" class="more-link">' . __( 'Read more', 'genesis' ) . '<span class="more-link-title"> ' . __( 'about', GENWPACC_DOMAIN ) . " " . get_the_title() . "</span></a>";
 }
 
-
-
-
-
 ?>
