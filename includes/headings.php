@@ -63,5 +63,3 @@ function genwpacc_genesis_register_sidebar_defaults( $args ) {
 
     return $args;
 }
-
-?>
