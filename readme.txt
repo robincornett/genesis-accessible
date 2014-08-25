@@ -1,10 +1,10 @@
 === Genesis Accessible ===
 Contributors: rianrietveld, garyj
 Plugin website: http://genesis-accessible.org
-Tags: Genesis, Accessible, Accessibility, a11y, WCAG, Web Standards
+Tags: Genesis, Accessible, Accessibility, a11y, WCAG, WCAG 2.0 AA, Web Standards
 Requires at least: 3.8
 Tested up to: 3.9.2
-Stable tag: 1.1.0
+Stable tag: 1.1.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -19,7 +19,7 @@ Leiden and Genesis Accessible together provide you with a WCAG 2.0 AA accessible
 = So what do you need =
 
 - WordPress: Well, First of all: have a recent version [WordPress](http://www.wordpress.org) installed, preferably version 3.9 or higher. Also take a look at the [requirements for WordPress](http://wordpress.org/about/requirements/)
-- Genesis Framework: The Leiden child theme and the plugin Genesis Accessible are written for the Genesis framework version 2.0 or higher. This excellent framework is not free, but doesn’t cost much and is totally worth the money. You can buy and download it at studiopress.com, you only need the [basic framework](http://my.studiopress.com/themes/genesis/).
+- Genesis Framework: The Leiden child theme and the plugin Genesis Accessible are written for the Genesis framework version 2.0 or higher. This excellent framework is not free, but doesn’t cost much and is totally worth the money. You can buy and download it at studiopress.com, you only need the [basic framework](http://www.shareasale.com/r.cfm?b=346198&u=629895&m=28169&urllink=&afftrack=).
 - This plugin Genesis Accessible
 - The Genesis child theme [Leiden](https://github.com/RRWD/leiden/archive/master.zip)
 
@@ -28,7 +28,7 @@ Look for documentation on http://genesis-accessible.org
 == Installation ==
 
 - Install WordPress (http://codex.wordpress.org/Installing_WordPress) or download it in the version of your language.
-- Install the [Genesis Framework](http://my.studiopress.com/themes/genesis/) version 2.0.1 or higher
+- Install the [Genesis Framework](http://www.shareasale.com/r.cfm?b=346198&u=629895&m=28169&urllink=&afftrack=) version 2.0.1 or higher
 - If your site is in another language than English: install and activate the plugin [Genesis Translations](http://wordpress.org/plugins/genesis-translations/)
 - Install and activate the Genesis child theme Leiden
 - Install and activate the plugin Genesis Accessible
@@ -43,7 +43,7 @@ Look for documentation on http://genesis-accessible.org
 
 Look for documentation on http://genesis-accessible.org
 
-== FAQ ==
+== Frequently Asked Questions ==
 
 = Support and documentation =
 
@@ -51,7 +51,17 @@ Look for documentation on http://genesis-accessible.org
 
 Look for documentation on http://genesis-accessible.org
 
+
 == Changelog ==
+
+= 1.1.1 =
+
+Release date: August 25, 2014
+
+* Hebrew translation by Nir Rosenbaum
+* Spanish translation by Andrew Kurtis, WebHostingHub
+* Added genesis-accessible.pot
+* Minor bugfixes
 
 = 1.1.0 =
 
@@ -61,7 +71,6 @@ Release date: August 8, 2014
 * Removed jump to search from skiplinks
 * Renamed classes prefix skip-links to genwpacc for consistency
 * Moved skip-links inside the header to improve the HTML5 outline
-* Added aria-label="Skip links" to the ul containing the skip links
 * Moved the H2 Main navigation inside the nav class="nav-primary ...
 * Rewrite dropdown JS to use module pattern, props to Gary Jones
 * Removed .search-form and :focus from genwpacc-skiplinks.css → theme related, available in child theme Leiden
