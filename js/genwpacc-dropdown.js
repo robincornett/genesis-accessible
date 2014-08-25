@@ -47,7 +47,7 @@ var genacc = ( function( $ ) {
 			.on( 'mouseenter.genwpacc', menuItemEnter )
 			.on( 'mouseleave.genwpacc', menuItemLeave )
 			.find( 'a' )
-			.on( 'focus.wpacc blur.genwpacc', menuItemToggleClass );
+			.on( 'focus.genwpacc blur.genwpacc', menuItemToggleClass );
 	};
 
 	// Only expose the ready function to the world
