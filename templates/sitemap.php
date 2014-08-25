@@ -53,4 +53,3 @@ function genwpacc_page_archive_content() { ?>
 }
 
 genesis();
-?>

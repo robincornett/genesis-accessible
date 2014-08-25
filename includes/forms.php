@@ -50,5 +50,3 @@ function wpaccgen_get_search_form_uniqueid() {
 	return apply_filters( 'genesis_search_form', $form, $search_text, $button_text, $label );
 
 }
-
-?>

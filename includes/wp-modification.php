@@ -17,5 +17,3 @@ function genwpacc_read_more_link() {
 	// http://wpfab.com/edit-the-read-more-link-on-blog-or-content-archive-pages/
 	return '...<br /> <a href="'. get_permalink() .'" class="more-link">' . __( 'Read more', 'genesis' ) . '<span class="more-link-title"> ' . __( 'about', GENWPACC_DOMAIN ) . " " . get_the_title() . "</span></a>";
 }
-
-?>
