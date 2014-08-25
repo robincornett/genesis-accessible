@@ -29,5 +29,3 @@ function wpaccgen_remove_title_attr( $text ) {
 
     return $text;
 }
-
-?>
