@@ -15,4 +15,3 @@ function genwpacc_remove_genesis_widgets() {
     unregister_widget( 'Genesis_User_Profile_Widget' );
     unregister_widget( 'Genesis_Featured_Post' );
 }
-?>
