@@ -180,8 +180,6 @@ class Genesis_Accessible_Theme_Settings extends Genesis_Admin_Boxes {
 
 }
 
-
-
 add_action( 'genesis_admin_menu', 'genwpacc_theme_settings' );
 /**
  * Add the Theme Settings Page
