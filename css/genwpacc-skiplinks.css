@@ -1,51 +1,56 @@
-/*
-	genwpacc-skiplinks-style.css
-	Description: Hide skiplink except from screen readers and keyboard users
-	Part of the plugin genesis-accessible
-	Author: Rian Rietveld
-	Plugin URI: http://genesis-accessible.org/
-	Version: 1.0.0
+/**
+ * genwpacc-skiplinks-style.css
+ * Description: Hide skiplink except from screen readers and keyboard users
+ * Part of the plugin genesis-accessible
+ * Author: Rian Rietveld
+ * Plugin URI: http://genesis-accessible.org/
+ * Version: 2.0.0
+ * License: GPL-2.0+
+ * License URI: http://www.opensource.org/licenses/gpl-license.php
+ * /
 
-	License: GPL-2.0+
-	License URI: http://www.opensource.org/licenses/gpl-license.php
-*/
-
+/* Text meant only for screen readers */
 .screen-reader-text,
 .screen-reader-text span,
-.search-form label {
-	position: absolute;
-	left: -1000em;
-	top: -1000em;
+.screen-reader-shortcut,
+.search-form label,
+.genesis-sidebar-title  {
+	position: absolute !important;
+	clip: rect(0, 0, 0, 0);
 	height: 1px;
 	width: 1px;
+	border: 0;
 	overflow: hidden;
 }
 
-.screen-reader-shortcut {
-	position: absolute;
-	top: -1000em;
-}
-
-.screen-reader-shortcut:focus {
-	left: 1em;
-	top: 1em;
+.screen-reader-text:focus,
+.screen-reader-shortcut:focus,
+.genesis-nav-menu .search input[type="submit"]:focus,
+.widget_search input[type="submit"]:focus  {
+	clip: auto !important;
 	height: auto;
 	width: auto;
 	display: block;
 	font-size: 1em;
 	font-weight: bold;
 	padding: 15px 23px 14px;
-	background: #fff;
 	color: #333;
-	z-index: 100000;
-	line-height: normal;
+	background: #fff;
+	z-index: 100000; /* Above WP toolbar. */
 	text-decoration: none;
-	-webkit-box-shadow: 0 0 2px 2px rgba(0,0,0,.6);
 	box-shadow: 0 0 2px 2px rgba(0,0,0,.6);
 }
 
-.genwpacc-genesis-skip-link li {
+/* Skip link
+--------------------------------------------- */
+.genesis-skip-link li {
 	height: 0;
 	width: 0;
 	list-style: none;
+}
+
+/* Display outline on focus */
+:focus {
+	color: #333;
+	outline: #ccc solid 1px;
 }

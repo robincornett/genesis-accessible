@@ -6,133 +6,168 @@
 *	License: GPLv2 or later
 */
 
-/** Add skiplinks for screen readers and keyboard navigation
+
+add_action ( 'genesis_before_header', 'genwpacc_skip_links', 5);
+
+/** Add skiplinks for screen readers and keyboard navigation for Genesis version < 2.2
 *
 * @since 1.0.0
 */
-add_action ( 'genesis_header', 'genwpacc_skip_links', 5);
 function genwpacc_skip_links() {
 
-    $site_layout = genesis_site_layout();
+	// Call function to add IDs to the markup
+	genwpacc_skiplinks_markup();
 
-	// set defaults
-	$nav = false;
-	$nav2 = false;
-    $sidebar = false;
-    $sidebar_alt = false;
-	$footer = false;
+	// Determine which skip links are needed
+	$links = array();
 
-
-   	//  navigation?
-   	if ( genesis_get_option( 'menu-primary' ) == '1' || has_nav_menu( 'primary' ) )
-   		$nav = true;
-	if ( genesis_get_option( 'menu-secondary' ) == '1' || has_nav_menu( 'secondary' ) )
-		$nav2 = true;
-
-   	// sidebar?
-	if ( $site_layout == 'sidebar-sidebar-content' || $site_layout == 'content-sidebar-sidebar' || $site_layout == 'sidebar-content-sidebar')  {
-		$sidebar = true;
-    	$sidebar_alt = true;
-   	}
-    if ( $site_layout == 'sidebar-content' || $site_layout == 'content-sidebar' )  $sidebar = true;
-
-
-    // footer widgets?
-    if ( current_theme_supports( 'genesis-footer-widgets' ) == '1' && is_active_sidebar( 'footer-1' ) ) {
-    	$footer_widgets = get_theme_support( 'genesis-footer-widgets' );
-    	if ( isset( $footer_widgets[0] ) && is_numeric( $footer_widgets[0] ) )
-    		$footer = true;
-    }
-
-
-
-	// add id's to the elements to jump to
-	// genesis_markup() http://docs.garyjones.co.uk/genesis/2.0.0/source-function-genesis_parse_attr.html#77-100
-	// https://gist.github.com/salcode/7164690
-
-	if ( function_exists( 'genesis_markup' ) ) {
-
-		add_filter( 'genesis_attr_nav-primary', 'genwpacc_genesis_attr_nav_primary' );
-		function genwpacc_genesis_attr_nav_primary( $attributes ) {
-    		$attributes['id'] = 'genwpacc-genesis-nav';
-    		return $attributes;
-		}
-
-		add_filter( 'genesis_attr_nav-secondary', 'genwpacc_genesis_attr_nav_secondary' );
-		function genwpacc_genesis_attr_nav_secondary( $attributes ) {
-    		$attributes['id'] = 'genwpacc-genesis-secondary';
-    		return $attributes;
-		}
-
-		add_filter( 'genesis_attr_content', 'genwpacc_genesis_attr_content' );
-		function genwpacc_genesis_attr_content( $attributes ) {
-    		$attributes['id'] = 'genwpacc-genesis-content';
-    		return $attributes;
-		}
-
-		add_filter( 'genesis_attr_sidebar-primary', 'genwpacc_genesis_attr_sidebar_primary' );
-		function genwpacc_genesis_attr_sidebar_primary( $attributes ) {
-    		$attributes['id'] = 'genwpacc-sidebar-primary';
-    		return $attributes;
-		}
-
-		add_filter( 'genesis_attr_sidebar-secondary', 'genwpacc_genesis_attr_sidebar_secondary' );
-		function genwpacc_genesis_attr_sidebar_secondary( $attributes ) {
-    		$attributes['id'] = 'genwpacc-sidebar-secondary';
-    		return $attributes;
-		}
-
-		if ( !function_exists( 'genesis_attr_footer-widgets' ) ) {
-
-			add_filter( 'genesis_attr_footer-widgets', 'genwpacc_genesis_attr_footer_widgets' );
-			function genwpacc_genesis_attr_footer_widgets( $attributes ) {
-
-				if ( ! is_active_sidebar( 'footer-1' ) )
-					return;
-
-				$attributes['id'] = 'genwpacc-genesis-footer-widgets';
-     			return $attributes;
-
-			}
-
-		} else {
-
-			add_filter( 'genesis_attr_footer-widgets', 'genwpacc_genesis_attr_footer_widgets' );
-			function genwpacc_genesis_attr_footer_widgets( $attributes ) {
-
-					if ( ! is_active_sidebar( 'footer-1' ) )
-						return;
-
-    				$attributes['id'] .= 'genwpacc-genesis-footer-widgets';
-    				return $attributes;
-			}
-		}
-
+	if ( has_nav_menu( 'primary' ) ) {
+		$links['genesis-nav-primary'] =  __( 'Skip to primary navigation', 'genesis' );
 	}
 
+	$links['genesis-content'] = __( 'Skip to content', 'genesis' );
 
-    // write HTML, skiplinks in a list with a heading
+	if ( in_array( genesis_site_layout(), array( 'sidebar-content', 'content-sidebar', 'sidebar-sidebar-content', 'sidebar-content-sidebar', 'content-sidebar-sidebar' ) ) ) {
+		$links['genesis-sidebar-primary'] = __( 'Skip to primary sidebar', 'genesis' );
+	}
 
-   	?> <!-- skiplinks --><?php
+	if ( in_array( genesis_site_layout(), array( 'sidebar-sidebar-content', 'sidebar-content-sidebar', 'content-sidebar-sidebar' ) ) ) {
+		$links['genesis-sidebar-secondary'] = __( 'Skip to secondary sidebar', 'genesis' );
+	}
 
-    echo '<h2 class="screen-reader-text">'. __( 'Skip links', GENWPACC_DOMAIN ) .'</h2>' . "\n";
+	if ( current_theme_supports( 'genesis-footer-widgets' ) ) {
+		$footer_widgets = get_theme_support( 'genesis-footer-widgets' );
+		if ( isset( $footer_widgets[0] ) && is_numeric( $footer_widgets[0] ) ) {
+			if ( is_active_sidebar( 'footer-1' ) ) {
+				$links['genesis-footer-widgets'] = __( 'Skip to footer', 'genesis' );
+			}
+		}
+	}
 
-	echo '<ul class="genwpacc-genesis-skip-link">' . "\n";
+	 /**
+	 * Filter the skip links.
+	 *
+	 * @since 2.2.0
+	 *
+	 * @param array $links {
+	 *     Default skiplinks.
+	 *
+	 *     @type string HTML ID attribute value to link to.
+	 *     @type string Anchor text.
+	 * }
+	 */
+	$links = apply_filters( 'genesis_skip_links_output', $links );
 
-    if ( $nav ) echo '  <li><a href="#genwpacc-genesis-nav" class="screen-reader-shortcut">'. __( 'Jump to main navigation', GENWPACC_DOMAIN ) .'</a></li>' . "\n";
+	// write HTML, skiplinks in a list with a heading
+	$skiplinks  =  '<section>';
+	$skiplinks .=  '<h2 class="screen-reader-text">'. __( 'Skip links', 'genesis' ) .'</h2>';
+	$skiplinks .=  '<ul class="genesis-skip-link">';
 
-	if ( $nav2 ) echo '  <li><a href="#genwpacc-genesis-secondary" class="screen-reader-shortcut">'. __( 'Jump to sub navigation', GENWPACC_DOMAIN ) .'</a></li>' . "\n";
+	// Add markup for each skiplink
+	foreach ($links as $key => $value) {
+		$skiplinks .=  '<li><a href="' . esc_url( '#' . $key ) . '" class="screen-reader-shortcut"> ' . $value . '</a></li>';
+	}
 
-	echo '  <li><a href="#genwpacc-genesis-content" class="screen-reader-shortcut">'. __( 'Jump to content', GENWPACC_DOMAIN ) .'</a></li>' . "\n";
+	$skiplinks .=  '</ul>';
+	$skiplinks .=  '</section>' . "\n";
 
-	if ( $sidebar ) echo '  <li><a href="#genwpacc-sidebar-primary" class="screen-reader-shortcut">'. __( 'Jump to primary sidebar', GENWPACC_DOMAIN ) .'</a></li>' . "\n";
+	echo $skiplinks;
+}
 
-	if ( $sidebar_alt ) echo '  <li><a href="#genwpacc-sidebar-secondary" class="screen-reader-shortcut">'. __( 'Jump to secondary sidebar', GENWPACC_DOMAIN ) .'</a></li>' . "\n";
 
-	if ( $footer ) echo '  <li><a href="#genwpacc-genesis-footer-widgets" class="screen-reader-shortcut">'. __( 'Jump to footer', GENWPACC_DOMAIN ) .'</a></li>' . "\n";
+/**
+ * Add ID markup to the elements to jump to  for Genesis version < 2.2
+ *
+ * @since 2.0.0
+ *
+ * @link https://gist.github.com/salcode/7164690
+ * @link genesis_markup() http://docs.garyjones.co.uk/genesis/2.0.0/source-function-genesis_parse_attr.html#77-100
+ *
+ */
+function genwpacc_skiplinks_markup() {
 
-	echo '</ul>' . "\n";
+	add_filter( 'genesis_attr_nav-primary', 'genwpacc_skiplinks_attr_nav_primary' );
+	add_filter( 'genesis_attr_content', 'genwpacc_skiplinks_attr_content' );
+	add_filter( 'genesis_attr_sidebar-primary', 'genwpacc_skiplinks_attr_sidebar_primary' );
+	add_filter( 'genesis_attr_sidebar-secondary', 'genwpacc_skiplinks_attr_sidebar_secondary' );
+	add_filter( 'genesis_attr_footer-widgets', 'genwpacc_skiplinks_attr_footer_widgets' );
 
+}
+
+/**
+ * Add ID markup to primary navigation
+ *
+ * @since 2.0.0
+ *
+ * @param array $attributes Existing attributes.
+ *
+ * @return $attributes plus id and aria-label
+ *
+ */
+function genwpacc_skiplinks_attr_nav_primary( $attributes ) {
+	$attributes['id'] = 'genesis-nav-primary';
+	$attributes['aria-label'] = __( 'Main navigation', 'genesis' );
+	return $attributes;
+}
+
+/**
+ * Add ID markup to content area
+ *
+ * @since 2.0.0
+ *
+ * @param array $attributes Existing attributes.
+ *
+ * @return $attributes plus id
+ *
+ */
+function genwpacc_skiplinks_attr_content( $attributes ) {
+	$attributes['id'] = 'genesis-content';
+	return $attributes;
+}
+
+/**
+ * Add ID markup to primary sidebar
+ *
+ * @since 2.0.0
+ *
+ * @param array $attributes Existing attributes.
+ *
+ * @return $attributes plus id
+ *
+ */
+function genwpacc_skiplinks_attr_sidebar_primary( $attributes ) {
+	$attributes['id'] = 'genesis-sidebar-primary';
+	return $attributes;
+}
+
+/**
+ * Add ID markup to secondary sidebar
+ *
+ * @since 2.0.0
+ *
+ * @param array $attributes Existing attributes.
+ *
+ * @return $attributes plus id
+ *
+ */
+function genwpacc_skiplinks_attr_sidebar_secondary( $attributes ) {
+	$attributes['id'] = 'genesis-sidebar-secondary';
+	return $attributes;
+}
+
+/**
+ * Add ID markup to footer widget area
+ *
+ * @since 2.0.0
+ *
+ * @param array $attributes Existing attributes.
+ *
+ * @return $attributes plus id
+ *
+ */
+function genwpacc_skiplinks_attr_footer_widgets( $attributes ) {
+	$attributes['id'] = 'genesis-footer-widgets';
+	return $attributes;
 }
 
 add_action( 'wp_enqueue_scripts', 'genwpacc_skiplinks_scripts' );

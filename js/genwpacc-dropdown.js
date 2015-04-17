@@ -1,11 +1,9 @@
-/*  genesis-accessible Dropdown Menu JavaScript
-
-	Version: 1.1.0
-
-	License: GPL-2.0+
-	License URI: http://www.opensource.org/licenses/gpl-license.php
-
-*/
+/**
+ * genesis-accessible Dropdown Menu JavaScript
+ * Version: 1.1.0
+ * License: GPL-2.0+
+ * License URI: http://www.opensource.org/licenses/gpl-license.php
+ */
 
 var genacc = ( function( $ ) {
 	'use strict';
