@@ -1,19 +1,20 @@
-# Copyright (C) 2014 Genesis Accessible
+# Copyright (C) 2015 Genesis Accessible
 # This file is distributed under the same license as the Genesis Accessible package.
 msgid ""
 msgstr ""
-"Project-Id-Version: Genesis Accessible 1.0.1\n"
-"Report-Msgid-Bugs-To: http://wordpress.org/plugins/genesis-accessible/\n"
-"POT-Creation-Date: 2014-05-16 14:47+0100\n"
+"Project-Id-Version: Genesis Accessible 1.1.1\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/support/plugin/genesis-"
+"accessible\n"
+"POT-Creation-Date: 2015-03-26 15:10:05+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2014-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: 2015-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 
 #: admin/accessible-theme-settings.php:29
-#: admin/accessible-theme-settings.php:99
+#: admin/accessible-theme-settings.php:100
 msgid "Genesis - Accessibility Settings"
 msgstr ""
 
@@ -21,133 +22,131 @@ msgstr ""
 msgid "Accessibility Settings"
 msgstr ""
 
-#: admin/accessible-theme-settings.php:98
+#: admin/accessible-theme-settings.php:99
 msgid "Genesis - Accessibility Documentation"
 msgstr ""
 
-#: admin/accessible-theme-settings.php:100
+#: admin/accessible-theme-settings.php:101
 msgid "WordPress - Accessibility Settings"
 msgstr ""
 
-#: admin/accessible-theme-settings.php:113
+#: admin/accessible-theme-settings.php:114
 msgid ""
 "These settings are for the Genesis framework only.<br />Together with the "
 "WordPress setting below, your theme can be a lot more accessible."
-msgstr "."
+msgstr ""
 
-#: admin/accessible-theme-settings.php:117
+#: admin/accessible-theme-settings.php:118
 msgid "Settings for Genesis:"
 msgstr ""
 
-#: admin/accessible-theme-settings.php:120
+#: admin/accessible-theme-settings.php:121
 msgid "Remove title attribute from links"
 msgstr ""
 
-#: admin/accessible-theme-settings.php:123
+#: admin/accessible-theme-settings.php:124
 msgid "Add skiplinks"
 msgstr ""
 
-#: admin/accessible-theme-settings.php:126
+#: admin/accessible-theme-settings.php:127
 msgid "Add CSS for skiplinks"
 msgstr ""
 
-#: admin/accessible-theme-settings.php:129
+#: admin/accessible-theme-settings.php:130
 msgid ""
 "Use a semantic heading structure<br />(Note: Disable also \"Use semantic "
 "HTML5 page and section headings throughout site?\" in the Genesis SEO "
 "Settings)"
 msgstr ""
 
-#: admin/accessible-theme-settings.php:132
+#: admin/accessible-theme-settings.php:133
 msgid ""
 "Add keyboard accessiblility to the dropdown menu<br />(only select this if "
 "you have a dropdown submenu in the main or sub navigation menu)"
 msgstr ""
 
-#: admin/accessible-theme-settings.php:135
+#: admin/accessible-theme-settings.php:136
 msgid "Remove less accessible Genesis widgets"
 msgstr ""
 
-#: admin/accessible-theme-settings.php:151
+#: admin/accessible-theme-settings.php:139
+msgid "Enable accessible 404 template"
+msgstr ""
+
+#: admin/accessible-theme-settings.php:155
 msgid ""
 "These settings are for WordPress itself. If you have installed <a href=\\"
 "\"http://wordpress.org/plugins/wp-accessibility/\\\">WP Accessibility</a> by "
 "Joe Dolson too: don't worry you can use both plugins together."
 msgstr ""
 
-#: admin/accessible-theme-settings.php:154
+#: admin/accessible-theme-settings.php:158
 msgid "Settings for WordPress:"
 msgstr ""
 
-#: admin/accessible-theme-settings.php:157
+#: admin/accessible-theme-settings.php:161
 msgid "Add the post title to the read more links"
 msgstr ""
 
-#: admin/accessible-theme-settings.php:160
+#: admin/accessible-theme-settings.php:164
 msgid "Remove h1 from editor toolbar"
-msgstr "Verwijder de h1 uit de editor toolba"
+msgstr ""
 
-#: admin/accessible-theme-settings.php:176
+#: admin/accessible-theme-settings.php:180
 msgid ""
 "For documentation, help and support please visit <a href=\"http://genesis-"
 "accessible.org/\">genesis-accessible.org</a>."
-msgstr ">."
+msgstr ""
 
-#: genesis-accessible.php:69
-#, php-format
+#: genesis-accessible.php:77
 msgid ""
 "Whoa.. the Genesis Accessible plugin only works, really, when you have "
 "installed the %1$sGenesis Framework%2$s"
 msgstr ""
 
-#: genesis-accessible.php:76
-#, php-format
+#: genesis-accessible.php:83
 msgid ""
 "Uhm, the thing of it is, you kinda need the %1$sGenesis Framework %2$s%3$s "
 "or greater for these plugin to make any sense."
-msgstr "."
+msgstr ""
 
-#: includes/forms.php:30
+#: includes/forms.php:29
 msgid "Search this website"
 msgstr ""
 
-#: includes/forms.php:32
+#: includes/forms.php:31
 msgid "Search"
 msgstr ""
 
-#: includes/headings.php:24
+#: includes/headings.php:39
 msgid "Main navigation"
 msgstr ""
 
-#: includes/skip-links.php:112
+#: includes/skip-links.php:118
 msgid "Skip links"
 msgstr ""
 
-#: includes/skip-links.php:116
+#: includes/skip-links.php:122
 msgid "Jump to main navigation"
 msgstr ""
 
-#: includes/skip-links.php:118
-msgid "Jump to search"
-msgstr ""
-
-#: includes/skip-links.php:120
+#: includes/skip-links.php:124
 msgid "Jump to sub navigation"
 msgstr ""
 
-#: includes/skip-links.php:122
+#: includes/skip-links.php:126
 msgid "Jump to content"
 msgstr ""
 
-#: includes/skip-links.php:124
+#: includes/skip-links.php:128
 msgid "Jump to primary sidebar"
 msgstr ""
 
-#: includes/skip-links.php:126
+#: includes/skip-links.php:130
 msgid "Jump to secondary sidebar"
 msgstr ""
 
-#: includes/skip-links.php:128
+#: includes/skip-links.php:132
 msgid "Jump to footer"
 msgstr ""
 
@@ -164,7 +163,6 @@ msgid "Page not found"
 msgstr ""
 
 #: templates/404.php:25
-#, php-format
 msgid ""
 "The page you are looking for no longer exists. Perhaps you can return back "
 "to the site's <a href=\"%s\">homepage</a> and see if you can find what you "
@@ -193,4 +191,24 @@ msgstr ""
 
 #: templates/404.php:53 templates/sitemap.php:47
 msgid "Recent Posts:"
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+msgid "Genesis Accessible"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+msgid "http://genesis-accessible.org/"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "This plugin fixes some accessibility issues with the Genesis Framework."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Rian Rietveld"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "http://www.rrwd.nl/"
 msgstr ""
