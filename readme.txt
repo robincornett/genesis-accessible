@@ -1,5 +1,5 @@
 === Genesis Accessible ===
-Contributors: rianrietveld, garyj
+Contributors: rianrietveld, GaryJ
 Plugin website: http://genesis-accessible.org
 Tags: Genesis, Accessible, Accessibility, a11y, WCAG, WCAG 2.0 AA, Web Standards
 Requires at least: 3.8
