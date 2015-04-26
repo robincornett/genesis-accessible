@@ -47,6 +47,8 @@ function wpaccgen_get_search_form_uniqueid() {
 
 	if ( genesis_html5() ) {
 
+		$form  = sprintf( '<form %s>', genesis_attr( 'search-form' ) );
+
 		$form .= sprintf(
 				'<meta itemprop="target" content="%s"/><label for="%s">%s</label><input itemprop="query-input" type="search" name="s" id="%s" %s="%s" /><input type="submit" value="%s" /></form>',
 				home_url( '/?s={s}' ),
