@@ -47,7 +47,7 @@ function genwpacc_skip_links() {
 	 /**
 	 * Filter the skip links.
 	 *
-	 * @since 2.2.0
+	 * @since 1.2.0
 	 *
 	 * @param array $links {
 	 *     Default skiplinks.
@@ -78,7 +78,7 @@ function genwpacc_skip_links() {
 /**
  * Add ID markup to the elements to jump to  for Genesis version < 2.2
  *
- * @since 2.0.0
+ * @since 1.2.0
  *
  * @link https://gist.github.com/salcode/7164690
  * @link genesis_markup() http://docs.garyjones.co.uk/genesis/2.0.0/source-function-genesis_parse_attr.html#77-100
@@ -97,7 +97,7 @@ function genwpacc_skiplinks_markup() {
 /**
  * Add ID markup to primary navigation
  *
- * @since 2.0.0
+ * @since 1.2.0
  *
  * @param array $attributes Existing attributes.
  *
@@ -113,7 +113,7 @@ function genwpacc_skiplinks_attr_nav_primary( $attributes ) {
 /**
  * Add ID markup to content area
  *
- * @since 2.0.0
+ * @since 1.2.0
  *
  * @param array $attributes Existing attributes.
  *
@@ -128,7 +128,7 @@ function genwpacc_skiplinks_attr_content( $attributes ) {
 /**
  * Add ID markup to primary sidebar
  *
- * @since 2.0.0
+ * @since 1.2.0
  *
  * @param array $attributes Existing attributes.
  *
@@ -143,7 +143,7 @@ function genwpacc_skiplinks_attr_sidebar_primary( $attributes ) {
 /**
  * Add ID markup to secondary sidebar
  *
- * @since 2.0.0
+ * @since 1.2.0
  *
  * @param array $attributes Existing attributes.
  *
@@ -158,7 +158,7 @@ function genwpacc_skiplinks_attr_sidebar_secondary( $attributes ) {
 /**
  * Add ID markup to footer widget area
  *
- * @since 2.0.0
+ * @since 1.2.0
  *
  * @param array $attributes Existing attributes.
  *

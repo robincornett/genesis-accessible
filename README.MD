@@ -1,10 +1,10 @@
 === Genesis Accessible ===
-Contributors: rianrietveld, garyj
+Contributors: rianrietveld, GaryJ
 Plugin website: http://genesis-accessible.org
 Tags: Genesis, Accessible, Accessibility, a11y, WCAG, WCAG 2.0 AA, Web Standards
 Requires at least: 3.8
-Tested up to: 3.9.2
-Stable tag: 1.1.1
+Tested up to: 4.2
+Stable tag: 1.2.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -27,11 +27,11 @@ Look for documentation on http://genesis-accessible.org
 
 == Installation ==
 
-- Install WordPress (http://codex.wordpress.org/Installing_WordPress) or download it in the version of your language.
+- Install WordPress (http://codex.wordpress.org/Installing_WordPress).
 - Install the [Genesis Framework](http://www.shareasale.com/r.cfm?b=346198&u=629895&m=28169&urllink=&afftrack=) version 2.0.1 or higher
 - If your site is in another language than English: install and activate the plugin [Genesis Translations](http://wordpress.org/plugins/genesis-translations/)
-- Install and activate the Genesis child theme Leiden
-- Install and activate the plugin Genesis Accessible
+- Install and activate the Genesis child theme Leiden [Leiden](https://github.com/RRWD/leiden/archive/master.zip)
+- Install and activate this plugin Genesis Accessible
 - Go in the Dashboard to Genesis → Accessibility Settings and select the options you want to add
 - Go to the Dashboard to Genesis → Theme Settings and select Content Archives: Display post content and Limit content to the amount of characters you want (e.g. 500)
 - Go to the Dashboard to Genesis → SEO Settings and uncheck "Use semantic HTML and section thoughout site?"
@@ -51,8 +51,19 @@ Look for documentation on http://genesis-accessible.org
 
 Look for documentation on http://genesis-accessible.org
 
+Genesis Accessible on [GitHub]https://github.com/RRWD/genesis-accessible
+
 
 == Changelog ==
+
+= 1.2.0 =
+
+Release date: May 4, 2015
+
+* Compatible with Genesis 2.2
+* Several bugfixes
+* With help and contributions from: @littlerchicken (Robin Cornett), @cdils (Carrie Dils), @bramd (Bram Duvigneau), @purplebabyhippo (Angie Vale), @neilgee (Neil Gee) and the #genesiswp Slack community
+
 
 = 1.1.1 =
 
