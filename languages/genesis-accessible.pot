@@ -1,11 +1,11 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Genesis Accessible\n"
-"POT-Creation-Date: 2015-04-30 12:02+0100\n"
-"PO-Revision-Date: 2015-04-30 12:21+0100\n"
+"POT-Creation-Date: 2015-04-30 12:11+0100\n"
+"PO-Revision-Date: 2015-04-30 12:12+0100\n"
 "Last-Translator: Rian Rietveld <rian@rrwd.nl>\n"
 "Language-Team: Rian Rietveld <rian@rrwd.nl>\n"
-"Language: nl_NL\n"
+"Language: en_US\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -22,40 +22,37 @@ msgstr ""
 #: admin/accessible-theme-settings.php:29
 #: admin/accessible-theme-settings.php:100
 msgid "Genesis - Accessibility Settings"
-msgstr "Genesis - Instellingen Toegankelijkheid"
+msgstr ""
 
 #: admin/accessible-theme-settings.php:30
 msgid "Accessibility Settings"
-msgstr "Instellingen Toegankelijkheid"
+msgstr ""
 
 #: admin/accessible-theme-settings.php:99
 msgid "Genesis - Accessibility Documentation"
-msgstr "Genesis - Documentatie Toegankelijkheid"
+msgstr ""
 
 #: admin/accessible-theme-settings.php:101
 msgid "WordPress - Accessibility Settings"
-msgstr "WordPress - Instellingen Toegankelijkheid"
+msgstr ""
 
 #: admin/accessible-theme-settings.php:114
 msgid ""
 "These settings are for the Genesis framework only.<br />Together with the "
 "WordPress setting below, your theme can be a lot more accessible."
 msgstr ""
-"Deze instellingen zijn alleen voor het Genesis Framework.<br />Samen met de "
-"WordPress instellingen hieronder wordt je thema een stuk toegankelijker."
 
 #: admin/accessible-theme-settings.php:118
 msgid "Settings for Genesis:"
-msgstr "Instellingen voor Genesis:"
+msgstr ""
 
 #: admin/accessible-theme-settings.php:123
 msgid "Add skiplinks"
-msgstr "Voeg omzeilende links (skiplinks) toe"
+msgstr ""
 
 #: admin/accessible-theme-settings.php:129
 msgid "Add CSS for screen readers (screen-reader-text) and skiplinks"
 msgstr ""
-"CSS toevoegen voor screen readers (screen-reader-text) en omzeilende links"
 
 #: admin/accessible-theme-settings.php:135
 msgid ""
@@ -63,33 +60,28 @@ msgid ""
 "HTML5 page and section headings throughout site?\" in the Genesis SEO "
 "Settings)"
 msgstr ""
-"Gebruik een semantische heading structuur<br/>(Let op: zet ook \"Gebruik "
-"semantische HTML5 pagina- en sectietitels op de website?\" uit in de Genesis "
-"- SEO Instellingen)"
 
 #: admin/accessible-theme-settings.php:141
 msgid ""
 "Add keyboard accessiblility to the dropdown menu<br />(only select this if "
 "you have a dropdown submenu in the main or sub navigation menu)"
 msgstr ""
-"Voeg toetsenbord toegankelijkheid toe aan het dropdownmenu (kies dit alleen "
-"als je een dropdownmenu hebt in je hoofd- of subnavigatie)"
 
 #: admin/accessible-theme-settings.php:150
 msgid "Remove less accessible Genesis widgets"
-msgstr "Verwijder minder toegankelijke Genesis widgets"
+msgstr ""
 
 #: admin/accessible-theme-settings.php:156
 msgid "Use an accessible 404 page"
-msgstr "Gebruik een toegankelijke pagina 404"
+msgstr ""
 
 #: admin/accessible-theme-settings.php:162
 msgid "Use an accessible sitemap"
-msgstr "Gebruik een toegankelijke sitemap"
+msgstr ""
 
 #: admin/accessible-theme-settings.php:170
 msgid "Remove Genesis widgets"
-msgstr "Verwijder Genesis widgets"
+msgstr ""
 
 #: admin/accessible-theme-settings.php:189
 msgid ""
@@ -97,10 +89,6 @@ msgid ""
 "\"http://wordpress.org/plugins/wp-accessibility/\\\">WP Accessibility</a> by "
 "Joe Dolson too: don't worry you can use both plugins together."
 msgstr ""
-"Deze instellingen zijn voor WordPress zelf. Indien je ook <a href=\"http://"
-"wordpress.org/plugins/wp-accessibility/\" hreflang=\"en\">WP Accessibility</"
-"a> van Joe Dolson hebt geïnstalleerd: geen probleem, je kunt deze plugins "
-"samen gebruiken."
 
 #: admin/accessible-theme-settings.php:191
 msgid ""
@@ -108,34 +96,28 @@ msgid ""
 "in the online <a href=\\\"http://genesis-accessible.org/documentation/"
 "compatibility-wp-accessibility/\\\">Genesis Accessible Documentation</a>"
 msgstr ""
-"Lees meer over de compatibiliteit tussen WP Toegankelijkheid en Genesis "
-"Accessible in de online <a href=\"http://genesis-accessible.org/"
-"documentation/compatibility-wp-accessibility/\" hreflang=\"en\">Genesis "
-"Accessible Documentation</a>"
 
 #: admin/accessible-theme-settings.php:195
 msgid "Settings for WordPress:"
-msgstr "Instellingen voor WordPress:"
+msgstr ""
 
 #: admin/accessible-theme-settings.php:201
 msgid "Add the post title to the read more links"
-msgstr "Voeg de titel van het bericht toe aan de lees meer links"
+msgstr ""
 
 #: admin/accessible-theme-settings.php:208
 msgid "Remove title attribute from links"
-msgstr "Verwijder het title attribuut van de links"
+msgstr ""
 
 #: admin/accessible-theme-settings.php:214
 msgid "Remove h1 from editor toolbar"
-msgstr "Verwijder de h1 uit de editor toolbar"
+msgstr ""
 
 #: admin/accessible-theme-settings.php:231
 msgid ""
 "For documentation, help and support please visit <a href=\"http://genesis-"
 "accessible.org/\">genesis-accessible.org</a>."
 msgstr ""
-"Kijk voor documentatie, hulp en support op  <a href=\"http://genesis-"
-"accessible.org/\">genesis-accessible.org</a>."
 
 #: genesis-accessible.php:87
 #, php-format
@@ -143,8 +125,6 @@ msgid ""
 "Whoa.. the Genesis Accessible plugin only works, really, when you have "
 "installed the %1$sGenesis Framework%2$s"
 msgstr ""
-"Oeps… de Genesis Accessible plugin werkt alleen als ook het  %1$sGenesis "
-"Framework%2$s is ge&iuml;nstalleerd."
 
 #: genesis-accessible.php:96
 #, php-format
@@ -152,56 +132,54 @@ msgid ""
 "Uhm, the thing of it is, you kinda need the %1$sGenesis Framework %2$s%3$s "
 "or greater for these plugin to make any sense."
 msgstr ""
-"Uhm eigenlijk heb je %1$sGenesis Framework %2$s%3$s of hoger nodig om deze "
-"plugin te laten werken."
 
 #: includes/forms.php:30 includes/forms.php:43
 msgid "Search this website"
-msgstr "Zoek in deze website"
+msgstr ""
 
 #: includes/forms.php:32
 msgid "Search"
-msgstr "Zoek"
+msgstr ""
 
 #: includes/headings.php:37 includes/skip-links.php:109
 msgid "Main navigation"
-msgstr "Hoofdnavigatie"
+msgstr ""
 
 #: includes/skip-links.php:25
 msgid "Skip to primary navigation"
-msgstr "Naar de hoofdnavigatie"
+msgstr ""
 
 #: includes/skip-links.php:28
 msgid "Skip to content"
-msgstr "Naar de inhoud"
+msgstr ""
 
 #: includes/skip-links.php:31
 msgid "Skip to primary sidebar"
-msgstr "Naar de primaire zijbalk"
+msgstr ""
 
 #: includes/skip-links.php:35
 msgid "Skip to secondary sidebar"
-msgstr "Naar de secundaire zijbalk"
+msgstr ""
 
 #: includes/skip-links.php:42
 msgid "Skip to footer"
-msgstr "Naar de voettekst"
+msgstr ""
 
 #: includes/skip-links.php:63
 msgid "Skip links"
-msgstr "Omzeilende links"
+msgstr ""
 
 #: includes/wp-modification.php:16
 msgid "Read more"
-msgstr "Lees verder"
+msgstr ""
 
 #: includes/wp-modification.php:16
 msgid "about "
-msgstr "over"
+msgstr ""
 
 #: templates/404.php:22
 msgid "Page not found"
-msgstr "Pagina niet gevonden"
+msgstr ""
 
 #: templates/404.php:25
 #, php-format
@@ -210,31 +188,27 @@ msgid ""
 "to the site's <a href=\"%s\">homepage</a> and see if you can find what you "
 "are looking for. Or, you can try finding it with the information below."
 msgstr ""
-"De pagina die je zoekt bestaat niet meer. Misschien kun je terugkeren naar "
-"de <a href=\"%s\">voorpagina</a> van deze website om  te zien of je kunt "
-"vinden wat je zoekt. Of je kunt proberen te vinden wat je zoekt via de "
-"informatie hieronder."
 
 #: templates/404.php:31
 msgid "Sitemap"
-msgstr "Sitemap"
+msgstr ""
 
 #: templates/404.php:33 templates/sitemap.php:27
 msgid "Pages:"
-msgstr "Pagina's:"
+msgstr ""
 
 #: templates/404.php:38 templates/sitemap.php:32
 msgid "Categories:"
-msgstr "Categorieën:"
+msgstr ""
 
 #: templates/404.php:43 templates/sitemap.php:37
 msgid "Authors:"
-msgstr "Auteurs:"
+msgstr ""
 
 #: templates/404.php:48 templates/sitemap.php:42
 msgid "Monthly:"
-msgstr "Maandelijks"
+msgstr ""
 
 #: templates/404.php:53 templates/sitemap.php:47
 msgid "Recent Posts:"
-msgstr "Recente berichten:"
+msgstr ""
