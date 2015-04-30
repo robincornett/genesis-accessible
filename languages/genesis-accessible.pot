@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Genesis Accessible\n"
-"POT-Creation-Date: 2015-04-30 12:11+0100\n"
-"PO-Revision-Date: 2015-04-30 12:12+0100\n"
+"POT-Creation-Date: 2015-04-30 13:39+0100\n"
+"PO-Revision-Date: 2015-04-30 13:40+0100\n"
 "Last-Translator: Rian Rietveld <rian@rrwd.nl>\n"
 "Language-Team: Rian Rietveld <rian@rrwd.nl>\n"
 "Language: en_US\n"
@@ -92,8 +92,8 @@ msgstr ""
 
 #: admin/accessible-theme-settings.php:191
 msgid ""
-"Read more about the compatibility of WP Accessibility and Genesis Accessible "
-"in the online <a href=\\\"http://genesis-accessible.org/documentation/"
+"Read more about WP Accessibility’s compatibility with Genesis Accessible in "
+"the online <a href=\\\"http://genesis-accessible.org/documentation/"
 "compatibility-wp-accessibility/\\\">Genesis Accessible Documentation</a>"
 msgstr ""
 
