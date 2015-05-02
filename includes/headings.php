@@ -6,28 +6,70 @@
 *	License: GPLv2 or later
 */
 
-/** add an H1 on archives */
+/** add an H1 on archives when the title is not added by meta value */
 add_action ('genesis_before_loop', 'wpaccgen_genesis_do_archive_title', 100);
 function wpaccgen_genesis_do_archive_title() {
 
-    if ( is_page_template( 'page_blog.php' ) || is_author() ) {
-        remove_filter( 'wp_title', 'genesis_doctitle_wrap', 20 );
-        $title = wp_title( "", false, "" );
-        echo '<div class="screen-reader-text"><h1 class="screen-reader-text">' . $title  . "</h1></div>\n";
+    if ( is_page_template( 'page_blog.php' ) ) {
+        echo '<div class="archive-description page-blog">';
+            genesis_do_post_title();
+        echo '</div>';
     }
 
-    if ( genesis_first_version_compare( '2.0.2', '>' ) )
+    if ( ! is_category() && ! is_tag() && ! is_tax() && ! is_post_type_archive() && ! is_archive() && is_author() ) {
         return;
+    }
 
-    if ( is_category() || is_tag() || is_tax() || is_post_type_archive() || is_archive() ) {
-        remove_filter( 'wp_title', 'genesis_doctitle_wrap', 20 );
-        $title = wp_title( "", false, "" );
-        echo '<div class="archive-description"><h1 class="archive-title">' . $title  . "</h1></div>\n";
+    $headline = '';
+
+
+    if ( is_category() || is_tag() || is_tax() ) {
+
+        global $wp_query;
+
+        $term = is_tax() ? get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' ) ) : $wp_query->get_queried_object();
+        if ( isset( $term->meta['headline'] ) ) {
+            return;
+        }
+
+        $headline = sprintf( '<h1 class="archive-title">%s</h1>', strip_tags( $term->name ) );
+        printf( '<div class="archive-description taxonomy-description">%s</div>', $headline );
+
+    } elseif ( is_post_type_archive() && genesis_has_post_type_archive_support() ) {
+
+        if (  '' != genesis_get_cpt_option( 'headline' ) ) {
+            return;
+        }
+
+        $headline = sprintf( '<h1 class="archive-title">%s</h1>', strip_tags( post_type_archive_title( '', false ) ) );
+        printf( '<h1 class="archive-description cpt-archive-description">%s</h1>', strip_tags( $headline ) );
+
+    } elseif ( is_author() ) {
+
+        if ( '' != get_the_author_meta( 'headline', (int) get_query_var( 'author' ) )  ) {
+            return;
+        }
+
+        $headline = sprintf( '<h1 class="archive-title">%s</h1>', strip_tags( get_the_author_meta( 'display_name', (int) get_query_var( 'author' ) ) ) );
+        printf( '<div class="archive-description author-description">%s</div>', $headline );
+
+    } elseif ( is_date() ) {
+
+        if ( is_day() ) {
+            $headline = __( 'Archives for ', 'genesis' ) . get_the_date();
+        } elseif ( is_month() ) {
+            $headline = __( 'Archives for ', 'genesis' ) . single_month_title( ' ', false );
+        } elseif ( is_year() ) {
+            $headline = __( 'Archives for ', 'genesis' ) . get_query_var( 'year' );
+        }
+
+        if ( $headline ) {
+            printf( '<div class="archive-description archive-date"><h1 class="archive-title">%s</h1></div>', $headline );
+        }
+
     }
 
 }
-
-
 
 /** Add an H2 heading to the primary navigation */
 add_filter( 'genesis_do_nav', 'genwpacc_genesis_add_header_to_primary_nav', 10, 3 );
