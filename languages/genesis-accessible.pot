@@ -63,8 +63,7 @@ msgstr ""
 
 #: admin/accessible-theme-settings.php:141
 msgid ""
-"Add keyboard accessiblility to the dropdown menu<br />(only select this if "
-"you have a dropdown submenu in the main or sub navigation menu)"
+"Add keyboard accessiblility to the dropdown menu<br />(only select this if you have a dropdown submenu in the main or sub navigation menu)"
 msgstr ""
 
 #: admin/accessible-theme-settings.php:150
@@ -85,16 +84,12 @@ msgstr ""
 
 #: admin/accessible-theme-settings.php:189
 msgid ""
-"These settings are for WordPress itself. If you have installed <a href=\\"
-"\"http://wordpress.org/plugins/wp-accessibility/\\\">WP Accessibility</a> by "
-"Joe Dolson too: don't worry you can use both plugins together."
+"These settings are for WordPress itself. If you have installed <a href=\"http://wordpress.org/plugins/wp-accessibility/\">WP Accessibility</a> by Joe Dolson too: don't worry you can use both plugins together."
 msgstr ""
 
 #: admin/accessible-theme-settings.php:191
 msgid ""
-"Read more about WP Accessibility’s compatibility with Genesis Accessible in "
-"the online <a href=\\\"http://genesis-accessible.org/documentation/"
-"compatibility-wp-accessibility/\\\">Genesis Accessible Documentation</a>"
+"Read more about WP Accessibility’s compatibility with Genesis Accessible in the online <a href=\"http://genesis-accessible.org/documentation/compatibility-wp-accessibility/\">Genesis Accessible Documentation</a>"
 msgstr ""
 
 #: admin/accessible-theme-settings.php:195
@@ -115,8 +110,7 @@ msgstr ""
 
 #: admin/accessible-theme-settings.php:231
 msgid ""
-"For documentation, help and support please visit <a href=\"http://genesis-"
-"accessible.org/\">genesis-accessible.org</a>."
+"For documentation, help and support please visit <a href=\"http://genesis-accessible.org/\">genesis-accessible.org</a>."
 msgstr ""
 
 #: genesis-accessible.php:87
