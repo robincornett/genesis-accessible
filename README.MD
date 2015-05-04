@@ -1,6 +1,7 @@
 === Genesis Accessible ===
 Contributors: rianrietveld, GaryJ
 Plugin website: http://genesis-accessible.org
+Donate link: http://genesis-accessible.org/donate/
 Tags: Genesis, Accessible, Accessibility, a11y, WCAG, WCAG 2.0 AA, Web Standards
 Requires at least: 3.8
 Tested up to: 4.2
@@ -18,12 +19,12 @@ Leiden and Genesis Accessible together provide you with a WCAG 2.0 AA accessible
 
 = So what do you need =
 
-- WordPress: Well, First of all: have a recent version [WordPress](http://www.wordpress.org) installed, preferably version 3.9 or higher. Also take a look at the [requirements for WordPress](http://wordpress.org/about/requirements/)
+- WordPress: Well, First of all: have a recent version [WordPress](http://www.wordpress.org) installed, preferably version 4.0 or higher. Also take a look at the [requirements for WordPress](http://wordpress.org/about/requirements/)
 - Genesis Framework: The Leiden child theme and the plugin Genesis Accessible are written for the Genesis framework version 2.0 or higher. This excellent framework is not free, but doesn’t cost much and is totally worth the money. You can buy and download it at studiopress.com, you only need the [basic framework](http://www.shareasale.com/r.cfm?b=346198&u=629895&m=28169&urllink=&afftrack=).
 - This plugin Genesis Accessible
 - The Genesis child theme [Leiden](https://github.com/RRWD/leiden/archive/master.zip)
 
-Look for documentation on http://genesis-accessible.org
+Look for documentation on [genesis-accessible.org](http://genesis-accessible.org)
 
 == Installation ==
 
@@ -41,17 +42,15 @@ Look for documentation on http://genesis-accessible.org
 - To add an H1 on archives for tags: Go to the Dashboard to Posts → Tags. Edit the tag and fill out the Archive Headline.
 - Go to the Dashboard to Genesis → SEO Settings →  Homepage Settings →  Which text would you like to be wrapped in h1 tags? Select Site Title.
 
-Look for documentation on http://genesis-accessible.org
+Look for documentation on [genesis-accessible.org](http://genesis-accessible.org)
 
-== Frequently Asked Questions ==
+== FAQ ==
 
-= Support and documentation =
-
-[FAQ](http://genesis-accessible.org/documentation/faq/)
-
-Look for documentation on http://genesis-accessible.org
-
-Genesis Accessible on [GitHub]https://github.com/RRWD/genesis-accessible
+- Look for documentation on [genesis-accessible.org](http://genesis-accessible.org)
+- Have a question? Please read the [FAQ](http://genesis-accessible.org/documentation/faq/)
+- Still have a question? Ask it on the [Support Forum](https://wordpress.org/support/plugin/genesis-accessible)
+- If you found a bug or have an improvement, please report it on [GitHub]https://github.com/RRWD/genesis-accessible
+- If you want this plugin in your language, you can help us to [translate](http://genesis-accessible.org/glotpress/projects/genesis-accessible) in the plugins GlotPress.
 
 
 == Changelog ==
@@ -62,8 +61,10 @@ Release date: May 4, 2015
 
 * Compatible with Genesis 2.2
 * Several bugfixes
-* With help and contributions from: @littlerchicken (Robin Cornett), @cdils (Carrie Dils), @bramd (Bram Duvigneau), @purplebabyhippo (Angie Vale), @neilgee (Neil Gee) and the #genesiswp Slack community
-
+* Added the possibility to add your own 404 and page_archive templates
+* Added a check for the existence of a Category Archive title and intro to prevent a double heading in archive pages.
+* With help and contributions from: @GaryJ (Gary Jones), @littlerchicken (Robin Cornett), @cdils (Carrie Dils), @bramd (Bram Duvigneau), @purplebabyhippo (Angie Vale), @neilgee (Neil Gee) and the #genesiswp Slack community
+* Britisch translation by Richard Senior
 
 = 1.1.1 =
 
