@@ -141,19 +141,14 @@ class Genesis_Accessible_Theme_Settings extends Genesis_Admin_Boxes {
 				<?php printf( __( 'Add keyboard accessiblility to the dropdown menu<br />(only select this if you have a dropdown submenu in the main or sub navigation menu)', GENWPACC_DOMAIN ) ); ?></label>
 			</p>
 
-			<p>
-				<label for="<?php echo $this->get_field_id( 'genwpacc_remove_genesis_widgets' ); ?>">
-				<input type="checkbox" name="<?php echo $this->get_field_name( 'genwpacc_remove_genesis_widgets' ); ?>" id="<?php echo $this->get_field_id( 'genwpacc_remove_genesis_widgets' ); ?>" value="1" <?php checked( $this->get_field_value( 'genwpacc_remove_genesis_widgets' ) ); ?> />
-				<?php printf( __( 'Remove less accessible Genesis widgets', GENWPACC_DOMAIN ) ); ?></label>
-			</p>
-
-			<p>
-	      		<label for="<?php echo $this->get_field_id( 'genwpacc_no_title_attr' ); ?>">
-	      		<input type="checkbox" name="<?php echo $this->get_field_name( 'genwpacc_no_title_attr' ); ?>" id="<?php echo $this->get_field_id( 'genwpacc_no_title_attr' ); ?>" value="1" <?php checked( $this->get_field_value( 'genwpacc_no_title_attr' ) ); ?> />
-				<?php printf( __( 'Remove title attribute from links', GENWPACC_DOMAIN ) ); ?></label>
-			</p>
 
 			<?php if ( !function_exists( 'genesis_a11y' ) ) { ?>
+
+				<p>
+					<label for="<?php echo $this->get_field_id( 'genwpacc_remove_genesis_widgets' ); ?>">
+					<input type="checkbox" name="<?php echo $this->get_field_name( 'genwpacc_remove_genesis_widgets' ); ?>" id="<?php echo $this->get_field_id( 'genwpacc_remove_genesis_widgets' ); ?>" value="1" <?php checked( $this->get_field_value( 'genwpacc_remove_genesis_widgets' ) ); ?> />
+					<?php printf( __( 'Remove less accessible Genesis widgets', GENWPACC_DOMAIN ) ); ?></label>
+				</p>
 
 				<p>
 		      		<label for="<?php echo $this->get_field_id( 'genwpacc_404' ); ?>">
@@ -165,6 +160,14 @@ class Genesis_Accessible_Theme_Settings extends Genesis_Admin_Boxes {
 		      		<label for="<?php echo $this->get_field_id( 'genwpacc_sitemap' ); ?>">
 		      		<input type="checkbox" name="<?php echo $this->get_field_name( 'genwpacc_sitemap' ); ?>" id="<?php echo $this->get_field_id( 'genwpacc_sitemap' ); ?>" value="1" <?php checked( $this->get_field_value( 'genwpacc_sitemap' ) ); ?> />
 					<?php printf( __( 'Use an accessible sitemap', GENWPACC_DOMAIN ) ); ?></label>
+				</p>
+
+			<?php } else { ?>
+
+				<p>
+					<label for="<?php echo $this->get_field_id( 'genwpacc_remove_genesis_widgets' ); ?>">
+					<input type="checkbox" name="<?php echo $this->get_field_name( 'genwpacc_remove_genesis_widgets' ); ?>" id="<?php echo $this->get_field_id( 'genwpacc_remove_genesis_widgets' ); ?>" value="1" <?php checked( $this->get_field_value( 'genwpacc_remove_genesis_widgets' ) ); ?> />
+					<?php printf( __( 'Remove Genesis widgets', GENWPACC_DOMAIN ) ); ?></label>
 				</p>
 
 			<?php } ?>
@@ -183,7 +186,9 @@ class Genesis_Accessible_Theme_Settings extends Genesis_Admin_Boxes {
 	 */
 	function modify_settings_wordpress() {
 
-		?><p><span class="description"><?php printf( __( 'These settings are for WordPress itself. If you have installed <a href=\"http://wordpress.org/plugins/wp-accessibility/\">WP Accessibility</a> by Joe Dolson too: don\'t worry you can use both plugins together.', GENWPACC_DOMAIN ) ); ?></span></p>
+		?><p><span class="description"><?php printf( __( 'These settings are for WordPress itself. If you have installed <a href="http://wordpress.org/plugins/wp-accessibility/">WP Accessibility</a> by Joe Dolson too: don\'t worry you can use both plugins together.', GENWPACC_DOMAIN ) ); ?></span></p>
+
+		<p><span class="description"><?php printf( __( 'Read more about WP Accessibility’s compatibility with Genesis Accessible in the online <a href="http://genesis-accessible.org/documentation/compatibility-wp-accessibility/">Genesis Accessible Documentation</a>', GENWPACC_DOMAIN ) ); ?></span></p>
 
      	<fieldset>
 
@@ -196,6 +201,12 @@ class Genesis_Accessible_Theme_Settings extends Genesis_Admin_Boxes {
 				<?php printf( __( 'Add the post title to the read more links', GENWPACC_DOMAIN ) ); ?></label>
 			</p>
 			<?php } ?>
+
+			<p>
+	      		<label for="<?php echo $this->get_field_id( 'genwpacc_no_title_attr' ); ?>">
+	      		<input type="checkbox" name="<?php echo $this->get_field_name( 'genwpacc_no_title_attr' ); ?>" id="<?php echo $this->get_field_id( 'genwpacc_no_title_attr' ); ?>" value="1" <?php checked( $this->get_field_value( 'genwpacc_no_title_attr' ) ); ?> />
+				<?php printf( __( 'Remove title attribute from links', GENWPACC_DOMAIN ) ); ?></label>
+			</p>
 
 	        <p>
 	        	<label for="<?php echo $this->get_field_id( 'genwpacc_tinymce' ); ?>">
