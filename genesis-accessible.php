@@ -1,13 +1,13 @@
 <?php
 /**
-* This plugin inplements the accessibilityy features for the Genesis Framework.
+* This plugin implements the accessibility features for the Genesis Framework.
 *
 * @package Genesis
 * @author Rian Rietveld
 *
 * Plugin Name: Genesis Accessible
 * Plugin URI: http://genesis-accessible.org/
-* Description: This plugin inplements the accessibilityy features for the Genesis Framework.
+* Description: This plugin implements the accessibility features for the Genesis Framework.
 * Author: Rian Rietveld
 * Version: 1.2.0
 * Author URI: http://www.rianrietveld.com/
@@ -222,3 +222,4 @@ function genwpacc_srt_css() {
 	wp_register_style( 'genwpacc-srt-css', GENWPACC_PLUGIN_URL .  'css/genwpacc-skiplinks.css' );
 	wp_enqueue_style('genwpacc-srt-css');
 }
+
