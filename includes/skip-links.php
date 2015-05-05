@@ -22,24 +22,24 @@ function genwpacc_skip_links() {
 	$links = array();
 
 	if ( has_nav_menu( 'primary' ) ) {
-		$links['genesis-nav-primary'] =  __( 'Skip to primary navigation', 'genesis' );
+		$links['genesis-nav-primary'] =  __( 'Skip to primary navigation', GENWPACC_DOMAIN );
 	}
 
-	$links['genesis-content'] = __( 'Skip to content', 'genesis' );
+	$links['genesis-content'] = __( 'Skip to content', GENWPACC_DOMAIN );
 
 	if ( in_array( genesis_site_layout(), array( 'sidebar-content', 'content-sidebar', 'sidebar-sidebar-content', 'sidebar-content-sidebar', 'content-sidebar-sidebar' ) ) ) {
-		$links['genesis-sidebar-primary'] = __( 'Skip to primary sidebar', 'genesis' );
+		$links['genesis-sidebar-primary'] = __( 'Skip to primary sidebar', GENWPACC_DOMAIN );
 	}
 
 	if ( in_array( genesis_site_layout(), array( 'sidebar-sidebar-content', 'sidebar-content-sidebar', 'content-sidebar-sidebar' ) ) ) {
-		$links['genesis-sidebar-secondary'] = __( 'Skip to secondary sidebar', 'genesis' );
+		$links['genesis-sidebar-secondary'] = __( 'Skip to secondary sidebar', GENWPACC_DOMAIN );
 	}
 
 	if ( current_theme_supports( 'genesis-footer-widgets' ) ) {
 		$footer_widgets = get_theme_support( 'genesis-footer-widgets' );
 		if ( isset( $footer_widgets[0] ) && is_numeric( $footer_widgets[0] ) ) {
 			if ( is_active_sidebar( 'footer-1' ) ) {
-				$links['genesis-footer-widgets'] = __( 'Skip to footer', 'genesis' );
+				$links['genesis-footer-widgets'] = __( 'Skip to footer', GENWPACC_DOMAIN );
 			}
 		}
 	}
@@ -60,7 +60,7 @@ function genwpacc_skip_links() {
 
 	// write HTML, skiplinks in a list with a heading
 	$skiplinks  =  '<section>';
-	$skiplinks .=  '<h2 class="screen-reader-text">'. __( 'Skip links', 'genesis' ) .'</h2>';
+	$skiplinks .=  '<h2 class="screen-reader-text">'. __( 'Skip links', GENWPACC_DOMAIN ) .'</h2>';
 	$skiplinks .=  '<ul class="genesis-skip-link">';
 
 	// Add markup for each skiplink
@@ -106,7 +106,7 @@ function genwpacc_skiplinks_markup() {
  */
 function genwpacc_skiplinks_attr_nav_primary( $attributes ) {
 	$attributes['id'] = 'genesis-nav-primary';
-	$attributes['aria-label'] = __( 'Main navigation', 'genesis' );
+	$attributes['aria-label'] = __( 'Main navigation', GENWPACC_DOMAIN );
 	return $attributes;
 }
 
