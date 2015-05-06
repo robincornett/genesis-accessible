@@ -61,7 +61,7 @@ function genwpacc_skip_links() {
 	// write HTML, skiplinks in a list with a heading
 	$skiplinks  =  '<section>';
 	$skiplinks .=  '<h2 class="screen-reader-text">'. __( 'Skip links', GENWPACC_DOMAIN ) .'</h2>';
-	$skiplinks .=  '<ul class="genesis-skip-link">';
+	$skiplinks .=  '<ul class="genesis-skip-link genwpacc-genesis-skip-link">';
 
 	// Add markup for each skiplink
 	foreach ($links as $key => $value) {
