@@ -175,10 +175,6 @@ function genwpacc_genesis_init() {
 		add_action( 'wp_enqueue_scripts', 'genwpacc_srt_css' );
 	}
 
-	if ( genesis_get_option( 'genwpacc_js', 'genwpacc-settings' ) == 1 ) {
-		add_action( 'wp_enqueue_scripts', 'genwpacc_js' );
-	}
-
 }
 
 /**

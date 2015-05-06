@@ -175,8 +175,4 @@ function genwpacc_skiplinks_scripts() {
 
 	wp_enqueue_script( 'genwpacc-skiplinks-js',  GENWPACC_PLUGIN_URL . 'js/genwpacc-skiplinks.js' );
 
-	if ( ( 	genesis_get_option( 'genwpacc_skiplinks_css', 'genwpacc-settings' )  == 0 ) ) return;
-
-	wp_register_style( 'genwpacc-skiplinks-css', GENWPACC_PLUGIN_URL. 'css/genwpacc-skiplinks.css' );
-	wp_enqueue_style('genwpacc-skiplinks-css');
 }
