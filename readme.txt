@@ -5,7 +5,7 @@ Donate link: http://genesis-accessible.org/donate/
 Tags: Genesis, Accessible, Accessibility, a11y, WCAG, WCAG 2.0 AA, Web Standards
 Requires at least: 3.8
 Tested up to: 4.2
-Stable tag: 1.2.0
+Stable tag: 1.2.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -49,11 +49,17 @@ Look for documentation on [genesis-accessible.org](http://genesis-accessible.org
 - Look for documentation on [genesis-accessible.org](http://genesis-accessible.org)
 - Have a question? Please read the [FAQ](http://genesis-accessible.org/documentation/faq/)
 - Still have a question? Ask it on the [Support Forum](https://wordpress.org/support/plugin/genesis-accessible)
-- If you found a bug or have an improvement, please report it on [GitHub]https://github.com/RRWD/genesis-accessible
+- If you found a bug or have an improvement, please report it on [GitHub](https://github.com/RRWD/genesis-accessible)
 - If you want this plugin in your language, you can help us to [translate](http://genesis-accessible.org/glotpress/projects/genesis-accessible) in the plugins GlotPress.
 
 
 == Changelog ==
+
+= 1.2.1 =
+
+Release date: May 6, 2015
+
+* Bug fixes in the skip links, props Nir Rosenbaum
 
 = 1.2.0 =
 
