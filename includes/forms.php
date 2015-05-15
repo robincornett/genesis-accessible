@@ -47,7 +47,11 @@ function wpaccgen_get_search_form_uniqueid() {
 
 	if ( genesis_html5() ) {
 
-		$form  = sprintf( '<form %s>', genesis_attr( 'search-form' ) );
+		if ( function_exists( 'genesis_a11y' ) ) {
+			$form  = sprintf( '<form %s>', genesis_attr( 'search-form' ) );
+		} else {
+			$form = sprintf( '<form method="get" class="search-form" action="%s" role="search">', home_url( '/' ) );
+		}
 
 		$form .= sprintf(
 				'<meta itemprop="target" content="%s"/><label for="%s">%s</label><input itemprop="query-input" type="search" name="s" id="%s" %s="%s" /><input type="submit" value="%s" /></form>',
@@ -61,7 +65,9 @@ function wpaccgen_get_search_form_uniqueid() {
 		);
 
 	} else {
+
 		$form = sprintf( '<form method="get" class="searchform search-form" action="%s" role="search" >%s<input type="text" value="%s" name="s" id="%s" class="s search-input" onfocus="%s" onblur="%s" /><input type="submit" class="searchsubmit search-submit" value="%s" /></form>', home_url( '/' ), $label, $id, esc_attr( $search_text ), esc_attr( $onfocus ), esc_attr( $onblur ), esc_attr( $button_text ) );
+
 	}
 
 	return apply_filters( 'genesis_search_form', $form, $search_text, $button_text, $label );
