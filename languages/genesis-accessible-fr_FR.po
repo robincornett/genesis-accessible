@@ -1,0 +1,246 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Genesis Accessible\n"
+"POT-Creation-Date: 2015-05-19 07:43+0100\n"
+"PO-Revision-Date: 2015-05-19 07:43+0100\n"
+"Last-Translator: Alain Schlesser <alain.schlesser@gmail.com>\n"
+"Language-Team: Rian Rietveld <rian@rrwd.nl>\n"
+"Language: fr_FR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.7.7\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: admin/accessible-theme-settings.php:29
+#: admin/accessible-theme-settings.php:100
+msgid "Genesis - Accessibility Settings"
+msgstr "Paramétrages de Genesis - Accessibilité"
+
+#: admin/accessible-theme-settings.php:30
+msgid "Accessibility Settings"
+msgstr "Paramétrages de l'accessibilité"
+
+#: admin/accessible-theme-settings.php:99
+msgid "Genesis - Accessibility Documentation"
+msgstr "Documentation de Genesis - Accessibilité"
+
+#: admin/accessible-theme-settings.php:101
+msgid "WordPress - Accessibility Settings"
+msgstr "WordPress - paramétrages de l'accessibilité"
+
+#: admin/accessible-theme-settings.php:114
+msgid ""
+"These settings are for the Genesis framework only.<br />Together with the "
+"WordPress setting below, your theme can be a lot more accessible."
+msgstr ""
+"Ces paramétrages ne sont applicables qu'au Framework Genesis.<br />Ensemble "
+"avec les paramétrages WordPress ci-dessous, votre thème pourra être beaucoup "
+"plus accessible."
+
+#: admin/accessible-theme-settings.php:118
+msgid "Settings for Genesis:"
+msgstr "Paramétrages pour Genesis:"
+
+#: admin/accessible-theme-settings.php:123
+msgid "Add skiplinks"
+msgstr "Ajouter des skiplinks"
+
+#: admin/accessible-theme-settings.php:129
+msgid "Add CSS for screen readers (screen-reader-text) and skiplinks"
+msgstr ""
+"Ajouter du CSS pour les lecteurs d'écran (screen-reader-text) et skiplinks"
+
+#: admin/accessible-theme-settings.php:135
+msgid ""
+"Use a semantic heading structure<br />(Note: Disable also \"Use semantic "
+"HTML5 page and section headings throughout site?\" in the Genesis SEO "
+"Settings)"
+msgstr ""
+"Utiliser une structure de titre sémantique<br />(Note : désactivez également "
+"\"Utiliser les titres de page et de section sémantiques HTML5 à travers le "
+"site?\" dans les paramètres SEO de Genesis)"
+
+#: admin/accessible-theme-settings.php:141
+msgid ""
+"Add keyboard accessiblility to the dropdown menu<br />(only select this if "
+"you have a dropdown submenu in the main or sub navigation menu)"
+msgstr ""
+"Ajouter l'accessibilité à travers le clavier dans le menu déroulant<br />(ne "
+"sélectionnez cette option que si vous avez un sous-menu déroulant pour la "
+"navigation principale ou secondaire)"
+
+#: admin/accessible-theme-settings.php:150
+msgid "Remove less accessible Genesis widgets"
+msgstr "Supprimer les widgets de Genesis qui sont moins accessible"
+
+#: admin/accessible-theme-settings.php:156
+msgid "Use an accessible 404 page"
+msgstr "Utiliser une page d'erreur 404 accessible"
+
+#: admin/accessible-theme-settings.php:162
+msgid "Use an accessible sitemap"
+msgstr "Utiliser un plan du site accessible"
+
+#: admin/accessible-theme-settings.php:170
+msgid "Remove Genesis widgets"
+msgstr "Supprimer les widgets de Genesis"
+
+#: admin/accessible-theme-settings.php:189
+msgid ""
+"These settings are for WordPress itself. If you have installed <a href="
+"\"http://wordpress.org/plugins/wp-accessibility/\">WP Accessibility</a> by "
+"Joe Dolson too: don't worry you can use both plugins together."
+msgstr ""
+"Ces réglages sont pour WordPress même. Au cas où vous avez aussi installé <a "
+"href=\"http://wordpress.org/plugins/wp-accessibility/\">WP Accessibility</a> "
+"par Joe Dolson : ne vous inquiétez pas, vous pouvez utiliser les deux "
+"plugins ensemble."
+
+#: admin/accessible-theme-settings.php:191
+msgid ""
+"Read more about WP Accessibility’s compatibility with Genesis Accessible in "
+"the online <a href=\"http://genesis-accessible.org/documentation/"
+"compatibility-wp-accessibility/\">Genesis Accessible Documentation</a>"
+msgstr ""
+"En savoir plus sur la compatibilité de WP Accessibility avec Genesis "
+"Accessible dans la <a href=\"http://genesis-accessible.org/documentation/"
+"compatibility-wp-accessibility/\">documentation Genesis Accessible</a> en "
+"ligne"
+
+#: admin/accessible-theme-settings.php:195
+msgid "Settings for WordPress:"
+msgstr "Paramétrages pour WordPress:"
+
+#: admin/accessible-theme-settings.php:201
+msgid "Add the post title to the read more links"
+msgstr "Ajouter le titre de l'article pour les liens 'Lire d'avantage'"
+
+#: admin/accessible-theme-settings.php:208
+msgid "Remove title attribute from links"
+msgstr "Supprimer l'attribut 'title' des liens"
+
+#: admin/accessible-theme-settings.php:214
+msgid "Remove h1 from editor toolbar"
+msgstr "Supprimer 'h1' de la barre d'outils de l'éditeur"
+
+#: admin/accessible-theme-settings.php:231
+msgid ""
+"For documentation, help and support please visit <a href=\"http://genesis-"
+"accessible.org/\">genesis-accessible.org</a>."
+msgstr ""
+"Pour documentation, aide et support, visitez s'il vous plaît <a href="
+"\"http://genesis-accessible.org/\">genesis-accessible.org</a>."
+
+#: genesis-accessible.php:87
+#, php-format
+msgid ""
+"Whoa.. the Genesis Accessible plugin only works, really, when you have "
+"installed the %1$sGenesis Framework%2$s"
+msgstr ""
+"Oups... le plugin Genesis Accessible ne fonctionne que si vous avez installé "
+"le %1$sFramework Genesis%2$s"
+
+#: genesis-accessible.php:96
+#, php-format
+msgid ""
+"Uhm, the thing of it is, you kinda need the %1$sGenesis Framework %2$s%3$s "
+"or greater for these plugin to make any sense."
+msgstr ""
+"Eh, en fait, vous avez plutôt besoin du %1$sFramework Genesis %2$s%3$s ou "
+"plus, sinon ce plugin ne fait aucun sens."
+
+#: includes/forms.php:30 includes/forms.php:43
+msgid "Search this website"
+msgstr "Rechercher sur ce site"
+
+#: includes/forms.php:32
+msgid "Search"
+msgstr "Recherche"
+
+#: includes/headings.php:59 includes/headings.php:61 includes/headings.php:63
+msgid "Archives for "
+msgstr "Archives pour"
+
+#: includes/headings.php:81 includes/skip-links.php:109
+msgid "Main navigation"
+msgstr "Navigation principale"
+
+#: includes/skip-links.php:25
+msgid "Skip to primary navigation"
+msgstr "Sauter à la navigation principale"
+
+#: includes/skip-links.php:28
+msgid "Skip to content"
+msgstr "Sauter au contenu"
+
+#: includes/skip-links.php:31
+msgid "Skip to primary sidebar"
+msgstr "Sauter à la barre latérale principale"
+
+#: includes/skip-links.php:35
+msgid "Skip to secondary sidebar"
+msgstr "Sauter à la barre latérale secondaire"
+
+#: includes/skip-links.php:42
+msgid "Skip to footer"
+msgstr "Sauter au pied de page"
+
+#: includes/skip-links.php:63
+msgid "Skip links"
+msgstr "Ignorer les liens"
+
+#: includes/wp-modification.php:16
+msgid "Read more"
+msgstr "Lire d'avantage"
+
+#: includes/wp-modification.php:16
+msgid "about "
+msgstr "A propos"
+
+#: templates/404.php:22
+msgid "Page not found"
+msgstr "Page non trouvée"
+
+#: templates/404.php:25
+#, php-format
+msgid ""
+"The page you are looking for no longer exists. Perhaps you can return back "
+"to the site's <a href=\"%s\">homepage</a> and see if you can find what you "
+"are looking for. Or, you can try finding it with the information below."
+msgstr ""
+"La page que vous recherchez n'existe plus. Vous pouvez retourner à la <a "
+"href=\"%s\">page d'accueil</a> du site et voir si vous pouvez peut-être "
+"trouver ce que vous cherchez. Ou sinon, vous pouvez essayez de trouver avec "
+"les informations ci-dessous."
+
+#: templates/404.php:31
+msgid "Sitemap"
+msgstr "Plan du site"
+
+#: templates/404.php:33 templates/sitemap.php:27
+msgid "Pages:"
+msgstr "Pages:"
+
+#: templates/404.php:38 templates/sitemap.php:32
+msgid "Categories:"
+msgstr "Catégories:"
+
+#: templates/404.php:43 templates/sitemap.php:37
+msgid "Authors:"
+msgstr "Auteurs:"
+
+#: templates/404.php:48 templates/sitemap.php:42
+msgid "Monthly:"
+msgstr "﻿Mensuel:"
+
+#: templates/404.php:53 templates/sitemap.php:47
+msgid "Recent Posts:"
+msgstr "Articles récents:"
