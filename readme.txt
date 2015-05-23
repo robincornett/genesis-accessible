@@ -5,7 +5,7 @@ Donate link: http://genesis-accessible.org/donate/
 Tags: Genesis, Accessible, Accessibility, a11y, WCAG, WCAG 2.0 AA, Web Standards
 Requires at least: 3.8
 Tested up to: 4.2
-Stable tag: 1.2.1
+Stable tag: 1.2.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -20,40 +20,49 @@ Leiden and Genesis Accessible together provide you with a WCAG 2.0 AA accessible
 = So what do you need =
 
 - WordPress: Well, First of all: have a recent version [WordPress](http://www.wordpress.org) installed, preferably version 4.0 or higher. Also take a look at the [requirements for WordPress](http://wordpress.org/about/requirements/)
-- Genesis Framework: The Leiden child theme and the plugin Genesis Accessible are written for the Genesis framework version 2.0 or higher. This excellent framework is not free, but doesn’t cost much and is totally worth the money. You can buy and download it at studiopress.com, you only need the [basic framework](http://www.shareasale.com/r.cfm?b=346198&u=629895&m=28169&urllink=&afftrack=).
+- Genesis Framework: The Leiden child theme and the plugin Genesis Accessible are written for the Genesis framework version 2.0 or higher. This excellent framework is not free, but doesn’t cost much and is totally worth the money. You can buy and download it at studiopress.com, you only need the [basic Genesis framework](http://www.shareasale.com/r.cfm?b=346198&u=629895&m=28169&urllink=&afftrack=).
 - This plugin Genesis Accessible
-- The Genesis child theme [Leiden](https://github.com/RRWD/leiden/archive/master.zip)
+- The [Genesis child theme Leiden](https://github.com/RRWD/leiden/archive/master.zip)
 
-Look for documentation on [genesis-accessible.org](http://genesis-accessible.org)
+Look for [documentation on genesis-accessible.org](http://genesis-accessible.org)
 
 == Installation ==
 
 - Install WordPress (http://codex.wordpress.org/Installing_WordPress).
 - Install the [Genesis Framework](http://www.shareasale.com/r.cfm?b=346198&u=629895&m=28169&urllink=&afftrack=) version 2.0.1 or higher
 - If your site is in another language than English: install and activate the plugin [Genesis Translations](http://wordpress.org/plugins/genesis-translations/)
-- Install and activate the Genesis child theme Leiden [Leiden](https://github.com/RRWD/leiden/archive/master.zip)
+- Install and activate the [Genesis child theme Leiden](https://github.com/RRWD/leiden/archive/master.zip)
 - Install and activate this plugin Genesis Accessible
 - Go in the Dashboard to Genesis → Accessibility Settings and select the options you want to add
 - Go to the Dashboard to Genesis → Theme Settings and select Content Archives: Display post content and Limit content to the amount of characters you want (e.g. 500)
 - Go to the Dashboard to Genesis → SEO Settings and uncheck "Use semantic HTML and section thoughout site?"
 
 = Settings for Genesis version 2.1 =
+
 - To add an H1 on archives for categories: Go to the Dashboard to Posts → Category. Edit the category and fill out the Archive Headline.
 - To add an H1 on archives for tags: Go to the Dashboard to Posts → Tags. Edit the tag and fill out the Archive Headline.
 - Go to the Dashboard to Genesis → SEO Settings →  Homepage Settings →  Which text would you like to be wrapped in h1 tags? Select Site Title.
 
-Look for documentation on [genesis-accessible.org](http://genesis-accessible.org)
+Look for [documentation on genesis-accessible.org](http://genesis-accessible.org)
 
-== FAQ ==
+== Frequently Asked Questions ==
 
-- Look for documentation on [genesis-accessible.org](http://genesis-accessible.org)
-- Have a question? Please read the [FAQ](http://genesis-accessible.org/documentation/faq/)
+- Look for [documentation on genesis-accessible.org](http://genesis-accessible.org)
+- Have a question? Please read the [FAQ](http://genesis-accessible.org/documentation/faq/) on genesis-accessible.org
 - Still have a question? Ask it on the [Support Forum](https://wordpress.org/support/plugin/genesis-accessible)
 - If you found a bug or have an improvement, please report it on [GitHub](https://github.com/RRWD/genesis-accessible)
 - If you want this plugin in your language, you can help us to [translate](http://genesis-accessible.org/glotpress/projects/genesis-accessible) in the plugins GlotPress.
 
 
 == Changelog ==
+
+= 1.2.2 =
+
+Release date: May 23, 2015
+
+* Bug fix for search action pointing to the wrong url (thanks Jackie D'Elia)
+* Added French and updated German language files by Alain Schlesser
+* Added CSS position:relative to .more-link for compatibility with themes using backstretch scripts (thanks Paul Oasten and Carrie Dils)
 
 = 1.2.1 =
 
