@@ -117,8 +117,11 @@ function genwpacc_genesis_init() {
 
 	}
 
-	// pre Genesis 2.2
 	if ( !function_exists( 'genesis_a11y' ) ) {
+
+		/**
+ 		 * Pre Genesis 2.2: add a11y functionality if selected
+ 		 */
 
 		require_once( GENWPACC_PLUGIN_PATH . 'includes/forms.php' );
 		require_once( GENWPACC_PLUGIN_PATH . 'includes/wp-modification.php' );
@@ -149,7 +152,14 @@ function genwpacc_genesis_init() {
 
 	} else {
 
+		/**
+ 		 * Activate Genesis 2.2 default a11y functionality if selected
+ 		 * add_theme_support( 'genesis-accessibility', array( 'skip-links', 'search-form', 'drop-down-menu', 'headings' ) );
+ 		 */
+
 		$genwpacc_options = array();
+
+		$genwpacc_options[] = 'search-form';
 
 		if ( genesis_get_option( 'genwpacc_skiplinks', 'genwpacc-settings' ) == 1 ) {
 			$genwpacc_options[] = 'skip-links';
