@@ -62,7 +62,7 @@ Release date: May 23, 2015
 
 * Bug fix for search action pointing to the wrong url (thanks Jackie D'Elia)
 * Added French and updated German language files by Alain Schlesser
-* Added CSS position:relative to .more-link for compatibility with themes using backstretch scripts (thanks Paul Oasten and Carrie Dils)
+* Added CSS position:relative to .more-link for compatibility with themes using backstretch scripts (thanks Paul Oaten and Carrie Dils)
 
 = 1.2.1 =
 
