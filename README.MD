@@ -35,7 +35,7 @@ Look for [documentation on genesis-accessible.org](http://genesis-accessible.org
 - Install and activate this plugin Genesis Accessible
 - Go in the Dashboard to Genesis → Accessibility Settings and select the options you want to add
 - Go to the Dashboard to Genesis → Theme Settings and select Content Archives: Display post content and Limit content to the amount of characters you want (e.g. 500)
-- Go to the Dashboard to Genesis → SEO Settings and uncheck "Use semantic HTML and section thoughout site?"
+- Go to the Dashboard to Genesis → SEO Settings and uncheck "Use semantic HTML and section throughout site?"
 
 = Settings for Genesis version 2.1 =
 
