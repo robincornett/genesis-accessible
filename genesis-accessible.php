@@ -84,7 +84,7 @@ function genwpacc_activation_check() {
 
 		deactivate_plugins( plugin_basename( __FILE__ ) );  // Deactivate ourself
 
-		wp_die( sprintf( __( 'Whoa.. the Genesis Accessible plugin only works, really, when you have installed the %1$s.', GENWPACC_DOMAIN ), '<a href="http://www.shareasale.com/r.cfm?b=346198&u=629895&m=28169&urllink=&afftrack=">Genesis Framework</a>' ) );
+		wp_die( sprintf( __( 'Whoa.. the Genesis Accessible plugin only works, really, when you have installed the %1$s.', GENWPACC_DOMAIN ), '<a href="https://my.studiopress.com/themes/genesis/">Genesis Framework</a>' ) );
 
 	}
 
@@ -93,7 +93,7 @@ function genwpacc_activation_check() {
 
         deactivate_plugins( plugin_basename( __FILE__ ) );  // Deactivate ourself
 
-		wp_die( sprintf( __( 'Uhm, the thing of it is, you kinda need the %1$s %2$s or greater for this plugin to make any sense.', GENWPACC_DOMAIN ), '<a href="http://www.shareasale.com/r.cfm?b=346198&u=629895&m=28169&urllink=&afftrack=">Genesis Framework</a>', $minimum_genesis_version ) );
+		wp_die( sprintf( __( 'Uhm, the thing of it is, you kinda need the %1$s %2$s or greater for this plugin to make any sense.', GENWPACC_DOMAIN ), '<a href="https://my.studiopress.com/themes/genesis/">Genesis Framework</a>', $minimum_genesis_version ) );
 
 	}
 
