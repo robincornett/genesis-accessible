@@ -2,8 +2,8 @@
 Contributors: rianrietveld, GaryJ, littlerchicken
 Plugin website: https://wordpress.org/plugins/genesis-accessible/
 Tags: Genesis, Accessible, Accessibility, a11y, WCAG, WCAG 2.0 AA, Web Standards
-Requires at least: 3.8
-Tested up to: 4.5
+Requires at least: 4.6
+Tested up to: 4.9
 Stable tag: 1.2.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -23,7 +23,7 @@ Look for [documentation on genesis-accessible.org](http://genesis-accessible.org
 == Installation ==
 
 - Install WordPress (http://codex.wordpress.org/Installing_WordPress).
-- Install the [Genesis Framework](https://my.studiopress.com/themes/genesis/) version 2.0.1 or higher
+- Install the [Genesis Framework](https://my.studiopress.com/themes/genesis/) version 2.3.1 or higher
 - Install your preferred Genesis child theme
 - If your site is in another language than English: install and activate the plugin [Genesis Translations](http://wordpress.org/plugins/genesis-translations/)
 - Install and activate this plugin Genesis Accessible

@@ -5,7 +5,7 @@ Genesis Accessible is a plugin for site owners who want accessibility-ready webs
 ### So what do you need?
 
 - WordPress: Well, First of all: have a recent version [WordPress](https://www.wordpress.org) installed, preferably version 4.0 or higher. Also take a look at the [requirements for WordPress](https://wordpress.org/about/requirements/)
-- Genesis Framework: The Genesis Accessible plugin is written for the Genesis framework version 2.0 or higher. This excellent framework is not free, but doesn't cost much and is totally worth the money. You can buy and download it at studiopress.com; you only need the [basic Genesis framework](https://my.studiopress.com/themes/genesis/).
+- Genesis Framework: The Genesis Accessible plugin is written for the Genesis framework version 2.3.1 or higher. This excellent framework is not free, but doesn't cost much and is totally worth the money. You can buy and download it at studiopress.com; you only need the [basic Genesis framework](https://my.studiopress.com/themes/genesis/).
 - This plugin Genesis Accessible
 
 Look for [documentation on genesis-accessible.org](http://genesis-accessible.org)
@@ -13,7 +13,7 @@ Look for [documentation on genesis-accessible.org](http://genesis-accessible.org
 ## Installation
 
 - Install WordPress (https://codex.wordpress.org/Installing_WordPress).
-- Install the [Genesis Framework](https://my.studiopress.com/themes/genesis/) version 2.0.1 or higher
+- Install the [Genesis Framework](https://my.studiopress.com/themes/genesis/) version 2.3.1 or higher
 - Install your preferred Genesis child theme
 - If your site is in another language than English: install and activate the plugin [Genesis Translations](https://wordpress.org/plugins/genesis-translations/)
 - Install and activate this plugin Genesis Accessible
