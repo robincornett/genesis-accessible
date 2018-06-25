@@ -1,21 +1,23 @@
 <?php
 /**
-* This plugin implements the accessibility features for the Genesis Framework.
-*
-* @package Genesis
-* @author Rian Rietveld
-*
-* Plugin Name: Genesis Accessible
-* Plugin URI: http://genesis-accessible.org/
-* Description: This plugin implements the accessibility features for the Genesis Framework.
-* Author: Rian Rietveld
-* Version: 1.2.3
-* Author URI: http://www.rianrietveld.com/
-* License: GPLv2
-* Text Domain: genesis-accessible
-* Domain Path: /languages/
-* Function prefix genwpacc_
-*/
+ * This plugin implements the accessibility features for the Genesis Framework.
+ *
+ * @package GenesisAccessible
+ * @author  Rian Rietveld
+ * @author  Robin Cornett
+ * @license GPL-2.0+
+ *
+ * Plugin Name: Genesis Accessible
+ * Plugin URI: https://wordpress.org/plugins/genesis-accessible/
+ * Description: This plugin implements the accessibility features for the Genesis Framework.
+ * Author: Rian Rietveld, Robin Cornett
+ * Author URI: https://genesis-accessible.org/
+ * Version: 1.2.3
+ * License: GPL-2.0+
+ * Text Domain: genesis-accessible
+ * Domain Path: /languages/
+ * Function prefix genwpacc_
+ */
 
 /**
 * Defining Genesis Accessible constants
