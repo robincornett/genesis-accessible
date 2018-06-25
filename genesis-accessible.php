@@ -50,7 +50,7 @@ define( 'GENWPACC_SETTINGS_FIELD', 'genwpacc-settings' );
  *
  * @since 1.0.0
  */
-define( 'GENWPACC_DOMAIN' , 'genesis-accessible' );
+define( 'GENWPACC_DOMAIN', 'genesis-accessible' );
 
 /**
  * Load the text domain for translation of the plugin
@@ -86,7 +86,10 @@ function genwpacc_activation_check() {
 
 		deactivate_plugins( plugin_basename( __FILE__ ) );  // Deactivate ourself
 
-		wp_die( sprintf( __( 'Whoa.. the Genesis Accessible plugin only works, really, when you have installed the %1$s.', GENWPACC_DOMAIN ), '<a href="https://my.studiopress.com/themes/genesis/">Genesis Framework</a>' ) );
+		wp_die( sprintf( __( 'Whoa.. the Genesis Accessible plugin only works, really, when you have installed the %1$s.', 'genesis-accessible' ),
+			/* translators: link to the Genesis Framework */
+			'<a href="https://my.studiopress.com/themes/genesis/">Genesis Framework</a>'
+		) );
 
 	}
 
@@ -95,7 +98,11 @@ function genwpacc_activation_check() {
 
         deactivate_plugins( plugin_basename( __FILE__ ) );  // Deactivate ourself
 
-		wp_die( sprintf( __( 'Uhm, the thing of it is, you kinda need the %1$s %2$s or greater for this plugin to make any sense.', GENWPACC_DOMAIN ), '<a href="https://my.studiopress.com/themes/genesis/">Genesis Framework</a>', $minimum_genesis_version ) );
+		wp_die( sprintf( __( 'Uhm, the thing of it is, you kinda need the %1$s %2$s or greater for this plugin to make any sense.', 'genesis-accessible' ),
+			/* translators: link to the Genesis Framework */
+			'<a href="https://my.studiopress.com/themes/genesis/">Genesis Framework</a>',
+			esc_attr( $minimum_genesis_version )
+		) );
 
 	}
 

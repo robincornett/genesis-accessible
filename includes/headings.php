@@ -78,7 +78,7 @@ function genwpacc_genesis_add_header_to_primary_nav( $nav_output, $nav, $args ) 
     if ( ! genesis_nav_menu_supported( 'primary' ) || ! has_nav_menu( 'primary' ) )
         return;
 
-    $heading =  '<h2 class="screen-reader-text">'. __( 'Main navigation', GENWPACC_DOMAIN ) .'</h2>';
+    $heading =  '<h2 class="screen-reader-text">'. __( 'Main navigation', 'genesis-accessible' ) .'</h2>';
 
     $nav_markup_open = genesis_markup( array(
         'html5' => '<nav %s>',

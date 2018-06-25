@@ -26,8 +26,8 @@ class Genesis_Accessible_Theme_Settings extends Genesis_Admin_Boxes {
 		$menu_ops = array(
 			'submenu' => array(
 				'parent_slug' => 'genesis',
-				'page_title'  => __( 'Genesis - Accessibility Settings', 'GENWPACC_DOMAIN' ),
-				'menu_title'  => __( 'Accessibility Settings', 'GENWPACC_DOMAIN' )
+				'page_title'  => __( 'Genesis - Accessibility Settings', 'genesis-accessible' ),
+				'menu_title'  => __( 'Accessibility Settings', 'genesis-accessible' )
 			)
 		);
 
@@ -96,9 +96,9 @@ class Genesis_Accessible_Theme_Settings extends Genesis_Admin_Boxes {
 	 */
 	function metaboxes() {
 
-		add_meta_box('plugin-documentation',  __( 'Genesis - Accessibility Documentation', 'GENWPACC_DOMAIN' ), array( $this, 'plugin_documentation' ), $this->pagehook, 'main', 'high');
-		add_meta_box('genesis-settings',  __( 'Genesis - Accessibility Settings', 'GENWPACC_DOMAIN' ), array( $this, 'modify_settings_genesis' ), $this->pagehook, 'main', 'high');
-		add_meta_box('wordpress-settings',  __( 'WordPress - Accessibility Settings', 'GENWPACC_DOMAIN' ), array( $this, 'modify_settings_wordpress' ), $this->pagehook, 'main', 'high');
+		add_meta_box('plugin-documentation',  __( 'Genesis - Accessibility Documentation', 'genesis-accessible' ), array( $this, 'plugin_documentation' ), $this->pagehook, 'main', 'high');
+		add_meta_box('genesis-settings',  __( 'Genesis - Accessibility Settings', 'genesis-accessible' ), array( $this, 'modify_settings_genesis' ), $this->pagehook, 'main', 'high');
+		add_meta_box('wordpress-settings',  __( 'WordPress - Accessibility Settings', 'genesis-accessible' ), array( $this, 'modify_settings_wordpress' ), $this->pagehook, 'main', 'high');
 
 	}
 
@@ -111,34 +111,34 @@ class Genesis_Accessible_Theme_Settings extends Genesis_Admin_Boxes {
 	 */
 	function modify_settings_genesis() {
 
-		?><p><span class="description"><?php printf( __( 'These settings are for the Genesis framework only.<br />Together with the WordPress setting below, your theme can be a lot more accessible.', GENWPACC_DOMAIN ) ); ?></span></p>
+		?><p><span class="description"><?php printf( __( 'These settings are for the Genesis framework only.<br />Together with the WordPress setting below, your theme can be a lot more accessible.', 'genesis-accessible' ) ); ?></span></p>
 
 		<fieldset>
 
-	      	<legend><?php _e( 'Settings for Genesis:', GENWPACC_DOMAIN ); ?></legend>
+	      	<legend><?php _e( 'Settings for Genesis:', 'genesis-accessible' ); ?></legend>
 
 	      	<p>
 	      		<label for="<?php echo $this->get_field_id( 'genwpacc_skiplinks' ); ?>">
 	      		<input type="checkbox" name="<?php echo $this->get_field_name( 'genwpacc_skiplinks' ); ?>" id="<?php echo $this->get_field_id( 'genwpacc_skiplinks' ); ?>" value="1" <?php checked( $this->get_field_value( 'genwpacc_skiplinks' ) ); ?> />
-				<?php printf( __( 'Add skiplinks', GENWPACC_DOMAIN ) ); ?></label>
+				<?php printf( __( 'Add skiplinks', 'genesis-accessible' ) ); ?></label>
 			</p>
 
 			<p>
 				<label for="<?php echo $this->get_field_id( 'genwpacc_skiplinks_css' ); ?>">
 				<input type="checkbox" name="<?php echo $this->get_field_name( 'genwpacc_skiplinks_css' ); ?>" id="<?php echo $this->get_field_id( 'genwpacc_skiplinks_css' ); ?>" value="1" <?php checked( $this->get_field_value( 'genwpacc_skiplinks_css' ) ); ?> />
-				<?php printf( __( 'Add CSS for screen readers (screen-reader-text) and skiplinks', GENWPACC_DOMAIN ) ); ?></label>
+				<?php printf( __( 'Add CSS for screen readers (screen-reader-text) and skiplinks', 'genesis-accessible' ) ); ?></label>
 			</p>
 
 	      	<p>
 	      		<label for="<?php echo $this->get_field_id( 'genwpacc_widget_headings' ); ?>">
 	      		<input type="checkbox" name="<?php echo $this->get_field_name( 'genwpacc_widget_headings' ); ?>" id="<?php echo $this->get_field_id( 'genwpacc_widget_headings' ); ?>" value="1" <?php checked( $this->get_field_value( 'genwpacc_widget_headings' ) ); ?> />
-				<?php printf( __( 'Use a semantic heading structure<br />(Note: Disable also "Use semantic HTML5 page and section headings throughout site?" in the Genesis SEO Settings)', GENWPACC_DOMAIN ) ); ?></label>
+				<?php printf( __( 'Use a semantic heading structure<br />(Note: Disable also "Use semantic HTML5 page and section headings throughout site?" in the Genesis SEO Settings)', 'genesis-accessible' ) ); ?></label>
 			</p>
 
 	      	<p>
 	      		<label for="<?php echo $this->get_field_id( 'genwpacc_dropdown' ); ?>">
 	      		<input type="checkbox" name="<?php echo $this->get_field_name( 'genwpacc_dropdown' ); ?>" id="<?php echo $this->get_field_id( 'genwpacc_dropdown' ); ?>" value="1" <?php checked( $this->get_field_value( 'genwpacc_dropdown' ) ); ?> />
-				<?php printf( __( 'Add keyboard accessiblility to the dropdown menu<br />(only select this if you have a dropdown submenu in the main or sub navigation menu)', GENWPACC_DOMAIN ) ); ?></label>
+				<?php printf( __( 'Add keyboard accessiblility to the dropdown menu<br />(only select this if you have a dropdown submenu in the main or sub navigation menu)', 'genesis-accessible' ) ); ?></label>
 			</p>
 
 
@@ -147,19 +147,19 @@ class Genesis_Accessible_Theme_Settings extends Genesis_Admin_Boxes {
 				<p>
 					<label for="<?php echo $this->get_field_id( 'genwpacc_remove_genesis_widgets' ); ?>">
 					<input type="checkbox" name="<?php echo $this->get_field_name( 'genwpacc_remove_genesis_widgets' ); ?>" id="<?php echo $this->get_field_id( 'genwpacc_remove_genesis_widgets' ); ?>" value="1" <?php checked( $this->get_field_value( 'genwpacc_remove_genesis_widgets' ) ); ?> />
-					<?php printf( __( 'Remove less accessible Genesis widgets', GENWPACC_DOMAIN ) ); ?></label>
+					<?php printf( __( 'Remove less accessible Genesis widgets', 'genesis-accessible' ) ); ?></label>
 				</p>
 
 				<p>
 		      		<label for="<?php echo $this->get_field_id( 'genwpacc_404' ); ?>">
 		      		<input type="checkbox" name="<?php echo $this->get_field_name( 'genwpacc_404' ); ?>" id="<?php echo $this->get_field_id( 'genwpacc_404' ); ?>" value="1" <?php checked( $this->get_field_value( 'genwpacc_404' ) ); ?> />
-					<?php printf( __( 'Use an accessible 404 page', GENWPACC_DOMAIN ) ); ?></label>
+					<?php printf( __( 'Use an accessible 404 page', 'genesis-accessible' ) ); ?></label>
 				</p>
 
 				<p>
 		      		<label for="<?php echo $this->get_field_id( 'genwpacc_sitemap' ); ?>">
 		      		<input type="checkbox" name="<?php echo $this->get_field_name( 'genwpacc_sitemap' ); ?>" id="<?php echo $this->get_field_id( 'genwpacc_sitemap' ); ?>" value="1" <?php checked( $this->get_field_value( 'genwpacc_sitemap' ) ); ?> />
-					<?php printf( __( 'Use an accessible sitemap', GENWPACC_DOMAIN ) ); ?></label>
+					<?php printf( __( 'Use an accessible sitemap', 'genesis-accessible' ) ); ?></label>
 				</p>
 
 			<?php } else { ?>
@@ -167,7 +167,7 @@ class Genesis_Accessible_Theme_Settings extends Genesis_Admin_Boxes {
 				<p>
 					<label for="<?php echo $this->get_field_id( 'genwpacc_remove_genesis_widgets' ); ?>">
 					<input type="checkbox" name="<?php echo $this->get_field_name( 'genwpacc_remove_genesis_widgets' ); ?>" id="<?php echo $this->get_field_id( 'genwpacc_remove_genesis_widgets' ); ?>" value="1" <?php checked( $this->get_field_value( 'genwpacc_remove_genesis_widgets' ) ); ?> />
-					<?php printf( __( 'Remove Genesis widgets', GENWPACC_DOMAIN ) ); ?></label>
+					<?php printf( __( 'Remove Genesis widgets', 'genesis-accessible' ) ); ?></label>
 				</p>
 
 			<?php } ?>
@@ -186,32 +186,32 @@ class Genesis_Accessible_Theme_Settings extends Genesis_Admin_Boxes {
 	 */
 	function modify_settings_wordpress() {
 
-		?><p><span class="description"><?php printf( __( 'These settings are for WordPress itself. If you have installed <a href="http://wordpress.org/plugins/wp-accessibility/">WP Accessibility</a> by Joe Dolson too: don\'t worry you can use both plugins together.', GENWPACC_DOMAIN ) ); ?></span></p>
+		?><p><span class="description"><?php printf( __( 'These settings are for WordPress itself. If you have installed <a href="http://wordpress.org/plugins/wp-accessibility/">WP Accessibility</a> by Joe Dolson too: don\'t worry you can use both plugins together.', 'genesis-accessible' ) ); ?></span></p>
 
-		<p><span class="description"><?php printf( __( 'Read more about WP Accessibility’s compatibility with Genesis Accessible in the online <a href="http://genesis-accessible.org/documentation/compatibility-wp-accessibility/">Genesis Accessible Documentation</a>', GENWPACC_DOMAIN ) ); ?></span></p>
+		<p><span class="description"><?php printf( __( 'Read more about WP Accessibility’s compatibility with Genesis Accessible in the online <a href="http://genesis-accessible.org/documentation/compatibility-wp-accessibility/">Genesis Accessible Documentation</a>', 'genesis-accessible' ) ); ?></span></p>
 
      	<fieldset>
 
-	        <legend><?php _e( 'Settings for WordPress:', GENWPACC_DOMAIN ); ?></legend>
+	        <legend><?php _e( 'Settings for WordPress:', 'genesis-accessible' ); ?></legend>
 
 			<?php if ( !function_exists( 'genesis_a11y' ) ) { ?>
 	        <p>
 		        <label for="<?php echo $this->get_field_id( 'genwpacc_read_more' ); ?>">
 		        <input type="checkbox" name="<?php echo $this->get_field_name( 'genwpacc_read_more' ); ?>" id="<?php echo $this->get_field_id( 'genwpacc_read_more' ); ?>" value="1" <?php checked( $this->get_field_value( 'genwpacc_read_more' ) ); ?> />
-				<?php printf( __( 'Add the post title to the read more links', GENWPACC_DOMAIN ) ); ?></label>
+				<?php printf( __( 'Add the post title to the read more links', 'genesis-accessible' ) ); ?></label>
 			</p>
 			<?php } ?>
 
 			<p>
 	      		<label for="<?php echo $this->get_field_id( 'genwpacc_no_title_attr' ); ?>">
 	      		<input type="checkbox" name="<?php echo $this->get_field_name( 'genwpacc_no_title_attr' ); ?>" id="<?php echo $this->get_field_id( 'genwpacc_no_title_attr' ); ?>" value="1" <?php checked( $this->get_field_value( 'genwpacc_no_title_attr' ) ); ?> />
-				<?php printf( __( 'Remove title attribute from links', GENWPACC_DOMAIN ) ); ?></label>
+				<?php printf( __( 'Remove title attribute from links', 'genesis-accessible' ) ); ?></label>
 			</p>
 
 	        <p>
 	        	<label for="<?php echo $this->get_field_id( 'genwpacc_tinymce' ); ?>">
 	        	<input type="checkbox" name="<?php echo $this->get_field_name( 'genwpacc_tinymce' ); ?>" id="<?php echo $this->get_field_id( 'genwpacc_tinymce' ); ?>" value="1" <?php checked( $this->get_field_value( 'genwpacc_tinymce' ) ); ?> />
-				<?php printf( __( 'Remove h1 from editor toolbar', GENWPACC_DOMAIN ) ); ?></label>
+				<?php printf( __( 'Remove h1 from editor toolbar', 'genesis-accessible' ) ); ?></label>
 			</p>
 
   		</fieldset>
@@ -228,7 +228,7 @@ class Genesis_Accessible_Theme_Settings extends Genesis_Admin_Boxes {
 	 */
 	function plugin_documentation() {
 
-		?><p><span class="description"><?php printf( __( 'For documentation, help and support please visit <a href="http://genesis-accessible.org/">genesis-accessible.org</a>.', GENWPACC_DOMAIN ) ); ?></span></p>
+		?><p><span class="description"><?php printf( __( 'For documentation, help and support please visit <a href="http://genesis-accessible.org/">genesis-accessible.org</a>.', 'genesis-accessible' ) ); ?></span></p>
 
     <?php
 	}

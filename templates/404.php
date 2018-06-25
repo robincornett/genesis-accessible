@@ -19,7 +19,7 @@ function genwpacc_404() {
 
 	echo genesis_html5() ? '<article class="entry">' : '<div class="post hentry">';
 
-		printf( '<h1 class="entry-title">%s</h1>', __( 'Page not found', GENWPACC_DOMAIN ) );
+		printf( '<h1 class="entry-title">%s</h1>', __( 'Page not found', 'genesis-accessible' ) );
 		echo '<div class="entry-content">';
 
 			?> <p><?php printf( __( 'The page you are looking for no longer exists. Perhaps you can return back to the site\'s <a href="%s">homepage</a> and see if you can find what you are looking for. Or, you can try finding it with the information below.', 'genesis' ), home_url() ); ?></p><?php
