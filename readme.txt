@@ -1,5 +1,5 @@
 === Genesis Accessible ===
-Contributors: rianrietveld, GaryJ, littler.chicken
+Contributors: rianrietveld, GaryJ, littlerchicken
 Plugin website: https://wordpress.org/plugins/genesis-accessible/
 Tags: Genesis, Accessible, Accessibility, a11y, WCAG, WCAG 2.0 AA, Web Standards
 Requires at least: 3.8
