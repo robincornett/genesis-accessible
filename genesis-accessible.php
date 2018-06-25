@@ -61,51 +61,53 @@ load_plugin_textdomain( 'genesis-accessible', false, 'genesis-accessible/languag
 
 
 register_activation_hook( __FILE__, 'genwpacc_activation_check' );
-
+add_action( 'admin_init', 'genwpacc_activation_check' );
 /**
  * Checks for activated Genesis Framework and its minimum version before allowing plugin to activate
  *
  * @author Nathan Rice, Remkus de Vries. adjusted by Rian Rietveld for this plugin
- * @uses accessible_activation_check()
- * @since 1.0
+ * @since  1.0
  */
-
 function genwpacc_activation_check() {
 
-	// Find Genesis Theme Data
-    $theme = wp_get_theme( 'genesis' );
-
-    // Get the version
-    $version = $theme->get( 'Version' );
-
-    // Set what we consider the minimum Genesis version
-    $minimum_genesis_version = '2.0';
-
 	// Restrict activation to only when the Genesis Framework is activated
-	if ( basename( get_template_directory() ) != 'genesis' ) {
-
+	if ( basename( get_template_directory() ) !== 'genesis' ) {
 		deactivate_plugins( plugin_basename( __FILE__ ) );  // Deactivate ourself
-
-		wp_die( sprintf( __( 'Whoa.. the Genesis Accessible plugin only works, really, when you have installed the %1$s.', 'genesis-accessible' ),
-			/* translators: link to the Genesis Framework */
-			'<a href="https://my.studiopress.com/themes/genesis/">Genesis Framework</a>'
-		) );
-
+		add_action( 'admin_notices', 'genwpacc_deactivation_message' );
 	}
+
+	// Find Genesis Theme Data
+	$theme = wp_get_theme( 'genesis' );
+
+	// Get the version
+	$version = $theme->get( 'Version' );
+
+	// Set what we consider the minimum Genesis version
+	$minimum_genesis_version = '2.3.1';
 
 	// Set a minimum version of the Genesis Framework to be activated on
-    if ( version_compare( $version, $minimum_genesis_version, '<' ) ) {
-
-        deactivate_plugins( plugin_basename( __FILE__ ) );  // Deactivate ourself
-
-		wp_die( sprintf( __( 'Uhm, the thing of it is, you kinda need the %1$s %2$s or greater for this plugin to make any sense.', 'genesis-accessible' ),
-			/* translators: link to the Genesis Framework */
-			'<a href="https://my.studiopress.com/themes/genesis/">Genesis Framework</a>',
-			esc_attr( $minimum_genesis_version )
-		) );
-
+	if ( version_compare( $version, $minimum_genesis_version, '<' ) ) {
+		deactivate_plugins( plugin_basename( __FILE__ ) );  // Deactivate ourself
+		add_action( 'admin_notices', 'genwpacc_deactivation_message' );
 	}
+}
 
+/**
+ * Genesis Accessible deactivation message.
+ * @since 1.3.0
+ */
+function genwpacc_deactivation_message() {
+
+	/* translators: link to the Genesis Framework */
+	$message = sprintf( __( 'Uhm, the thing of it is, you kinda need the %1$s 2.3.1 or greater for this plugin to make any sense. Genesis Accessible has been deactivated.', 'genesis-accessible' ),
+		'<a href="https://my.studiopress.com/themes/genesis/">Genesis Framework</a>'
+	);
+
+	echo '<div class="error"><p>' . wp_kses_post( $message ) . '</p></div>';
+
+	if ( isset( $_GET['activate'] ) ) {
+		unset( $_GET['activate'] );
+	}
 }
 
 /**
