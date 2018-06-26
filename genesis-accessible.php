@@ -61,7 +61,7 @@ load_plugin_textdomain( 'genesis-accessible', false, 'genesis-accessible/languag
 
 
 register_activation_hook( __FILE__, 'genwpacc_activation_check' );
-add_action( 'admin_init', 'genwpacc_activation_check' );
+//add_action( 'admin_init', 'genwpacc_activation_check' );
 /**
  * Checks for activated Genesis Framework and its minimum version before allowing plugin to activate
  *
