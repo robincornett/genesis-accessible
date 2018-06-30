@@ -116,90 +116,9 @@ add_action( 'genesis_init', 'genwpacc_genesis_init', 12 );
  * @since 1.0.0
  */
 function genwpacc_genesis_init() {
-
-	if ( is_admin() ) {
-
-		require_once GENWPACC_PLUGIN_PATH . 'admin/accessible-theme-settings.php';
-
-		if ( genesis_get_option( 'genwpacc_tinymce', 'genwpacc-settings' ) == 1 ) {
-			require_once GENWPACC_PLUGIN_PATH . 'admin/admin.php';
-		}
-	}
-
-	if ( genesis_get_option( 'genwpacc_no_title_attr', 'genwpacc-settings' ) == 1 ) {
-		require_once GENWPACC_PLUGIN_PATH . 'includes/attributes.php';
-	}
-
-	if ( genesis_get_option( 'genwpacc_skiplinks_css', 'genwpacc-settings' ) == 1 ) {
-		add_action( 'wp_enqueue_scripts', 'genwpacc_srt_css' );
-	}
-
-	if ( ! function_exists( 'genesis_a11y' ) ) {
-		genwpacc_pre_22();
-		return;
-	}
-
-	/**
-	 * Activate Genesis 2.2 default a11y functionality if selected
-	 * add_theme_support( 'genesis-accessibility', array( 'skip-links', 'search-form', 'drop-down-menu', 'headings' ) );
-	 */
-	$genwpacc_options = array( 'search-form' );
-
-	if ( genesis_get_option( 'genwpacc_skiplinks', 'genwpacc-settings' ) == 1 ) {
-		$genwpacc_options[] = 'skip-links';
-	}
-
-	if ( genesis_get_option( 'genwpacc_widget_headings', 'genwpacc-settings' ) == 1 ) {
-		$genwpacc_options[] = 'headings';
-	}
-
-	if ( genesis_get_option( 'genwpacc_dropdown', 'genwpacc-settings' ) == 1 ) {
-		$genwpacc_options[] = 'drop-down-menu';
-	}
-
-	add_theme_support( 'genesis-accessibility', $genwpacc_options );
-}
-
-/**
- * Pre Genesis 2.2: add a11y functionality if selected
- */
-function genwpacc_pre_22() {
-	add_action( 'admin_notices', 'genwpacc_deprecated_genesis_notice' );
-	require_once GENWPACC_PLUGIN_PATH . 'includes/forms.php';
-	require_once GENWPACC_PLUGIN_PATH . 'includes/wp-modification.php';
-
-	if ( genesis_get_option( 'genwpacc_skiplinks', 'genwpacc-settings' ) == 1 ) {
-		require_once GENWPACC_PLUGIN_PATH . 'includes/skip-links.php';
-	}
-
-	if ( genesis_get_option( 'genwpacc_widget_headings', 'genwpacc-settings' ) == 1 ) {
-		require_once GENWPACC_PLUGIN_PATH . 'includes/headings.php';
-	}
-
-	if ( genesis_get_option( 'genwpacc_dropdown', 'genwpacc-settings' ) == 1 ) {
-		require_once GENWPACC_PLUGIN_PATH . 'includes/dropdown.php';
-	}
-
-	if ( genesis_get_option( 'genwpacc_sitemap', 'genwpacc-settings' ) == 1 ) {
-		add_action( 'template_redirect', 'genwpacc_template_sitemap' );
-	}
-
-	if ( genesis_get_option( 'genwpacc_404', 'genwpacc-settings' ) == 1 ) {
-		add_action( 'template_redirect', 'genwpacc_template_404' );
-	}
-
-	if ( genesis_get_option( 'genwpacc_remove_genesis_widgets', 'genwpacc-settings' ) == 1 ) {
-		require_once GENWPACC_PLUGIN_PATH . 'includes/widgets.php';
-	}
-}
-
-/**
- * Warning notice for users on old versions of Genesis.
- */
-function genwpacc_deprecated_genesis_notice() {
-	$message = __( 'The version of Genesis you are using is no longer supported by the Genesis Accessible plugin, which now requires a minimum version of Genesis 2.3.1 and WordPress 4.6.', 'genesis-accessible' );
-
-	echo '<div class="notice notice-warning"><p>' . wp_kses_post( $message ) . '</p></div>';
+	require_once GENWPACC_PLUGIN_PATH . 'includes/class-genesisaccessible.php';
+	$genesis_accessible = new GenesisAccessible();
+	$genesis_accessible->init();
 }
 
 /**
@@ -207,14 +126,11 @@ function genwpacc_deprecated_genesis_notice() {
  *
  * @since 1.2.0
  */
-
 function genwpacc_template_sitemap() {
-
 	if ( get_page_template_slug() == 'page_archive.php' ) {
-		include ( GENWPACC_PLUGIN_PATH .'/templates/sitemap.php' );
+		include GENWPACC_PLUGIN_PATH . '/templates/sitemap.php';
 		exit();
 	}
-
 }
 
 /**
@@ -222,14 +138,11 @@ function genwpacc_template_sitemap() {
  *
  * @since 1.2.0
  */
-
 function genwpacc_template_404() {
-
 	if ( is_404() ) {
-		include ( GENWPACC_PLUGIN_PATH .'/templates/404.php' );
+		include GENWPACC_PLUGIN_PATH . '/templates/404.php';
 		exit();
 	}
-
 }
 
 /**
@@ -237,10 +150,8 @@ function genwpacc_template_404() {
  *
  * @since 1.2.0
  */
-
 function genwpacc_srt_css() {
-
-	wp_register_style( 'genwpacc-srt-css', GENWPACC_PLUGIN_URL .  'css/genwpacc-skiplinks.css' );
-	wp_enqueue_style('genwpacc-srt-css');
+	wp_register_style( 'genwpacc-srt-css', GENWPACC_PLUGIN_URL . 'css/genwpacc-skiplinks.css' );
+	wp_enqueue_style( 'genwpacc-srt-css' );
 }
 
