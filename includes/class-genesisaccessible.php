@@ -101,7 +101,7 @@ class GenesisAccessible {
 			add_action( 'template_redirect', 'genwpacc_template_sitemap' );
 		}
 
-		if ( genesis_get_option( 'genwpacc_404', 'genwpacc-settings' ) ) {
+		if ( $this->get_setting( 'genwpacc_404' ) ) {
 			add_action( 'template_redirect', 'genwpacc_template_404' );
 		}
 
@@ -142,6 +142,8 @@ class GenesisAccessible {
 			'genwpacc_tinymce'                => 0,
 			'genwpacc_dropdown'               => 0,
 			'genwpacc_remove_genesis_widgets' => 0,
+			'genwpacc_sitemap'                => 0,
+			'genwpacc_404'                    => 0,
 		);
 
 		$option        = get_option( 'genwpacc-settings', array() );
