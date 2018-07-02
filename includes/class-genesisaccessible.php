@@ -81,7 +81,7 @@ class GenesisAccessible {
 	 * @since 1.3.0
 	 */
 	protected function pre_22() {
-		add_action( 'admin_notices', 'genwpacc_deprecated_genesis_notice' );
+		add_action( 'admin_notices', array( $this, 'deprecated_genesis_notice' ) );
 		require_once GENWPACC_PLUGIN_PATH . 'includes/forms.php';
 		require_once GENWPACC_PLUGIN_PATH . 'includes/wp-modification.php';
 
