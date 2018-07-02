@@ -127,8 +127,8 @@ function genwpacc_genesis_init() {
  * @since 1.2.0
  */
 function genwpacc_template_sitemap() {
-	if ( get_page_template_slug() == 'page_archive.php' ) {
-		include GENWPACC_PLUGIN_PATH . '/templates/sitemap.php';
+	if ( get_page_template_slug() === 'page_archive.php' ) {
+		include GENWPACC_PLUGIN_PATH . 'templates/sitemap.php';
 		exit();
 	}
 }
@@ -140,7 +140,7 @@ function genwpacc_template_sitemap() {
  */
 function genwpacc_template_404() {
 	if ( is_404() ) {
-		include GENWPACC_PLUGIN_PATH . '/templates/404.php';
+		include GENWPACC_PLUGIN_PATH . 'templates/404.php';
 		exit();
 	}
 }
