@@ -55,7 +55,7 @@ class GenesisAccessible {
 
 	/**
 	 * Activate Genesis 2.2 default a11y functionality if selected
-	 * add_theme_support( 'genesis-accessibility', array( 'skip-links', 'search-form', 'drop-down-menu', 'headings' ) );
+	 * add_theme_support( 'genesis-accessibility', array( '404-page', 'drop-down-menu', 'headings', 'search-form', 'skip-links', ) );
 	 * @since 1.3.0
 	 */
 	protected function add_genesis_theme_support() {
@@ -71,6 +71,10 @@ class GenesisAccessible {
 
 		if ( $this->get_setting( 'genwpacc_dropdown' ) ) {
 			$genwpacc_options[] = 'drop-down-menu';
+		}
+
+		if ( $this->get_setting( 'genwpacc_404' ) ) {
+			$genwpacc_options[] = '404-page';
 		}
 
 		add_theme_support( 'genesis-accessibility', $genwpacc_options );

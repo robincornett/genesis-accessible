@@ -141,6 +141,11 @@ class Genesis_Accessible_Theme_Settings extends Genesis_Admin_Boxes {
 				<?php printf( __( 'Add keyboard accessiblility to the dropdown menu<br />(only select this if you have a dropdown submenu in the main or sub navigation menu)', 'genesis-accessible' ) ); ?></label>
 			</p>
 
+			<p>
+				<label for="<?php echo $this->get_field_id( 'genwpacc_404' ); ?>">
+					<input type="checkbox" name="<?php echo $this->get_field_name( 'genwpacc_404' ); ?>" id="<?php echo $this->get_field_id( 'genwpacc_404' ); ?>" value="1" <?php checked( $this->get_field_value( 'genwpacc_404' ) ); ?> />
+					<?php printf( __( 'Use an accessible 404 page', 'genesis-accessible' ) ); ?></label>
+			</p>
 
 			<?php if ( !function_exists( 'genesis_a11y' ) ) { ?>
 
@@ -148,12 +153,6 @@ class Genesis_Accessible_Theme_Settings extends Genesis_Admin_Boxes {
 					<label for="<?php echo $this->get_field_id( 'genwpacc_remove_genesis_widgets' ); ?>">
 					<input type="checkbox" name="<?php echo $this->get_field_name( 'genwpacc_remove_genesis_widgets' ); ?>" id="<?php echo $this->get_field_id( 'genwpacc_remove_genesis_widgets' ); ?>" value="1" <?php checked( $this->get_field_value( 'genwpacc_remove_genesis_widgets' ) ); ?> />
 					<?php printf( __( 'Remove less accessible Genesis widgets', 'genesis-accessible' ) ); ?></label>
-				</p>
-
-				<p>
-		      		<label for="<?php echo $this->get_field_id( 'genwpacc_404' ); ?>">
-		      		<input type="checkbox" name="<?php echo $this->get_field_name( 'genwpacc_404' ); ?>" id="<?php echo $this->get_field_id( 'genwpacc_404' ); ?>" value="1" <?php checked( $this->get_field_value( 'genwpacc_404' ) ); ?> />
-					<?php printf( __( 'Use an accessible 404 page', 'genesis-accessible' ) ); ?></label>
 				</p>
 
 				<p>
