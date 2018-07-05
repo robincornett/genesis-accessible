@@ -59,7 +59,7 @@ class GenesisAccessible {
 	 * @since 1.3.0
 	 */
 	protected function add_genesis_theme_support() {
-		$genwpacc_options = array( 'search-form' );
+		$genwpacc_options = array( 'search-form', '404-page' );
 
 		if ( $this->get_setting( 'genwpacc_skiplinks' ) ) {
 			$genwpacc_options[] = 'skip-links';
@@ -71,10 +71,6 @@ class GenesisAccessible {
 
 		if ( $this->get_setting( 'genwpacc_dropdown' ) ) {
 			$genwpacc_options[] = 'drop-down-menu';
-		}
-
-		if ( $this->get_setting( 'genwpacc_404' ) ) {
-			$genwpacc_options[] = '404-page';
 		}
 
 		add_theme_support( 'genesis-accessibility', $genwpacc_options );
