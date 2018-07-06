@@ -20,7 +20,7 @@ class GenesisAccessible {
 	 */
 	public function init() {
 
-		add_action( 'genesis_setup', array( $this, 'check_genesis_accessibility' ), 100 );
+		add_action( 'init', array( $this, 'check_genesis_accessibility' ), 100 );
 
 		if ( is_admin() ) {
 
@@ -59,25 +59,54 @@ class GenesisAccessible {
 	 * @since 1.3.0
 	 */
 	protected function add_genesis_theme_support() {
-		$genwpacc_options = array( 'search-form' );
+		$theme_support  = $this->get_genesis_theme_support();
+		$plugin_support = $this->get_plugin_support();
+
+		if ( empty( array_diff( $plugin_support, $theme_support ) ) ) {
+			add_action( 'admin_notices', array( $this, 'theme_already_supports_notice' ) );
+
+			return;
+		}
+
+		add_theme_support( 'genesis-accessibility', array_unique( array_merge( $theme_support, $plugin_support ) ) );
+	}
+
+	/**
+	 * Get the Genesis accessibility features defined by the plugin settings.
+	 * @since 1.3.0
+	 * @return array
+	 */
+	protected function get_plugin_support() {
+		$plugin_support = array( 'search-form', '404-page' );
 
 		if ( $this->get_setting( 'genwpacc_skiplinks' ) ) {
-			$genwpacc_options[] = 'skip-links';
+			$plugin_support[] = 'skip-links';
 		}
 
 		if ( $this->get_setting( 'genwpacc_widget_headings' ) ) {
-			$genwpacc_options[] = 'headings';
+			$plugin_support[] = 'headings';
 		}
 
 		if ( $this->get_setting( 'genwpacc_dropdown' ) ) {
-			$genwpacc_options[] = 'drop-down-menu';
+			$plugin_support[] = 'drop-down-menu';
 		}
 
-		if ( $this->get_setting( 'genwpacc_404' ) ) {
-			$genwpacc_options[] = '404-page';
+		return $plugin_support;
+	}
+
+	/**
+	 * Get the theme accessibility settings.
+	 * @since 1.3.0
+	 *
+	 * @return array
+	 */
+	protected function get_genesis_theme_support() {
+		$theme_support = get_theme_support( 'genesis-accessibility' );
+		if ( ! $theme_support ) {
+			return array();
 		}
 
-		add_theme_support( 'genesis-accessibility', $genwpacc_options );
+		return $theme_support[0];
 	}
 
 	/**
@@ -115,13 +144,37 @@ class GenesisAccessible {
 	}
 
 	/**
+	 * Add a notice to the admin if the installed theme already supports the Genesis Accessible features.
+	 * @since 1.3.0
+	 *
+	 */
+	public function theme_already_supports_notice() {
+		$message = __( 'It looks like your theme already provides the Genesis features provided by Genesis Accessible. You may not need this plugin after all.', 'genesis-accessible' );
+		$this->print_notice( $message, 'notice-success' );
+	}
+
+	/**
 	 * Warning notice for users on old versions of Genesis.
 	 * @since 1.3.0
 	 */
 	public function deprecated_genesis_notice() {
 		$message = __( 'The version of Genesis you are using is no longer supported by the Genesis Accessible plugin, which now requires a minimum version of Genesis 2.3.1 and WordPress 4.6.', 'genesis-accessible' );
 
-		echo '<div class="notice notice-warning"><p>' . wp_kses_post( $message ) . '</p></div>';
+		$this->print_notice( $message );
+	}
+
+	/**
+	 * Print the admin notice.
+	 * @since 1.3.0
+	 *
+	 * @param $message
+	 * @param string $class
+	 */
+	protected function print_notice( $message, $class = 'notice-warning' ) {
+		printf( '<div class="notice %s"><p>%s</p></div>',
+			esc_attr( $class ),
+			wp_kses_post( $message )
+		);
 	}
 
 	/**
