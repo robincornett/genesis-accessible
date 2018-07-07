@@ -1,10 +1,10 @@
 <?php
 /** forms.php
-*	Description: Adds label and id to the search forms
-*	Author: Rian Rietveld
-*	Plugin URI: http://genesis-accessible.org/
-*	License: GPLv2 or later
-*/
+ *    Description: Adds label and id to the search forms
+ *    Author: Rian Rietveld
+ *    Plugin URI: http://genesis-accessible.org/
+ *    License: GPLv2 or later
+ */
 
 //* Replace the search form, function adds a real label and an id for the search input field
 //* Based on the genesis_search_form with Genesis 2.0.2, keeps the filters
@@ -21,7 +21,7 @@ add_filter( 'get_search_form', 'wpaccgen_get_search_form_uniqueid', 20 );
  *
  * @since 0.2.0
  *
- * @uses genesis_html5() Check for HTML5 support.
+ * @uses  genesis_html5() Check for HTML5 support.
  *
  * @return string HTML markup.
  */
@@ -39,7 +39,7 @@ function wpaccgen_get_search_form_uniqueid() {
 
 	//* Empty label, by default. Filterable.
 	$label = apply_filters( 'genesis_search_form_label', '' );
-	if ( '' == $label )  {
+	if ( '' == $label ) {
 		$label = apply_filters( 'genesis_search_text', __( 'Search this website', 'genesis' ) );
 	}
 
@@ -48,20 +48,20 @@ function wpaccgen_get_search_form_uniqueid() {
 	if ( genesis_html5() ) {
 
 		if ( function_exists( 'genesis_a11y' ) ) {
-			$form  = sprintf( '<form %s>', genesis_attr( 'search-form' ) );
+			$form = sprintf( '<form %s>', genesis_attr( 'search-form' ) );
 		} else {
 			$form = sprintf( '<form method="get" class="search-form" action="%s" role="search">', home_url( '/' ) );
 		}
 
 		$form .= sprintf(
-				'<meta itemprop="target" content="%s"/><label for="%s">%s</label><input itemprop="query-input" type="search" name="s" id="%s" %s="%s" /><input type="submit" value="%s" /></form>',
-				home_url( '/?s={s}' ),
-				esc_attr( $form_id ),
-				esc_html( $label ),
-				esc_attr( $form_id ),
-				$value_or_placeholder,
-				esc_attr( $search_text ),
-				esc_attr( $button_text )
+			'<meta itemprop="target" content="%s"/><label for="%s">%s</label><input itemprop="query-input" type="search" name="s" id="%s" %s="%s" /><input type="submit" value="%s" /></form>',
+			home_url( '/?s={s}' ),
+			esc_attr( $form_id ),
+			esc_html( $label ),
+			esc_attr( $form_id ),
+			$value_or_placeholder,
+			esc_attr( $search_text ),
+			esc_attr( $button_text )
 		);
 
 	} else {

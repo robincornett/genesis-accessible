@@ -20,27 +20,27 @@
  */
 
 /**
-* Defining Genesis Accessible constants
+ * Defining Genesis Accessible constants
  *
  * @since 1.0.0
  */
 
-define( 'GENWPACC_VERSION','1.2.3' );
+define( 'GENWPACC_VERSION', '1.2.3' );
 
 if ( ! defined( 'GENWPACC_BASE_FILE' ) ) {
-    define( 'GENWPACC_BASE_FILE', __FILE__ );
+	define( 'GENWPACC_BASE_FILE', __FILE__ );
 }
 
-if ( ! defined( 'GENWPACC_BASE_DIR' ) ){
-    define( 'GENWPACC_BASE_DIR', dirname( GENWPACC_BASE_FILE ) );
+if ( ! defined( 'GENWPACC_BASE_DIR' ) ) {
+	define( 'GENWPACC_BASE_DIR', dirname( GENWPACC_BASE_FILE ) );
 }
 
-if ( ! defined( 'GENWPACC_PLUGIN_URL' ) ){
-    define( 'GENWPACC_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
+if ( ! defined( 'GENWPACC_PLUGIN_URL' ) ) {
+	define( 'GENWPACC_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
 }
 
-if ( ! defined( 'GENWPACC_PLUGIN_PATH' ) ){
-    define( 'GENWPACC_PLUGIN_PATH', plugin_dir_path( __FILE__ ) );
+if ( ! defined( 'GENWPACC_PLUGIN_PATH' ) ) {
+	define( 'GENWPACC_PLUGIN_PATH', plugin_dir_path( __FILE__ ) );
 }
 
 define( 'GENWPACC_SETTINGS_FIELD', 'genwpacc-settings' );

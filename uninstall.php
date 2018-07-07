@@ -8,5 +8,6 @@
 
  */
 
-if( !defined( 'ABSPATH') && !defined('WP_UNINSTALL_PLUGIN') )
-    exit();
+if ( ! defined( 'ABSPATH' ) && ! defined( 'WP_UNINSTALL_PLUGIN' ) ) {
+	exit();
+}

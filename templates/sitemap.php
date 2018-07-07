@@ -1,13 +1,13 @@
 <?php
 /**
-* Template Name: Sitemap
-* This file creates a site map
-*
-* This file is based on the core Genesis file page_archive.
-* Author: Rian Rietveld
-* Plugin URI: http://genesis-accessible.org/
-* License: GPLv2 or later
-*/
+ * Template Name: Sitemap
+ * This file creates a site map
+ *
+ * This file is based on the core Genesis file page_archive.
+ * Author: Rian Rietveld
+ * Plugin URI: http://genesis-accessible.org/
+ * License: GPLv2 or later
+ */
 
 /** Remove standard post content output **/
 remove_action( 'genesis_entry_content', 'genesis_page_archive_content' );
@@ -15,7 +15,6 @@ remove_action( 'genesis_post_content', 'genesis_page_archive_content' );
 
 add_action( 'genesis_entry_content', 'genwpacc_page_archive_content' );
 add_action( 'genesis_post_content', 'genwpacc_page_archive_content' );
-
 /**
  * This function outputs sitemap-esque columns displaying all pages,
  * categories, authors, monthly archives, and recent posts.
@@ -49,7 +48,7 @@ function genwpacc_page_archive_content() { ?>
 		<?php wp_get_archives( 'type=postbypost&limit=100' ); ?>
 	</ul>
 
-<?php
+	<?php
 }
 
 genesis();
