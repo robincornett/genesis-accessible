@@ -67,10 +67,8 @@ function genwpacc_skip_links() {
 	 */
 	$links = apply_filters( 'genesis_skip_links_output', $links );
 
-	// write HTML, skiplinks in a list with a heading
-	$skiplinks  = '<section>';
-	$skiplinks .= '<h2 class="screen-reader-text">' . __( 'Skip links', 'genesis-accessible' ) . '</h2>';
-	$skiplinks .= '<ul class="genesis-skip-link genwpacc-genesis-skip-link">';
+	// write HTML, skiplinks in a list
+	$skiplinks = '<ul class="genesis-skip-link genwpacc-genesis-skip-link">';
 
 	// Add markup for each skiplink
 	foreach ( $links as $key => $value ) {
@@ -78,7 +76,6 @@ function genwpacc_skip_links() {
 	}
 
 	$skiplinks .= '</ul>';
-	$skiplinks .= '</section>' . "\n";
 
 	echo $skiplinks;
 }
