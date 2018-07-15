@@ -117,6 +117,7 @@ add_action( 'genesis_init', 'genwpacc_genesis_init', 12 );
  */
 function genwpacc_genesis_init() {
 	require_once GENWPACC_PLUGIN_PATH . 'includes/class-genesisaccessible.php';
+	require_once GENWPACC_PLUGIN_PATH . 'includes/class-genesisaccessible-theme-support.php';
 	$genesis_accessible = new GenesisAccessible();
 	$genesis_accessible->init();
 }

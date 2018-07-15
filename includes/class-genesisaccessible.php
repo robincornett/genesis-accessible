@@ -15,6 +15,13 @@ class GenesisAccessible {
 	protected $setting;
 
 	/**
+	 * The current theme's accessibility support.
+	 *
+	 * @var array
+	 */
+	protected $theme_support;
+
+	/**
 	 * Include plugin admin files and files per option from directory includes/
 	 * @since 1.0.0
 	 */
@@ -62,10 +69,8 @@ class GenesisAccessible {
 		$theme_support  = $this->get_genesis_theme_support();
 		$plugin_support = $this->get_plugin_support();
 
-		if ( empty( array_diff( $plugin_support, $theme_support ) ) ) {
+		if ( ! empty( $theme_support ) ) {
 			add_action( 'admin_notices', array( $this, 'theme_already_supports_notice' ) );
-
-			return;
 		}
 
 		add_theme_support( 'genesis-accessibility', array_unique( array_merge( $theme_support, $plugin_support ) ) );
@@ -101,12 +106,13 @@ class GenesisAccessible {
 	 * @return array
 	 */
 	protected function get_genesis_theme_support() {
-		$theme_support = get_theme_support( 'genesis-accessibility' );
-		if ( ! $theme_support ) {
-			return array();
+		if ( isset( $this->theme_support ) ) {
+			return $this->theme_support;
 		}
+		$theme_support       = new GenesisAccessibleThemeSupport();
+		$this->theme_support = $theme_support->get_theme_support();
 
-		return $theme_support[0];
+		return $this->theme_support;
 	}
 
 	/**
@@ -149,7 +155,9 @@ class GenesisAccessible {
 	 *
 	 */
 	public function theme_already_supports_notice() {
-		$message = __( 'It looks like your theme already provides the Genesis features provided by Genesis Accessible. You may not need this plugin after all.', 'genesis-accessible' );
+		$supports = implode( ', ', $this->get_genesis_theme_support() );
+		/* translators: list of already supported accessibility features */
+		$message = sprintf( __( 'It looks like your theme already provides support for these Genesis accessibility features: %s.', 'genesis-accessible' ), $supports );
 		$this->print_notice( $message, 'notice-success' );
 	}
 

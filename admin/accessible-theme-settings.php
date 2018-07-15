@@ -85,7 +85,7 @@ class Genesis_Accessible_Theme_Settings extends Genesis_Admin_Boxes {
 		$screen->add_help_tab( array(
 			'id'      => 'genwpacc-help',
 			'title'   => 'Genesis Accessible Help',
-			'content' => '<p>For documentation, help and support visit <a href="http://genesis-accessible.org/">genesis-accessible.org</a></p>',
+			'content' => '<p>For documentation, help, and support, visit <a href="http://genesis-accessible.org/">genesis-accessible.org</a></p>',
 		) );
 	}
 
@@ -126,7 +126,7 @@ class Genesis_Accessible_Theme_Settings extends Genesis_Admin_Boxes {
 	}
 
 	/**
-	 * Callback forGenesis - Accessibility Settings metabox
+	 * Callback for Genesis - Accessibility Settings metabox
 	 *
 	 * @since 1.0.0
 	 *
@@ -189,8 +189,9 @@ class Genesis_Accessible_Theme_Settings extends Genesis_Admin_Boxes {
 	protected function define_genesis_settings() {
 		$settings = array(
 			array(
-				'setting' => 'genwpacc_skiplinks',
-				'label'   => __( 'Add skiplinks', 'genesis-accessible' ),
+				'setting'  => 'genwpacc_skiplinks',
+				'label'    => __( 'Add skiplinks', 'genesis-accessible' ),
+				'supports' => 'skip-links',
 			),
 			array(
 				'setting' => 'genwpacc_skiplinks_css',
@@ -200,11 +201,13 @@ class Genesis_Accessible_Theme_Settings extends Genesis_Admin_Boxes {
 				'setting'     => 'genwpacc_widget_headings',
 				'label'       => __( 'Use a semantic heading structure', 'genesis-accessible' ),
 				'description' => __( '(Note: also disable "Use semantic HTML5 page and section headings throughout site?" in the Genesis SEO Settings)', 'genesis-accessible' ),
+				'supports'    => 'headings',
 			),
 			array(
 				'setting'     => 'genwpacc_dropdown',
 				'label'       => __( 'Add keyboard accessibility to the dropdown menu', 'genesis-accessible' ),
 				'description' => __( '(only select this if you have a dropdown submenu in the main or sub navigation menu)', 'genesis-accessible' ),
+				'supports'    => 'drop-down-menu',
 			),
 		);
 		if ( ! function_exists( 'genesis_a11y' ) ) {
@@ -267,12 +270,32 @@ class Genesis_Accessible_Theme_Settings extends Genesis_Admin_Boxes {
 				<input type="checkbox" name="<?php echo esc_attr( $this->get_field_name( $setting['setting'] ) ); ?>" id="<?php echo esc_attr( $this->get_field_id( $setting['setting'] ) ); ?>" value="1" <?php checked( esc_attr( $this->get_field_value( $setting['setting'] ) ) ); ?> />
 				<?php echo esc_html( $setting['label'] ); ?></label>
 			<?php
-			if ( ! empty( $setting['description'] ) ) {
-				echo '<br /><span class="description">' . esc_html( $setting['description'] ) . '</span>';
+			$description = $this->get_description( $setting );
+			if ( $description ) {
+				echo '<br /><span class="description">' . esc_html( $description ) . '</span>';
 			}
 			?>
 		</p>
 		<?php
+	}
+
+	/**
+	 * Get the description for the setting.
+	 * @since 1.3.0
+	 *
+	 * @param $setting
+	 *
+	 * @return string
+	 */
+	protected function get_description( $setting ) {
+		$description = ! empty( $setting['description'] ) ? $setting['description'] : '';
+		$theme       = new GenesisAccessibleThemeSupport();
+		$supports    = $theme->get_theme_support();
+		if ( ! empty( $setting['supports'] ) && in_array( $setting['supports'], $supports, true ) ) {
+			$description .= ' ' . __( 'Your theme already supports this feature.', 'genesis-accessible' );
+		}
+
+		return $description;
 	}
 
 	/**
@@ -283,7 +306,9 @@ class Genesis_Accessible_Theme_Settings extends Genesis_Admin_Boxes {
 	 * @see   Genesis_Accessible_Theme_Settings::metaboxes()
 	 */
 	public function plugin_documentation() {
-		?><p><span class="description"><?php echo wp_kses_post( __( 'For documentation, help and support please visit <a href="http://genesis-accessible.org/">genesis-accessible.org</a>.', 'genesis-accessible' ) ); ?></span></p><?php
+		?>
+		<p><span class="description"><?php echo wp_kses_post( __( 'For documentation, help and support please visit <a href="http://genesis-accessible.org/">genesis-accessible.org</a>.', 'genesis-accessible' ) ); ?></span></p>
+		<?php
 	}
 }
 
