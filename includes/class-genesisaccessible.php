@@ -155,6 +155,10 @@ class GenesisAccessible {
 	 *
 	 */
 	public function theme_already_supports_notice() {
+		$screen = get_current_screen();
+		if ( 'genesis_page_genesis-accessible' !== $screen->id ) {
+			return;
+		}
 		$supports = implode( ', ', $this->get_genesis_theme_support() );
 		/* translators: list of already supported accessibility features */
 		$message = sprintf( __( 'It looks like your theme already provides support for these Genesis accessibility features: %s.', 'genesis-accessible' ), $supports );
