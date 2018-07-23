@@ -200,7 +200,7 @@ class Genesis_Accessible_Theme_Settings extends Genesis_Admin_Boxes {
 			array(
 				'setting'     => 'genwpacc_widget_headings',
 				'label'       => __( 'Use a semantic heading structure', 'genesis-accessible' ),
-				'description' => __( '(Note: also disable "Use semantic HTML5 page and section headings throughout site?" in the Genesis SEO Settings)', 'genesis-accessible' ),
+				'description' => $this->get_semantic_headings_description(),
 				'supports'    => 'headings',
 			),
 			array(
@@ -228,6 +228,16 @@ class Genesis_Accessible_Theme_Settings extends Genesis_Admin_Boxes {
 		}
 
 		return $settings;
+	}
+
+	/**
+	 * Check if the semantic headings setting has been disabled before showing the related description.
+	 * Checks if current theme supports HTML5, has semantic headings enabled, and is prior to Genesis 2.5.
+	 *
+	 * @return string
+	 */
+	protected function get_semantic_headings_description() {
+		return genesis_html5() && genesis_get_option( 'semantic_headings' ) && genesis_get_option( 'db_version', null, false ) >= '2501' ? __( '(Note: also disable "Use semantic HTML5 page and section headings throughout site?" in the Genesis SEO Settings)', 'genesis-accessible' ) : '';
 	}
 
 	/**
