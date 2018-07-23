@@ -55,7 +55,6 @@ class Genesis_Accessible_Theme_Settings extends Genesis_Admin_Boxes {
 
 		// Initialize the Sanitization Filter
 		add_action( 'genesis_settings_sanitizer_init', array( $this, 'sanitization_filters' ) );
-
 	}
 
 	/**
@@ -204,8 +203,9 @@ class Genesis_Accessible_Theme_Settings extends Genesis_Admin_Boxes {
 				'supports' => 'skip-links',
 			),
 			array(
-				'setting' => 'genwpacc_skiplinks_css',
-				'label'   => __( 'Add CSS for screen readers (screen-reader-text) and skiplinks', 'genesis-accessible' ),
+				'setting'  => 'genwpacc_skiplinks_css',
+				'label'    => __( 'Add CSS for screen readers (screen-reader-text) and skiplinks', 'genesis-accessible' ),
+				'supports' => 'skip-links',
 			),
 			array(
 				'setting'     => 'genwpacc_widget_headings',
@@ -309,12 +309,16 @@ class Genesis_Accessible_Theme_Settings extends Genesis_Admin_Boxes {
 	 */
 	protected function get_description( $setting ) {
 		$description = ! empty( $setting['description'] ) ? $setting['description'] : '';
-		if ( ! empty( $setting['supports'] ) && in_array( $setting['supports'], $supports, true ) ) {
-			$description .= ' ' . __( 'Your theme already supports this feature.', 'genesis-accessible' );
 		$supports    = $this->theme_supports;
+		if ( empty( $setting['supports'] ) || ! in_array( $setting['supports'], $supports, true ) ) {
+			return $description;
+		}
+		$addendum = ' ' . __( 'Your theme already supports this feature.', 'genesis-accessible' );
+		if ( 'genwpacc_skiplinks_css' === $setting['setting'] ) {
+			$addendum = ' ' . __( 'since your theme includes support for skip links, it may already support this feature.', 'genesis-accessible' );
 		}
 
-		return $description;
+		return $description . $addendum;
 	}
 
 	/**
