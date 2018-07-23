@@ -12,6 +12,13 @@
 class Genesis_Accessible_Theme_Settings extends Genesis_Admin_Boxes {
 
 	/**
+	 * Current child theme support for Genesis accessibility settings.
+	 *
+	 * @var array
+	 */
+	protected $theme_supports = array();
+
+	/**
 	 * Create an admin menu item and settings page.
 	 * http://www.billerickson.net/admin-pages-with-genesis/
 	 * @since 1.0.0
@@ -20,6 +27,9 @@ class Genesis_Accessible_Theme_Settings extends Genesis_Admin_Boxes {
 
 		// Specify a unique page ID.
 		$page_id = 'genesis-accessible';
+
+		$theme                = new GenesisAccessibleThemeSupport();
+		$this->theme_supports = $theme->get_theme_support();
 
 		// Set it as a child to genesis, and define the menu and page titles
 		$menu_ops = array(
@@ -299,10 +309,9 @@ class Genesis_Accessible_Theme_Settings extends Genesis_Admin_Boxes {
 	 */
 	protected function get_description( $setting ) {
 		$description = ! empty( $setting['description'] ) ? $setting['description'] : '';
-		$theme       = new GenesisAccessibleThemeSupport();
-		$supports    = $theme->get_theme_support();
 		if ( ! empty( $setting['supports'] ) && in_array( $setting['supports'], $supports, true ) ) {
 			$description .= ' ' . __( 'Your theme already supports this feature.', 'genesis-accessible' );
+		$supports    = $this->theme_supports;
 		}
 
 		return $description;
