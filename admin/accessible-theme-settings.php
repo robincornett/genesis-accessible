@@ -94,7 +94,7 @@ class Genesis_Accessible_Theme_Settings extends Genesis_Admin_Boxes {
 		$screen->add_help_tab( array(
 			'id'      => 'genwpacc-help',
 			'title'   => 'Genesis Accessible Help',
-			'content' => '<p>For documentation, help, and support, visit <a href="http://genesis-accessible.org/">genesis-accessible.org</a></p>',
+			'content' => '<p>' . __( 'For documentation, help, and support, please visit <a href="http://genesis-accessible.org/">genesis-accessible.org</a>.', 'genesis-accessible' ) . '</p>',
 		) );
 	}
 
@@ -330,7 +330,7 @@ class Genesis_Accessible_Theme_Settings extends Genesis_Admin_Boxes {
 	 */
 	public function plugin_documentation() {
 		?>
-		<p><span class="description"><?php echo wp_kses_post( __( 'For documentation, help, and support please visit <a href="http://genesis-accessible.org/">genesis-accessible.org</a>.', 'genesis-accessible' ) ); ?></span></p>
+		<p><span class="description"><?php echo wp_kses_post( __( 'For documentation, help, and support, please visit <a href="http://genesis-accessible.org/">genesis-accessible.org</a>.', 'genesis-accessible' ) ); ?></span></p>
 		<?php
 	}
 }
