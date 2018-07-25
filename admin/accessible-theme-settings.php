@@ -146,16 +146,27 @@ class Genesis_Accessible_Theme_Settings extends Genesis_Admin_Boxes {
 		?>
 		<p><span class="description"><?php echo wp_kses_post( __( 'These settings are for the Genesis framework only. Together with the WordPress setting below, your theme can be a lot more accessible.', 'genesis-accessible' ) ); ?></span></p>
 
-		<fieldset>
-			<legend><?php esc_html_e( 'Settings for Genesis:', 'genesis-accessible' ); ?></legend>
+		<table class="form-table">
+			<tbody>
+			<tr>
+				<th scope="row">
+					<?php esc_html_e( 'Settings for Genesis:', 'genesis-accessible' ); ?>
+				</th>
+				<td>
+					<fieldset>
+						<legend class="screen-reader-text"><?php esc_html_e( 'Settings for Genesis:', 'genesis-accessible' ); ?></legend>
 
-			<?php
-			$settings = $this->define_genesis_settings();
-			foreach ( $settings as $setting ) {
-				$this->do_checkbox( $setting );
-			}
-			?>
-		</fieldset>
+						<?php
+						$settings = $this->define_genesis_settings();
+						foreach ( $settings as $setting ) {
+							$this->do_checkbox( $setting );
+						}
+						?>
+					</fieldset>
+				</td>
+			</tr>
+			</tbody>
+		</table>
 		<?php
 	}
 
@@ -172,20 +183,27 @@ class Genesis_Accessible_Theme_Settings extends Genesis_Admin_Boxes {
 		<p><span class="description"><?php echo wp_kses_post( __( 'These settings are for WordPress itself. If you have installed <a href="http://wordpress.org/plugins/wp-accessibility/">WP Accessibility</a> by Joe Dolson too: don\'t worry you can use both plugins together.', 'genesis-accessible' ) ); ?></span></p>
 
 		<p><span class="description"><?php echo wp_kses_post( __( 'Read more about WP Accessibility’s compatibility with Genesis Accessible in the online <a href="http://genesis-accessible.org/documentation/compatibility-wp-accessibility/">Genesis Accessible Documentation</a>', 'genesis-accessible' ) ); ?></span></p>
+		<table class="form-table">
+			<tbody>
+			<tr>
+				<th scope="row">
+					<?php esc_html_e( 'Settings for WordPress:', 'genesis-accessible' ); ?>
+				</th>
+				<td>
+					<fieldset>
+						<legend class="screen-reader-text"><?php esc_html_e( 'Settings for WordPress:', 'genesis-accessible' ); ?></legend>
 
-		<fieldset>
-
-			<legend><?php esc_html_e( 'Settings for WordPress:', 'genesis-accessible' ); ?></legend>
-
-			<?php
-			$settings = $this->define_wordpress_settings();
-			foreach ( $settings as $setting ) {
-				$this->do_checkbox( $setting );
-			}
-			?>
-
-		</fieldset>
-
+						<?php
+						$settings = $this->define_wordpress_settings();
+						foreach ( $settings as $setting ) {
+							$this->do_checkbox( $setting );
+						}
+						?>
+					</fieldset>
+				</td>
+			</tr>
+			</tbody>
+		</table>
 		<?php
 	}
 
