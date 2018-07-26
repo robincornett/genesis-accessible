@@ -287,8 +287,10 @@ class Genesis_Accessible_Theme_Settings extends Genesis_Admin_Boxes {
 		);
 		if ( ! function_exists( 'genesis_a11y' ) ) {
 			$settings = array_merge( array(
-				'setting' => 'genwpacc_read_more',
-				'label'   => __( 'Add the post title to the read more links', 'genesis-accessible' ),
+				array(
+					'setting' => 'genwpacc_read_more',
+					'label'   => __( 'Add the post title to the read more links', 'genesis-accessible' ),
+				),
 			), $settings );
 		}
 
