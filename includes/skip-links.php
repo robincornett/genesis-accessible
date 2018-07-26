@@ -185,5 +185,5 @@ add_action( 'wp_enqueue_scripts', 'genwpacc_skiplinks_scripts' );
  * Enqueue the skip links js.
  */
 function genwpacc_skiplinks_scripts() {
-	wp_enqueue_script( 'genwpacc-skiplinks-js', GENWPACC_PLUGIN_URL . 'js/genwpacc-skiplinks.js' );
+	wp_enqueue_script( 'genwpacc-skiplinks-js', GENWPACC_PLUGIN_URL . 'js/genwpacc-skiplinks.js', array( 'jquery' ), GENWPACC_VERSION, false );
 }

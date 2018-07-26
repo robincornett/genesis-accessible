@@ -152,7 +152,7 @@ function genwpacc_template_404() {
  * @since 1.2.0
  */
 function genwpacc_srt_css() {
-	wp_register_style( 'genwpacc-srt-css', GENWPACC_PLUGIN_URL . 'css/genwpacc-skiplinks.css' );
+	wp_register_style( 'genwpacc-srt-css', GENWPACC_PLUGIN_URL . 'css/genwpacc-skiplinks.css', array(), GENWPACC_VERSION, 'all' );
 	wp_enqueue_style( 'genwpacc-srt-css' );
 }
 
