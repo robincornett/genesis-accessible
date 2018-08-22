@@ -195,29 +195,9 @@ class GenesisAccessible {
 	 *
 	 * @param string $key
 	 *
-	 * @return array
+	 * @return boolean
 	 */
-	protected function get_setting( $key = '' ) {
-		if ( isset( $this->setting ) ) {
-			return $key ? $this->setting[ $key ] : $this->setting;
-		}
-		$defaults = array(
-			'genwpacc_screen_reader_text'     => 0,
-			'genwpacc_skiplinks'              => 0,
-			'genwpacc_skiplinks_css'          => 0,
-			'genwpacc_widget_headings'        => 0,
-			'genwpacc_no_title_attr'          => 0,
-			'genwpacc_read_more'              => 0,
-			'genwpacc_tinymce'                => 0,
-			'genwpacc_dropdown'               => 0,
-			'genwpacc_remove_genesis_widgets' => 0,
-			'genwpacc_sitemap'                => 0,
-			'genwpacc_404'                    => 0,
-		);
-
-		$option        = get_option( 'genwpacc-settings', array() );
-		$this->setting = wp_parse_args( $option, $defaults );
-
-		return $key ? $this->setting[ $key ] : $this->setting;
+	protected function get_setting( $key ) {
+		return (bool) genesis_get_option( $key, 'genwpacc-settings' );
 	}
 }
