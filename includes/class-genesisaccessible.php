@@ -161,7 +161,7 @@ class GenesisAccessible {
 		}
 		$supports = implode( ', ', $this->get_genesis_theme_support() );
 		/* translators: list of already supported accessibility features */
-		$message = sprintf( __( 'It looks like your theme already provides support for these Genesis accessibility features: %s.', 'genesis-accessible' ), $supports );
+		$message = sprintf( __( 'It looks like your theme may already support these Genesis accessibility features: %s.', 'genesis-accessible' ), $supports );
 		$this->print_notice( $message, 'notice-success' );
 	}
 
