@@ -21,9 +21,9 @@ Genesis Accessible is a plugin for site owners who want accessibility-ready webs
 
 = Settings for Genesis (earlier than 2.2 only) =
 
-- To add an H1 on archives for categories: Go to the Dashboard to Posts → Category. Edit the category and fill out the Archive Headline.
-- To add an H1 on archives for tags: Go to the Dashboard to Posts → Tags. Edit the tag and fill out the Archive Headline.
-- Go to the Dashboard to Genesis → SEO Settings →  Homepage Settings →  Which text would you like to be wrapped in h1 tags? Select Site Title.
+- To add an `h1` on archives for terms (categories, tags, custom taxonomy terms): Go to the Dashboard to Posts → Category. Edit the category and fill out the Archive Headline.
+- To add an `h1` on archives for tags: Go to the admin area to Posts → Tags. Edit the tag and fill out the Archive Headline.
+- Go to the admin area to Genesis → SEO Settings →  Homepage Settings →  Which text would you like to be wrapped in `h1` tags? Select Site Title.
 
 Look for [documentation on genesis-accessible.org](https://genesis-accessible.org)
 
