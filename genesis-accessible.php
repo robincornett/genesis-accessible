@@ -72,8 +72,7 @@ function genwpacc_activation_check() {
 
 	// Restrict activation to only when the Genesis Framework is activated
 	if ( basename( get_template_directory() ) !== 'genesis' ) {
-		deactivate_plugins( plugin_basename( __FILE__ ) );  // Deactivate ourself
-		add_action( 'admin_notices', 'genwpacc_deactivation_message' );
+		genwpacc_deactivate();
 	}
 
 	// Find Genesis Theme Data
@@ -83,12 +82,11 @@ function genwpacc_activation_check() {
 	$version = $theme->get( 'Version' );
 
 	// Set what we consider the minimum Genesis version
-	$minimum_genesis_version = '2.3.1';
+	$minimum_genesis_version = '2.0';
 
 	// Set a minimum version of the Genesis Framework to be activated on
 	if ( version_compare( $version, $minimum_genesis_version, '<' ) ) {
-		deactivate_plugins( plugin_basename( __FILE__ ) );  // Deactivate ourself
-		add_action( 'admin_notices', 'genwpacc_deactivation_message' );
+		genwpacc_deactivate();
 	}
 }
 
@@ -96,14 +94,17 @@ function genwpacc_activation_check() {
  * Genesis Accessible deactivation message.
  * @since 1.3.0
  */
-function genwpacc_deactivation_message() {
+function genwpacc_deactivate() {
+
+	deactivate_plugins( plugin_basename( __FILE__ ) );  // Deactivate
 
 	/* translators: link to the Genesis Framework */
-	$message = sprintf( __( 'Uhm, the thing of it is, you kinda need the %1$s 2.3.1 or greater for this plugin to make any sense. Genesis Accessible has been deactivated.', 'genesis-accessible' ),
+	$message = sprintf( __( 'Genesis Accessible requires the %1$s (minimum version 2.0.1, preferred version 2.3.1 or greater) for this plugin to work. The plugin has been deactivated.', 'genesis-accessible' ),
 		'<a href="https://my.studiopress.com/themes/genesis/">Genesis Framework</a>'
 	);
-
-	echo '<div class="error"><p>' . wp_kses_post( $message ) . '</p></div>';
+	/* translators: %s is the link for the plugins page. */
+	$message .= sprintf( __( ' <a href="%s">Return to the plugins page.</a>', 'genesis-accessible' ), esc_url( admin_url( 'plugins.php' ) ) );
+	wp_die( wp_kses_post( $message ) );
 
 	if ( isset( $_GET['activate'] ) ) {
 		unset( $_GET['activate'] );
@@ -155,4 +156,3 @@ function genwpacc_srt_css() {
 	wp_register_style( 'genwpacc-srt-css', GENWPACC_PLUGIN_URL . 'css/genwpacc-skiplinks.css', array(), GENWPACC_VERSION, 'all' );
 	wp_enqueue_style( 'genwpacc-srt-css' );
 }
-
