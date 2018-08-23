@@ -265,7 +265,17 @@ class Genesis_Accessible_Theme_Settings extends Genesis_Admin_Boxes {
 	 * @return string
 	 */
 	protected function get_semantic_headings_description() {
-		return genesis_html5() && genesis_get_option( 'semantic_headings' ) && genesis_get_option( 'db_version', null, false ) >= '2501' ? __( '(Note: also disable "Use semantic HTML5 page and section headings throughout site?" in the Genesis SEO Settings)', 'genesis-accessible' ) : '';
+		if ( ! genesis_html5() ) {
+			return '';
+		}
+		if ( ! genesis_get_option( 'semantic_headings' ) ) {
+			return '';
+		}
+		if ( genesis_get_option( 'db_version', null, false ) < '2501' ) {
+			return '';
+		}
+
+		return __( '(Note: also disable "Use semantic HTML5 page and section headings throughout site?" in the Genesis SEO Settings)', 'genesis-accessible' );
 	}
 
 	/**
