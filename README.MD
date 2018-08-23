@@ -1,6 +1,6 @@
 # Genesis Accessible
 
-Genesis Accessible is a plugin for site owners who want accessibility-ready websites, but who use themes which don't yet support the Genesis Framework's accessibility features.
+Genesis Accessible is a plugin for site owners who want accessibility-ready websites using the Genesis Framework, but who use child themes which don't yet support the framework's accessibility features.
 
 ### So what do you need?
 
@@ -8,7 +8,9 @@ Genesis Accessible is a plugin for site owners who want accessibility-ready webs
 - Genesis Framework: The Genesis Accessible plugin is written for the Genesis framework version 2.3.1 or higher. This excellent framework is not free, but doesn't cost much and is totally worth the money. You can buy and download it at studiopress.com; you only need the [basic Genesis framework](https://my.studiopress.com/themes/genesis/).
 - This plugin Genesis Accessible
 
-Look for [documentation on genesis-accessible.org](http://genesis-accessible.org)
+Look for [documentation on genesis-accessible.org](https://genesis-accessible.org)
+
+Photo by [Nick van der Zwan](https://unsplash.com/photos/Qco9YF2io4Q)
 
 ## Installation
 
@@ -21,24 +23,25 @@ Look for [documentation on genesis-accessible.org](http://genesis-accessible.org
 - Go to the Dashboard to Genesis → Theme Settings and select Content Archives: Display post content and Limit content to the amount of characters you want (e.g. 500)
 - Go to the Dashboard to Genesis → SEO Settings and uncheck "Use semantic HTML and section throughout site?"
 
-### Settings for Genesis version 2.1
-
-- To add an H1 on archives for categories: Go to the Dashboard to Posts → Category. Edit the category and fill out the Archive Headline.
-- To add an H1 on archives for tags: Go to the Dashboard to Posts → Tags. Edit the tag and fill out the Archive Headline.
-- Go to the Dashboard to Genesis → SEO Settings →  Homepage Settings →  Which text would you like to be wrapped in h1 tags? Select Site Title.
-
-Look for [documentation on genesis-accessible.org](http://genesis-accessible.org)
-
 ## Frequently Asked Questions
 
-- Look for [documentation on genesis-accessible.org](http://genesis-accessible.org)
-- Have a question? Please read the [FAQ](http://genesis-accessible.org/documentation/faq/) on genesis-accessible.org
+- Look for [documentation on genesis-accessible.org](https://genesis-accessible.org)
+- Have a question? Please read the [FAQ](https://genesis-accessible.org/documentation/faq/) on genesis-accessible.org
 - Still have a question? Ask it on the [Support Forum](https://wordpress.org/support/plugin/genesis-accessible)
 - If you found a bug or have an improvement, please report it on [GitHub](https://github.com/RRWD/genesis-accessible)
-- If you want this plugin in your language, you can help us to [translate](http://genesis-accessible.org/glotpress/projects/genesis-accessible) in the plugins GlotPress.
+- If you want this plugin in your language, you can help by [submitting a translation](https://translate.wordpress.org/projects/wp-plugins/genesis-accessible).
 
 
 ## Changelog
+
+### 1.3.0
+
+* Add a check for current theme accessibility support, and merge the plugin settings with those (instead of replacing)
+* On the settings page, identify which Genesis accessibility features are already included in the theme
+* Add support for 404 pages
+* Settings page updated to be consistent with Genesis Framework
+* Update minimum Genesis/WordPress versions
+* New contributor/author: @littlerchicken
 
 ### 1.2.3
 
