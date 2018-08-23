@@ -19,6 +19,12 @@ Genesis Accessible is a plugin for site owners who want accessibility-ready webs
 - Genesis Framework: The Genesis Accessible plugin is written for the Genesis framework version 2.0 or higher. This excellent framework is not free, but doesn't cost much and is totally worth the money. You can buy and download it at [studiopress.com](https://my.studiopress.com/themes/genesis/).
 - This plugin Genesis Accessible
 
+= Settings for Genesis (earlier than 2.2 only) =
+
+- To add an H1 on archives for categories: Go to the Dashboard to Posts → Category. Edit the category and fill out the Archive Headline.
+- To add an H1 on archives for tags: Go to the Dashboard to Posts → Tags. Edit the tag and fill out the Archive Headline.
+- Go to the Dashboard to Genesis → SEO Settings →  Homepage Settings →  Which text would you like to be wrapped in h1 tags? Select Site Title.
+
 Look for [documentation on genesis-accessible.org](https://genesis-accessible.org)
 
 == Installation ==
