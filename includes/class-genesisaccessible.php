@@ -22,6 +22,13 @@ class GenesisAccessible {
 	protected $theme_support;
 
 	/**
+	 * The plugin's settings page ID.
+	 *
+	 * @var string
+	 */
+	protected $settings_page_id = 'genesis_page_genesis-accessible';
+
+	/**
 	 * Include plugin admin files and files per option from directory includes/
 	 * @since 1.0.0
 	 */
@@ -156,7 +163,7 @@ class GenesisAccessible {
 	 */
 	public function theme_already_supports_notice() {
 		$screen = get_current_screen();
-		if ( 'genesis_page_genesis-accessible' !== $screen->id ) {
+		if ( $this->settings_page_id !== $screen->id ) {
 			return;
 		}
 		$supports = implode( ', ', $this->get_genesis_theme_support() );
