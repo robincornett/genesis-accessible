@@ -343,12 +343,12 @@ class Genesis_Accessible_Theme_Settings extends Genesis_Admin_Boxes {
 		if ( empty( $setting['supports'] ) || ! in_array( $setting['supports'], $supports, true ) ) {
 			return $description;
 		}
-		$addendum = ' ' . __( 'Your theme already supports this feature.', 'genesis-accessible' );
+		$addendum = __( 'Your theme already supports this feature.', 'genesis-accessible' ) . ' ';
 		if ( 'genwpacc_skiplinks_css' === $setting['setting'] ) {
-			$addendum = ' ' . __( 'Since your theme includes support for skip links, it may already support this feature.', 'genesis-accessible' );
+			$addendum = __( 'Since your theme includes support for skip links, it may already support this feature.', 'genesis-accessible' ) . ' ';
 		}
 
-		return $description . $addendum;
+		return $addendum . $description;
 	}
 
 	/**
