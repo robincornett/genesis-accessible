@@ -177,7 +177,7 @@ class GenesisAccessible {
 	 * @since 1.3.0
 	 */
 	public function deprecated_genesis_notice() {
-		$message = __( 'The version of Genesis you are using is no longer recommended by the Genesis Accessible plugin, which now requires a minimum version of Genesis 2.3.1 and WordPress 4.6. Support for this version of Genesis will be dropped in a future version of this plugin.', 'genesis-accessible' );
+		$message = __( 'The version of Genesis you are using is no longer recommended by the Genesis Accessible plugin, which now strongly suggests a minimum version of Genesis 2.3.1 and WordPress 4.6.', 'genesis-accessible' );
 
 		$this->print_notice( $message );
 	}
