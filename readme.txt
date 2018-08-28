@@ -7,7 +7,7 @@ Tested up to: 4.9
 Stable tag: 1.3.0
 Requires PHP: 5.6
 License: GPLv2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
 == Description ==
 
@@ -29,17 +29,18 @@ Look for [documentation on genesis-accessible.org](https://genesis-accessible.or
 
 == Installation ==
 
-- Install WordPress (http://codex.wordpress.org/Installing_WordPress).
+- Install [WordPress](https://codex.wordpress.org/Installing_WordPress).
 - Install the [Genesis Framework](https://my.studiopress.com/themes/genesis/) version 2.3.1 or higher
 - Install your preferred Genesis child theme
-- If your site is in another language than English: install and activate the plugin [Genesis Translations](http://wordpress.org/plugins/genesis-translations/)
+- If your site is in another language than English: install and activate the plugin [Genesis Translations](https://wordpress.org/plugins/genesis-translations/)
 - Install and activate this plugin Genesis Accessible
 - Go in the Dashboard to Genesis → Accessibility Settings and select the options you want to add
-- Go to the Dashboard to Genesis → Theme Settings and select Content Archives: Display post content and Limit content to the amount of characters you want (e.g. 500)
+- Go to the Dashboard to Genesis → Theme Settings and select Content Archives: Display post content. If you do not want to display the full content on archives, then limit content to the number of characters you want (e.g. 500)
+- Go to the Dashboard to Genesis → SEO Settings and uncheck "Use semantic HTML and section throughout site?" (this setting may not be available)
 
 Look for [documentation on genesis-accessible.org](https://genesis-accessible.org)
 
-Photo by [Nick van der Zwan](https://unsplash.com/photos/Qco9YF2io4Q)
+Photo credit: Leiden, Netherlands by [Nick van der Zwan](https://unsplash.com/photos/Qco9YF2io4Q)
 
 == Frequently Asked Questions ==
 
@@ -61,7 +62,7 @@ Photo by [Nick van der Zwan](https://unsplash.com/photos/Qco9YF2io4Q)
 = 1.3.0 =
 
 * Add a check for current theme accessibility support, and merge the plugin settings with those (instead of replacing)
-* On the settings page, identify which Genesis accessibility features are already included in the theme
+* On the settings page, identify which Genesis accessibility features are already included in the active child theme
 * Add support for 404 pages
 * Settings page updated to be consistent with Genesis Framework
 * Update minimum Genesis/WordPress versions

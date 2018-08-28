@@ -20,8 +20,8 @@ Photo by [Nick van der Zwan](https://unsplash.com/photos/Qco9YF2io4Q)
 - If your site is in another language than English: install and activate the plugin [Genesis Translations](https://wordpress.org/plugins/genesis-translations/)
 - Install and activate this plugin Genesis Accessible
 - Go in the Dashboard to Genesis → Accessibility Settings and select the options you want to add
-- Go to the Dashboard to Genesis → Theme Settings and select Content Archives: Display post content and Limit content to the amount of characters you want (e.g. 500)
-- Go to the Dashboard to Genesis → SEO Settings and uncheck "Use semantic HTML and section throughout site?"
+- Go to the Dashboard to Genesis → Theme Settings and select Content Archives: Display post content. If you do not want to display the full content on archives, then limit content to the number of characters you want (e.g. 500)
+- Go to the Dashboard to Genesis → SEO Settings and uncheck "Use semantic HTML and section throughout site?" (this setting may not be available)
 
 ### Settings for Genesis (earlier than 2.2 only)
 
@@ -37,13 +37,17 @@ Photo by [Nick van der Zwan](https://unsplash.com/photos/Qco9YF2io4Q)
 - If you found a bug or have an improvement, please report it on [GitHub](https://github.com/RRWD/genesis-accessible)
 - If you want this plugin in your language, you can help by [submitting a translation](https://translate.wordpress.org/projects/wp-plugins/genesis-accessible).
 
+## Screenshots
+
+![Screenshot of the Genesis Accessible settings page](https://github.com/RRWD/genesis-accessible/blob/develop/assets/screenshot-1.png)  
+_Screenshot of the Genesis Accessible settings page._
 
 ## Changelog
 
 ### 1.3.0
 
 * Add a check for current theme accessibility support, and merge the plugin settings with those (instead of replacing)
-* On the settings page, identify which Genesis accessibility features are already included in the theme
+* On the settings page, identify which Genesis accessibility features are already included in the active child theme
 * Add support for 404 pages
 * Settings page updated to be consistent with Genesis Framework
 * Update minimum Genesis/WordPress versions
