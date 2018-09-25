@@ -1,0 +1,37 @@
+{
+	"name": "robincornett/genesis-accessible",
+	"type": "wordpress-plugin",
+	"description": "WordPress plugin that implements extra accessibility features for the Genesis Framework.",
+	"keywords": [
+		"wordpress",
+		"genesis",
+		"accessibility"
+	],
+	"homepage": "https://github.com/robincornett/genesis-accessible",
+	"license": "GPL-2.0-or-later",
+	"authors": [
+		{
+			"name": "Rian Rietveld",
+			"homepage": "https://rianrietveld.com/",
+			"role": "Developer"
+		},
+		{
+			"name": "Robin Cornett",
+			"homepage": "https://robincornett.com/",
+			"role": "Developer"
+		}
+	],
+	"require": {
+		"php": "^5.6 || ^7",
+		"composer/installers": "^1"
+	},
+	"config": {
+		"sort-packages": true
+	},
+	"minimum-stability": "dev",
+	"prefer-stable": true,
+	"support": {
+		"issues": "https://github.com/robincornett/genesis-accessible/issues",
+		"source": "https://github.com/robincornett/genesis-accessible"
+	}
+}
