@@ -13,7 +13,6 @@
 
 	<!-- How to scan -->
 	<arg value="sp"/> <!-- Show sniff and progress -->
-	<arg name="colors"/> <!-- Show results with colors -->
 	<arg name="basepath" value="."/> <!-- Strip the file paths down to the relevant bit -->
 	<arg name="parallel" value="8"/> <!-- Enables parallel processing when available for faster results. -->
 	<arg name="extensions" value="php"/> <!-- Limit to PHP files -->

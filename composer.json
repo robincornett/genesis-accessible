@@ -41,7 +41,7 @@
 		"install-codestandards": [
 			"Dealerdirect\\Composer\\Plugin\\Installers\\PHPCodeSniffer\\Plugin::run"
 		],
-		"phpcs": "./vendor/bin/phpcs && ./vendor/bin/phpcs ./genesis-accessible.php -sp --standard=PHPCompatibilityWP --runtime-set testVersion 5.2"
+		"phpcs": "phpcs && phpcs genesis-accessible.php -sp --standard=PHPCompatibilityWP --runtime-set testVersion 5.2"
 	},
 	"support": {
 		"issues": "https://github.com/robincornett/genesis-accessible/issues",
