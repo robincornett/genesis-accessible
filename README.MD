@@ -44,6 +44,9 @@ _Screenshot of the Genesis Accessible settings page._
 
 ## Changelog
 
+### 1.3.1
+* Remove unneeded uninstall.php
+
 ### 1.3.0
 
 * Add a check for current theme accessibility support, and merge the plugin settings with those (instead of replacing)

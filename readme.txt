@@ -3,8 +3,8 @@ Contributors: rianrietveld, GaryJ, littlerchicken
 Donate link: https://genesis-accessible.org/donate/
 Tags: Genesis, Accessible, Accessibility, a11y, WCAG, WCAG 2.0 AA, Web Standards
 Requires at least: 4.6
-Tested up to: 4.9
-Stable tag: 1.3.0
+Tested up to: 5.2
+Stable tag: 1.3.1
 Requires PHP: 5.6
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -59,8 +59,10 @@ Photo credit: Leiden, Netherlands by [Nick van der Zwan](https://unsplash.com/ph
 
 == Changelog ==
 
-= 1.3.0 =
+= 1.3.1 =
+* Remove unneeded uninstall.php
 
+= 1.3.0 =
 * Add a check for current theme accessibility support, and merge the plugin settings with those (instead of replacing)
 * On the settings page, identify which Genesis accessibility features are already included in the active child theme
 * Add support for 404 pages
