@@ -89,7 +89,13 @@ class GenesisAccessible {
 	 * @return array
 	 */
 	protected function get_plugin_support() {
-		$plugin_support = array( 'search-form', '404-page' );
+		$plugin_support = array( 'search-form' );
+		/**
+		 * As of Genesis 3.0.0, the 404 page accessibility feature has been removed.
+		 */
+		if ( ! function_exists( 'genesis_get_theme_version' ) ) {
+			$plugin_support[] = '404-page';
+		}
 
 		if ( $this->get_setting( 'genwpacc_skiplinks' ) ) {
 			$plugin_support[] = 'skip-links';
