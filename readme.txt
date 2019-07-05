@@ -2,7 +2,7 @@
 Contributors: rianrietveld, GaryJ, littlerchicken
 Donate link: https://genesis-accessible.org/donate/
 Tags: Genesis, Accessible, Accessibility, a11y, WCAG, WCAG 2.0 AA, Web Standards
-Requires at least: 4.6
+Requires at least: 4.9
 Tested up to: 5.2
 Stable tag: 1.3.1
 Requires PHP: 5.6
@@ -15,15 +15,9 @@ Genesis Accessible is a plugin for site owners who want accessibility-ready webs
 
 = So what do you need? =
 
-- WordPress: Well, First of all: have a recent version [WordPress](https://wordpress.org) installed, preferably version 4.0 or higher. Also take a look at the [requirements for WordPress](https://wordpress.org/about/requirements/)
-- Genesis Framework: The Genesis Accessible plugin is written for the Genesis framework version 2.0 or higher. This excellent framework is not free, but doesn't cost much and is totally worth the money. You can buy and download it at [studiopress.com](https://my.studiopress.com/themes/genesis/).
+- WordPress: Well, First of all: have a recent version [WordPress](https://wordpress.org) installed: version 4.9 or higher. Also take a look at the [requirements for WordPress](https://wordpress.org/about/requirements/)
+- Genesis Framework: The Genesis Accessible plugin is written for the Genesis framework version 2.8.1 or higher. This excellent framework is not free, but doesn't cost much and is totally worth the money. You can buy and download it at [studiopress.com](https://my.studiopress.com/themes/genesis/).
 - This plugin Genesis Accessible
-
-= Settings for Genesis (earlier than 2.2 only) =
-
-- To add an `h1` on archives for terms (categories, tags, custom taxonomy terms): Go to the Dashboard to Posts → Category. Edit the category and fill out the Archive Headline.
-- To add an `h1` on archives for tags: Go to the admin area to Posts → Tags. Edit the tag and fill out the Archive Headline.
-- Go to the admin area to Genesis → SEO Settings →  Homepage Settings →  Which text would you like to be wrapped in `h1` tags? Select Site Title.
 
 Look for [documentation on genesis-accessible.org](https://genesis-accessible.org)
 

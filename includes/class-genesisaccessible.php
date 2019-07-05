@@ -183,7 +183,7 @@ class GenesisAccessible {
 	 * @since 1.3.0
 	 */
 	public function deprecated_genesis_notice() {
-		$message = __( 'The version of Genesis you are using is no longer recommended by the Genesis Accessible plugin, which now strongly suggests a minimum version of Genesis 2.3.1 and WordPress 4.6.', 'genesis-accessible' );
+		$message = __( 'The version of Genesis you are using is no longer recommended by the Genesis Accessible plugin, which now strongly suggests a minimum version of Genesis 2.8.1 and WordPress 4.9.', 'genesis-accessible' );
 
 		$this->print_notice( $message );
 	}
@@ -196,7 +196,8 @@ class GenesisAccessible {
 	 * @param string $class
 	 */
 	protected function print_notice( $message, $class = 'notice-warning' ) {
-		printf( '<div class="notice %s"><p>%s</p></div>',
+		printf(
+			'<div class="notice %s"><p>%s</p></div>',
 			esc_attr( $class ),
 			wp_kses_post( $message )
 		);

@@ -82,7 +82,7 @@ function genwpacc_activation_check() {
 	$version = $theme->get( 'Version' );
 
 	// Set what we consider the minimum Genesis version
-	$minimum_genesis_version = '2.0';
+	$minimum_genesis_version = '2.3.1';
 
 	// Set a minimum version of the Genesis Framework to be activated on
 	if ( version_compare( $version, $minimum_genesis_version, '<' ) ) {
@@ -99,7 +99,8 @@ function genwpacc_deactivate() {
 	deactivate_plugins( plugin_basename( __FILE__ ) );  // Deactivate
 
 	/* translators: link to the Genesis Framework */
-	$message = sprintf( __( 'Genesis Accessible requires the %1$s (minimum version 2.0.1, preferred version 2.3.1 or greater) for this plugin to work. The plugin has been deactivated.', 'genesis-accessible' ),
+	$message = sprintf(
+		__( 'Genesis Accessible requires the %1$s (minimum version 2.3.1, preferred version 2.8.1 or greater) for this plugin to work. The plugin has been deactivated.', 'genesis-accessible' ),
 		'<a href="https://my.studiopress.com/themes/genesis/">Genesis Framework</a>'
 	);
 	/* translators: %s is the link for the plugins page. */
