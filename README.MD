@@ -4,8 +4,8 @@ Genesis Accessible is a plugin for site owners who want accessibility-ready webs
 
 ### So what do you need?
 
-- WordPress: Well, First of all: have a recent version [WordPress](https://www.wordpress.org) installed, preferably version 4.0 or higher. Also take a look at the [requirements for WordPress](https://wordpress.org/about/requirements/)
-- Genesis Framework: The Genesis Accessible plugin is written for the Genesis framework version 2.3.1 or higher. This excellent framework is not free, but doesn't cost much and is totally worth the money. You can buy and download it at studiopress.com; you only need the [basic Genesis framework](https://my.studiopress.com/themes/genesis/).
+- WordPress: Well, First of all: have a recent version [WordPress](https://www.wordpress.org) installed, preferably version 4.9 or higher. Also take a look at the [requirements for WordPress](https://wordpress.org/about/requirements/)
+- Genesis Framework: The Genesis Accessible plugin is written for the Genesis framework version 2.8.1 or higher. This excellent framework is not free, but doesn't cost much and is totally worth the money. You can buy and download it at studiopress.com; you only need the [basic Genesis framework](https://my.studiopress.com/themes/genesis/).
 - This plugin Genesis Accessible
 
 Look for [documentation on genesis-accessible.org](https://genesis-accessible.org)
@@ -34,15 +34,19 @@ Photo by [Nick van der Zwan](https://unsplash.com/photos/Qco9YF2io4Q)
 - Look for [documentation on genesis-accessible.org](https://genesis-accessible.org)
 - Have a question? Please read the [FAQ](https://genesis-accessible.org/documentation/faq/) on genesis-accessible.org
 - Still have a question? Ask it on the [Support Forum](https://wordpress.org/support/plugin/genesis-accessible)
-- If you found a bug or have an improvement, please report it on [GitHub](https://github.com/RRWD/genesis-accessible)
+- If you found a bug or have an improvement, please report it on [GitHub](https://github.com/robincornett/genesis-accessible)
 - If you want this plugin in your language, you can help by [submitting a translation](https://translate.wordpress.org/projects/wp-plugins/genesis-accessible).
 
 ## Screenshots
 
-![Screenshot of the Genesis Accessible settings page](https://github.com/RRWD/genesis-accessible/blob/develop/assets/screenshot-1.png)  
+![Screenshot of the Genesis Accessible settings page](https://github.com/robincornett/genesis-accessible/blob/develop/assets/screenshot-1.png)  
 _Screenshot of the Genesis Accessible settings page._
 
 ## Changelog
+
+### 1.4.0
+* remove 404 support (removed from Genesis Framework)
+* remove support for old versions of Genesis
 
 ### 1.3.1
 * Remove unneeded uninstall.php

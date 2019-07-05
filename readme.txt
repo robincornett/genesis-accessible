@@ -41,7 +41,7 @@ Photo credit: Leiden, Netherlands by [Nick van der Zwan](https://unsplash.com/ph
 - Look for [documentation on genesis-accessible.org](https://genesis-accessible.org)
 - Have a question? Please read the [FAQ](https://genesis-accessible.org/documentation/faq/) on genesis-accessible.org
 - Still have a question? Ask it on the [Support Forum](https://wordpress.org/support/plugin/genesis-accessible)
-- If you found a bug or have an improvement, please report it on [GitHub](https://github.com/RRWD/genesis-accessible)
+- If you found a bug or have an improvement, please report it on [GitHub](https://github.com/robincornett/genesis-accessible)
 - If you want this plugin in your language, you can help by [submitting a translation](https://translate.wordpress.org/projects/wp-plugins/genesis-accessible).
 
 == Screenshots ==
@@ -49,9 +49,13 @@ Photo credit: Leiden, Netherlands by [Nick van der Zwan](https://unsplash.com/ph
 
 == Upgrade Notice ==
 
-1.3.0: new plugin contributor, more information available about current theme support
+1.4.0: updated with Genesis 3.0, removed support for older versions of the framework
 
 == Changelog ==
+
+= 1.4.0 =
+* remove 404 support (removed from Genesis Framework)
+* remove support for old versions of Genesis
 
 = 1.3.1 =
 * Remove unneeded uninstall.php
