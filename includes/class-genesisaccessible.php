@@ -62,9 +62,9 @@ class GenesisAccessible {
 	public function check_genesis_accessibility() {
 		if ( function_exists( 'genesis_a11y' ) ) {
 			$this->add_genesis_theme_support();
-		} else {
-			$this->pre_22();
+			return;
 		}
+		add_action( 'admin_notices', array( $this, 'deprecated_genesis_notice' ) );
 	}
 
 	/**
@@ -133,7 +133,6 @@ class GenesisAccessible {
 	 * @since 1.3.0
 	 */
 	protected function pre_22() {
-		add_action( 'admin_notices', array( $this, 'deprecated_genesis_notice' ) );
 		require_once GENWPACC_PLUGIN_PATH . 'includes/forms.php';
 		require_once GENWPACC_PLUGIN_PATH . 'includes/wp-modification.php';
 
@@ -183,7 +182,7 @@ class GenesisAccessible {
 	 * @since 1.3.0
 	 */
 	public function deprecated_genesis_notice() {
-		$message = __( 'The version of Genesis you are using is no longer recommended by the Genesis Accessible plugin, which now strongly suggests a minimum version of Genesis 2.8.1 and WordPress 4.9.', 'genesis-accessible' );
+		$message = __( 'The version of Genesis you are using is no longer supported by the Genesis Accessible plugin, which now strongly suggests a minimum version of Genesis 2.8.1 and WordPress 4.9.', 'genesis-accessible' );
 
 		$this->print_notice( $message );
 	}
