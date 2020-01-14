@@ -129,39 +129,6 @@ class GenesisAccessible {
 	}
 
 	/**
-	 * Pre Genesis 2.2: add a11y functionality if selected.
-	 * @since 1.3.0
-	 */
-	protected function pre_22() {
-		require_once GENWPACC_PLUGIN_PATH . 'includes/forms.php';
-		require_once GENWPACC_PLUGIN_PATH . 'includes/wp-modification.php';
-
-		if ( $this->get_setting( 'genwpacc_skiplinks' ) ) {
-			require_once GENWPACC_PLUGIN_PATH . 'includes/skip-links.php';
-		}
-
-		if ( $this->get_setting( 'genwpacc_widget_headings' ) ) {
-			require_once GENWPACC_PLUGIN_PATH . 'includes/headings.php';
-		}
-
-		if ( $this->get_setting( 'genwpacc_dropdown' ) ) {
-			require_once GENWPACC_PLUGIN_PATH . 'includes/dropdown.php';
-		}
-
-		if ( $this->get_setting( 'genwpacc_sitemap' ) ) {
-			add_action( 'template_redirect', 'genwpacc_template_sitemap' );
-		}
-
-		if ( $this->get_setting( 'genwpacc_404' ) ) {
-			add_action( 'template_redirect', 'genwpacc_template_404' );
-		}
-
-		if ( $this->get_setting( 'genwpacc_remove_genesis_widgets' ) ) {
-			require_once GENWPACC_PLUGIN_PATH . 'includes/widgets.php';
-		}
-	}
-
-	/**
 	 * Add a notice to the admin if the installed theme already supports the Genesis Accessible features.
 	 * @since 1.3.0
 	 *
