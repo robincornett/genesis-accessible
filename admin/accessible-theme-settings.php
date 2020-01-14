@@ -94,7 +94,7 @@ class Genesis_Accessible_Theme_Settings extends Genesis_Admin_Boxes {
 		$screen->add_help_tab( array(
 			'id'      => 'genwpacc-help',
 			'title'   => 'Genesis Accessible Help',
-			'content' => '<p>' . __( 'For documentation, help, and support, please visit <a href="http://genesis-accessible.org/">genesis-accessible.org</a>.', 'genesis-accessible' ) . '</p>',
+			'content' => '<p>' . __( 'For documentation, help, and support, please visit <a href="https://genesis-accessible.org/">genesis-accessible.org</a>.', 'genesis-accessible' ) . '</p>',
 		) );
 	}
 
@@ -180,9 +180,9 @@ class Genesis_Accessible_Theme_Settings extends Genesis_Admin_Boxes {
 	public function modify_settings_wordpress() {
 
 		?>
-		<p><span class="description"><?php echo wp_kses_post( __( 'These settings are for WordPress itself. If you have installed <a href="http://wordpress.org/plugins/wp-accessibility/">WP Accessibility</a> by Joe Dolson too: don\'t worry you can use both plugins together.', 'genesis-accessible' ) ); ?></span></p>
+		<p><span class="description"><?php echo wp_kses_post( __( 'These settings are for WordPress itself. If you have installed <a href="https://wordpress.org/plugins/wp-accessibility/">WP Accessibility</a> by Joe Dolson too: don\'t worry you can use both plugins together.', 'genesis-accessible' ) ); ?></span></p>
 
-		<p><span class="description"><?php echo wp_kses_post( __( 'Read more about WP Accessibility’s compatibility with Genesis Accessible in the online <a href="http://genesis-accessible.org/documentation/compatibility-wp-accessibility/">Genesis Accessible Documentation</a>', 'genesis-accessible' ) ); ?></span></p>
+		<p><span class="description"><?php echo wp_kses_post( __( 'Read more about WP Accessibility’s compatibility with Genesis Accessible in the online <a href="https://genesis-accessible.org/documentation/compatibility-wp-accessibility/">Genesis Accessible Documentation</a>', 'genesis-accessible' ) ); ?></span></p>
 		<table class="form-table">
 			<tbody>
 			<tr>
@@ -360,7 +360,7 @@ class Genesis_Accessible_Theme_Settings extends Genesis_Admin_Boxes {
 	 */
 	public function plugin_documentation() {
 		?>
-		<p><span class="description"><?php echo wp_kses_post( __( 'For documentation, help, and support, please visit <a href="http://genesis-accessible.org/">genesis-accessible.org</a>.', 'genesis-accessible' ) ); ?></span></p>
+		<p><span class="description"><?php echo wp_kses_post( __( 'For documentation, help, and support, please visit <a href="https://genesis-accessible.org/">genesis-accessible.org</a>.', 'genesis-accessible' ) ); ?></span></p>
 		<?php
 	}
 }
