@@ -3,8 +3,8 @@ Contributors: rianrietveld, GaryJ, littlerchicken
 Donate link: https://genesis-accessible.org/donate/
 Tags: Genesis, Accessible, Accessibility, a11y, WCAG, WCAG 2.0 AA, Web Standards
 Requires at least: 4.9
-Tested up to: 5.2
-Stable tag: 1.3.1
+Tested up to: 5.3
+Stable tag: 1.4.0
 Requires PHP: 5.6
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -54,7 +54,7 @@ Photo credit: Leiden, Netherlands by [Nick van der Zwan](https://unsplash.com/ph
 == Changelog ==
 
 = 1.4.0 =
-* remove 404 support (removed from Genesis Framework)
+* remove 404 support (removed from Genesis Framework in version 3.0)
 * remove support for old versions of Genesis
 
 = 1.3.1 =

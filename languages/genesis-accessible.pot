@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Genesis Accessible\n"
-"POT-Creation-Date: 2018-08-23 09:59-0400\n"
+"POT-Creation-Date: 2020-01-14 15:29-0500\n"
 "PO-Revision-Date: 2015-04-30 13:40+0100\n"
 "Last-Translator: Rian Rietveld <rian@rrwd.nl>\n"
 "Language-Team: Robin Cornett <hello@robincornett.com>\n"
@@ -10,7 +10,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.1.1\n"
+"X-Generator: Poedit 2.2.4\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
@@ -26,8 +26,8 @@ msgstr ""
 msgid "Accessibility Settings"
 msgstr ""
 
-#: admin/accessible-theme-settings.php:97 admin/accessible-theme-settings.php:353
-msgid "For documentation, help, and support, please visit <a href=\"http://genesis-accessible.org/\">genesis-accessible.org</a>."
+#: admin/accessible-theme-settings.php:97 admin/accessible-theme-settings.php:363
+msgid "For documentation, help, and support, please visit <a href=\"https://genesis-accessible.org/\">genesis-accessible.org</a>."
 msgstr ""
 
 #: admin/accessible-theme-settings.php:110
@@ -48,12 +48,13 @@ msgstr ""
 
 #: admin/accessible-theme-settings.php:183
 msgid ""
-"These settings are for WordPress itself. If you have installed <a href=\"http://wordpress.org/plugins/wp-accessibility/\">WP Accessibility</a> by Joe Dolson too: don't worry you can use both plugins together."
+"These settings are for WordPress itself. If you have installed <a href=\"https://wordpress.org/plugins/wp-accessibility/\">WP Accessibility</a> by Joe Dolson too: don't worry you can use both plugins together."
 msgstr ""
 
 #: admin/accessible-theme-settings.php:185
 msgid ""
-"Read more about WP Accessibility’s compatibility with Genesis Accessible in the online <a href=\"http://genesis-accessible.org/documentation/compatibility-wp-accessibility/\">Genesis Accessible Documentation</a>"
+"Read more about WP Accessibility’s compatibility with Genesis Accessible in the online <a href=\"https://genesis-accessible.org/documentation/compatibility-wp-accessibility/\">Genesis Accessible Documentation</"
+"a>"
 msgstr ""
 
 #: admin/accessible-theme-settings.php:190 admin/accessible-theme-settings.php:194
@@ -92,49 +93,47 @@ msgstr ""
 msgid "Use an accessible 404 page"
 msgstr ""
 
-#: admin/accessible-theme-settings.php:268
+#: admin/accessible-theme-settings.php:278
 msgid "(Note: also disable \"Use semantic HTML5 page and section headings throughout site?\" in the Genesis SEO Settings)"
 msgstr ""
 
-#: admin/accessible-theme-settings.php:281
+#: admin/accessible-theme-settings.php:291
 msgid "Remove title attribute from links"
 msgstr ""
 
-#: admin/accessible-theme-settings.php:285
+#: admin/accessible-theme-settings.php:295
 msgid "Remove h1 from editor toolbar"
 msgstr ""
 
-#: admin/accessible-theme-settings.php:292
+#: admin/accessible-theme-settings.php:302
 msgid "Add the post title to the read more links"
 msgstr ""
 
-#: admin/accessible-theme-settings.php:336
+#: admin/accessible-theme-settings.php:346
 msgid "Your theme already supports this feature."
 msgstr ""
 
-#: admin/accessible-theme-settings.php:338
+#: admin/accessible-theme-settings.php:348
 msgid "Since your theme includes support for skip links, it may already support this feature."
 msgstr ""
 
-#: genesis-accessible.php:102
+#: genesis-accessible.php:103
 #, php-format
-msgid "Genesis Accessible requires the %1$s (minimum version 2.0.1, preferred version 2.3.1 or greater) for this plugin to work. The plugin has been deactivated."
+msgid "Genesis Accessible requires the %1$s (minimum version 2.3.1, preferred version 2.8.1 or greater) for this plugin to work. The plugin has been deactivated."
 msgstr ""
 
-#: genesis-accessible.php:106
+#: genesis-accessible.php:107
 #, php-format
 msgid " <a href=\"%s\">Return to the plugins page.</a>"
 msgstr ""
 
-#: includes/class-genesisaccessible.php:164
+#: includes/class-genesisaccessible.php:176
 #, php-format
 msgid "It looks like your theme may already support these Genesis accessibility features: %s."
 msgstr ""
 
-#: includes/class-genesisaccessible.php:173
-msgid ""
-"The version of Genesis you are using is no longer recommended by the Genesis Accessible plugin, which now requires a minimum version of Genesis 2.3.1 and WordPress 4.6. Support for this version of Genesis will "
-"be dropped in a future version of this plugin."
+#: includes/class-genesisaccessible.php:185
+msgid "The version of Genesis you are using is no longer supported by the Genesis Accessible plugin, which now strongly suggests a minimum version of Genesis 2.8.1 and WordPress 4.9."
 msgstr ""
 
 #: includes/forms.php:30 includes/forms.php:43

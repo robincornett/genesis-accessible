@@ -23,12 +23,6 @@ Photo by [Nick van der Zwan](https://unsplash.com/photos/Qco9YF2io4Q)
 - Go to the Dashboard to Genesis → Theme Settings and select Content Archives: Display post content. If you do not want to display the full content on archives, then limit content to the number of characters you want (e.g. 500)
 - Go to the Dashboard to Genesis → SEO Settings and uncheck "Use semantic HTML and section throughout site?" (this setting may not be available)
 
-### Settings for Genesis (earlier than 2.2 only)
-
-- To add an `h1` on archives for terms (categories, tags, custom taxonomy terms): Go to the Dashboard to Posts → Category. Edit the category and fill out the Archive Headline.
-- To add an `h1` on archives for tags: Go to the admin area to Posts → Tags. Edit the tag and fill out the Archive Headline.
-- Go to the admin area to Genesis → SEO Settings →  Homepage Settings →  Which text would you like to be wrapped in `h1` tags? Select Site Title.
-
 ## Frequently Asked Questions
 
 - Look for [documentation on genesis-accessible.org](https://genesis-accessible.org)
@@ -45,7 +39,7 @@ _Screenshot of the Genesis Accessible settings page._
 ## Changelog
 
 ### 1.4.0
-* remove 404 support (removed from Genesis Framework)
+* remove 404 support (removed from Genesis Framework in version 3.0)
 * remove support for old versions of Genesis
 
 ### 1.3.1
